@@ -1,0 +1,760 @@
+"use client";
+
+import type React from "react";
+
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
+import {
+  Phone,
+  MapPin,
+  Clock,
+  ChevronDown,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Mail,
+} from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 40 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 },
+};
+
+const faqData = [
+  {
+    question: "How often should I use a body scrub?",
+    answer:
+      "For most skin types, using a body scrub 2-3 times per week is ideal. However, if you have sensitive skin, once a week may be sufficient.",
+  },
+  {
+    question: "Can I use a body scrub on my face?",
+    answer:
+      "No, body scrubs are typically too harsh for facial skin. We recommend using a gentle facial scrub specifically designed for the delicate skin on your face.",
+  },
+  {
+    question: "Can body scrubs help with cellulite?",
+    answer:
+      "While body scrubs can improve circulation and skin texture, they cannot eliminate cellulite. However, regular exfoliation can help improve the overall appearance of your skin.",
+  },
+  {
+    question: "Are body scrubs suitable for all skin types?",
+    answer:
+      "Most people can benefit from body scrubs, but those with very sensitive skin, eczema, or other skin conditions should consult with our specialists before treatment.",
+  },
+];
+
+export default function BodyScrubPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    service: "",
+    timeDate: "",
+  });
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSelectChange = (name: string, value: string) => {
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+  };
+
+  return (
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      {/* Responsive Header */}
+      <motion.header
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg border-b dark:border-gray-700 sticky top-0 z-50 transition-colors duration-300"
+      >
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-amber-800 dark:text-amber-400 transition-colors"
+            >
+              BLISS SPA
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-6">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                About Us
+              </Link>
+              <div className="relative group">
+                <button className="flex items-center text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors">
+                  Services <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border dark:border-gray-700">
+                  <div className="py-2">
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-amber-400"
+                    >
+                      Spa & Massage
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-amber-400"
+                    >
+                      Body Treatment
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-amber-400"
+                    >
+                      Facial Treatment
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-amber-400"
+                    >
+                      Aromatherapy
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <Link
+                href="/packages"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                Package
+              </Link>
+              <Link
+                href="/gallery"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                Gallery
+              </Link>
+              <Link
+                href="/blog"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                Contact
+              </Link>
+            </nav>
+
+            <div className="flex items-center space-x-4">
+              <ThemeToggle />
+              <Link href="/book-now">
+                <Button className="hidden sm:block bg-red-500 hover:bg-red-600 text-white px-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                  Book Now
+                </Button>
+              </Link>
+
+              {/* Mobile Menu Button */}
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="lg:hidden p-2 text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors relative"
+              >
+                <div className="w-6 h-6 flex flex-col justify-center items-center">
+                  <motion.span
+                    animate={
+                      isMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }
+                    }
+                    transition={{ duration: 0.3 }}
+                    className="w-6 h-0.5 bg-current block absolute"
+                  />
+                  <motion.span
+                    animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-6 h-0.5 bg-current block absolute"
+                  />
+                  <motion.span
+                    animate={
+                      isMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
+                    }
+                    transition={{ duration: 0.3 }}
+                    className="w-6 h-0.5 bg-current block absolute"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Navigation */}
+          <motion.div
+            initial={false}
+            animate={
+              isMenuOpen
+                ? { height: "auto", opacity: 1 }
+                : { height: 0, opacity: 0 }
+            }
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="lg:hidden overflow-hidden"
+          >
+            <motion.nav
+              initial={false}
+              animate={isMenuOpen ? { y: 0 } : { y: -20 }}
+              transition={{ duration: 0.3, delay: isMenuOpen ? 0.1 : 0 }}
+              className="flex flex-col space-y-4 pt-4 pb-4 border-t border-gray-200 dark:border-gray-700"
+            >
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors px-4 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors px-4 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
+              </Link>
+              <div className="px-4 pt-2">
+                <Link href="/book-now">
+                  <Button
+                    className="bg-red-500 hover:bg-red-600 text-white w-full"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Book Now
+                  </Button>
+                </Link>
+              </div>
+            </motion.nav>
+          </motion.div>
+        </div>
+      </motion.header>
+
+      {/* Main Content */}
+      <main className="py-8">
+        <div className="container mx-auto px-4">
+          {/* Best Body Scrub Picks Section */}
+          <motion.section {...fadeInUp} className="mb-16">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="space-y-6">
+                <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
+                  Best Body Scrub Picks for Luxurious Skin Care
+                </h1>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+                  Indulge in luxurious skincare with our curated selection of
+                  the best body scrubs. Our offerings include gentle exfoliants
+                  infused with nourishing ingredients like sea salt, sugar, and
+                  essential oils. Whether you seek deep hydration, radiant glow,
+                  or gentle exfoliation, each scrub is crafted to reveal
+                  smoother, revitalized skin. Treat yourself to our invigorating
+                  coffee scrubs for a morning boost, or unwind with calming
+                  lavender-infused options. Whatever your preference, our body
+                  scrubs promise a spa-like experience at home, leaving your
+                  skin irresistibly soft and beautifully rejuvenated. Elevate
+                  your skincare routine with our best body scrub picks today.
+                </p>
+              </div>
+              <div className="relative">
+                <Image
+                  src="/placeholder.svg?height=400&width=500"
+                  alt="Luxury Body Scrub Treatment"
+                  width={500}
+                  height={400}
+                  className="rounded-2xl shadow-2xl"
+                />
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Transform Your Skin Section */}
+          <motion.section
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-6">
+              Transform Your Skin with Milk Body Scrubs
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              Transform your skin with our luxurious Milk Body Scrub, designed
+              to exfoliate, nourish, and rejuvenate. This indulgent treatment
+              combines the gentle exfoliating power of natural ingredients with
+              finely ground almonds to slough away dead skin cells, revealing a
+              smoother, more radiant complexion. Rich in vitamins and
+              antioxidants, our milk-infused formula deeply hydrates and softens
+              the skin, leaving it feeling silky smooth and supple. The creamy
+              texture glides effortlessly, while the milk body scrub enhances
+              your skin's natural glow, promoting a healthy, youthful
+              appearance. Experience the ultimate in pampering and care with our
+              Milk Body Scrub, and let your skin shine with renewed vitality.
+            </p>
+          </motion.section>
+
+          {/* Achieve Radiant Skin Section */}
+          <motion.section
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-6">
+              Achieve Radiant Skin with a Whole Body Scrub
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              Revitalize your skin and achieve a radiant glow with our luxurious
+              whole body scrub treatment. This exfoliating service gently
+              removes dead skin cells, unclogs pores, and stimulates blood
+              circulation, leaving your skin feeling smooth, refreshed, and
+              rejuvenated. Infused with nourishing ingredients that deeply
+              hydrate and soften your skin, while the gentle massage enhances
+              relaxation and overall well-being. Ideal for all skin types, a
+              whole body scrub is the perfect way to detoxify and renew your
+              skin, revealing a brighter, more youthful complexion. Experience
+              the ultimate in skin pampering and treat yourself to a whole body
+              scrub today.
+            </p>
+          </motion.section>
+
+          {/* Why Choose Our Body Scrub Service Section */}
+          <motion.section
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-6">
+              Why Choose Our Body Scrub Service?
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+              At{" "}
+              <span className="text-red-500 font-semibold">Bliss Spa BD</span>,
+              we pride ourselves on delivering exceptional body scrub treatments
+              that go beyond exfoliation to rejuvenate and nourish your skin.
+              Our expert aestheticians carefully select the finest natural
+              ingredients and customize each scrub to suit your skin type and
+              preferences. Whether you're looking to achieve smoother skin,
+              reduce dryness, or prepare for a special occasion, our body scrubs
+              are designed to deliver visible results. Set in a serene and
+              luxurious spa environment, each treatment session takes place in
+              our tranquil environment is a retreat from daily stresses. With a
+              commitment to excellence and a focus on holistic skincare, Bliss
+              Spa BD is your destination for luxurious body scrub treatments
+              that leave you feeling renewed and radiant. Experience the
+              difference today by booking your appointment with us.
+            </p>
+          </motion.section>
+
+          {/* FAQ Section */}
+          <motion.section
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-8">
+              Frequently Asked Question (FAQ)
+            </h2>
+            <div className="space-y-4 max-w-4xl">
+              {faqData.map((faq, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
+                  <Collapsible
+                    open={openFaq === index}
+                    onOpenChange={() =>
+                      setOpenFaq(openFaq === index ? null : index)
+                    }
+                  >
+                    <CollapsibleTrigger className="w-full">
+                      <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700">
+                        <h3 className="text-left font-medium text-gray-800 dark:text-gray-200">
+                          {faq.question}
+                        </h3>
+                        <ChevronDown
+                          className={`h-5 w-5 text-gray-500 transition-transform ${
+                            openFaq === index ? "rotate-180" : ""
+                          }`}
+                        />
+                      </div>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <div className="p-4 bg-white dark:bg-gray-900 border-l-4 border-red-500 ml-4">
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+
+          {/* Experience Section */}
+          <motion.section
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mb-16 text-center"
+          >
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
+              Experience{" "}
+              <span className="text-red-500 font-semibold">Bliss Spa BD's</span>{" "}
+              premium body scrubs, crafted with the finest ingredients for
+              radiant, rejuvenated skin in a serene, personalised setting.
+              Discover transformative self-care today.
+            </p>
+          </motion.section>
+
+          {/* Contact Form Section */}
+          <motion.section
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <Card className="max-w-2xl mx-auto bg-white dark:bg-gray-800 shadow-xl border-0 dark:border dark:border-gray-700">
+              <CardContent className="p-8">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Name *
+                    </label>
+                    <div className="grid grid-cols-2 gap-4">
+                      <Input
+                        type="text"
+                        name="firstName"
+                        placeholder="First"
+                        value={formData.firstName}
+                        onChange={handleInputChange}
+                        className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+                        required
+                      />
+                      <Input
+                        type="text"
+                        name="lastName"
+                        placeholder="Last"
+                        value={formData.lastName}
+                        onChange={handleInputChange}
+                        className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Email *
+                    </label>
+                    <Input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Phone Number *
+                    </label>
+                    <Input
+                      type="tel"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleInputChange}
+                      className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Which Service Do You Want
+                    </label>
+                    <Select
+                      onValueChange={(value) =>
+                        handleSelectChange("service", value)
+                      }
+                    >
+                      <SelectTrigger className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100">
+                        <SelectValue placeholder="Select a service" />
+                      </SelectTrigger>
+                      <SelectContent className="bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600">
+                        <SelectItem
+                          value="milk-body-scrub"
+                          className="text-gray-900 dark:text-gray-100"
+                        >
+                          Milk Body Scrub
+                        </SelectItem>
+                        <SelectItem
+                          value="whole-body-scrub"
+                          className="text-gray-900 dark:text-gray-100"
+                        >
+                          Whole Body Scrub
+                        </SelectItem>
+                        <SelectItem
+                          value="coffee-scrub"
+                          className="text-gray-900 dark:text-gray-100"
+                        >
+                          Coffee Scrub
+                        </SelectItem>
+                        <SelectItem
+                          value="lavender-scrub"
+                          className="text-gray-900 dark:text-gray-100"
+                        >
+                          Lavender Scrub
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Write Your Time and Date
+                    </label>
+                    <Textarea
+                      name="timeDate"
+                      value={formData.timeDate}
+                      onChange={handleInputChange}
+                      rows={4}
+                      className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 resize-none"
+                      placeholder="Please specify your preferred date and time..."
+                    />
+                  </div>
+
+                  <Button
+                    type="submit"
+                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold"
+                  >
+                    Submit
+                  </Button>
+                </form>
+              </CardContent>
+            </Card>
+          </motion.section>
+        </div>
+      </main>
+
+      {/* Footer */}
+      <footer className="bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-900 dark:to-black text-white py-16 transition-colors duration-300">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* Contact Section */}
+            <div>
+              <div className="flex items-center mb-6">
+                <div className="text-2xl font-bold text-amber-400">
+                  BLISS SPA
+                </div>
+              </div>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                If you want a soothing and relaxing time of your life, book us
+                now!!
+              </p>
+              <div className="flex space-x-4">
+                <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors cursor-pointer">
+                  <Facebook className="h-5 w-5" />
+                </div>
+                <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors cursor-pointer">
+                  <Instagram className="h-5 w-5" />
+                </div>
+                <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors cursor-pointer">
+                  <Linkedin className="h-5 w-5" />
+                </div>
+              </div>
+              <Link href="/book-now">
+                <Button className="bg-red-500 hover:bg-red-600 text-white mt-6 w-full">
+                  Book Now
+                </Button>
+              </Link>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h4 className="font-bold text-xl mb-6 text-amber-400">Contact</h4>
+              <div className="space-y-4 text-gray-300">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="h-5 w-5 text-red-500 mt-1" />
+                  <div>
+                    <p>Address: Road 11,Rabindra Near</p>
+                    <p>Dhaka Bank</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Phone className="h-5 w-5 text-red-500" />
+                  <p>01738001055</p>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Mail className="h-5 w-5 text-red-500" />
+                  <p>blissspabd@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h5 className="font-semibold mb-3 text-amber-400">
+                  Opening Hours
+                </h5>
+                <div className="flex items-center space-x-2 text-gray-300">
+                  <Clock className="h-4 w-4 text-red-500" />
+                  <span>Saturday - Friday 10:00 - 22:00</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-bold text-xl mb-6 text-amber-400">
+                Quick Link
+              </h4>
+              <ul className="space-y-3 text-gray-300">
+                <li>
+                  <Link
+                    href="/about"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/services"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Service
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/gallery"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Gallery
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/packages"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Package
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Best Services */}
+            <div>
+              <h4 className="font-bold text-xl mb-6 text-amber-400">
+                Best Service
+              </h4>
+              <ul className="space-y-3 text-gray-300">
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Eye & Shadow
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Swedish Massage
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Facial Therapy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Facial & Therapy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Lifting Facial
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-700 pt-8 text-center">
+            <p className="text-gray-400">Copyright blissspabd.com 2024</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}

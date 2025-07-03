@@ -1,0 +1,745 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Phone,
+  MapPin,
+  Clock,
+  ChevronDown,
+  Facebook,
+  Instagram,
+  Linkedin,
+  Star,
+  Mail,
+} from "lucide-react";
+import { ThemeToggle } from "@/components/theme-toggle";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 60 },
+  animate: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 },
+};
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const services = [
+  {
+    title: "Body Scrub",
+    description: "Enjoy A Refreshing Body Scrub",
+    image: "body scrub spa treatment exfoliation",
+    category: "Body Treatment",
+  },
+  {
+    title: "Facial Spa",
+    description: "Nourish Your Face With Our Advanced Facial Spa",
+    image: "facial spa treatment skincare",
+    category: "Facial Care",
+  },
+  {
+    title: "Oil Bath",
+    description: "Calm Your Body With The Most Relaxed Oil Bath",
+    image: "oil bath massage therapy relaxation",
+    category: "Bath Treatment",
+  },
+  {
+    title: "Salt Bath",
+    description: "Enjoy A Refreshing Salt Bath Therapy",
+    image: "salt bath therapy wellness spa",
+    category: "Bath Treatment",
+  },
+  {
+    title: "Waxing & Threading",
+    description: "Clean Your Hair With Our Advanced Waxing",
+    image: "waxing threading beauty treatment",
+    category: "Beauty Care",
+  },
+  {
+    title: "Body Treatment",
+    description: "Enjoy A Refreshing & Luxury Body Massage",
+    image: "body treatment massage therapy",
+    category: "Body Care",
+  },
+  {
+    title: "Hot Stone Massage",
+    description: "A Rejuvenating Healing Massage",
+    image: "hot stone massage therapy relaxation",
+    category: "Massage Therapy",
+  },
+  {
+    title: "Hot Oil Massage",
+    description: "Hot Oil Massage Therapy & Rejuvenating Hot Massage",
+    image: "hot oil massage therapy wellness",
+    category: "Massage Therapy",
+  },
+  {
+    title: "Head Massage",
+    description: "Hot Oil Massage Therapy & Rejuvenating Head Massage",
+    image: "head massage therapy relaxation",
+    category: "Massage Therapy",
+  },
+];
+
+export default function ServicesPage() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  return (
+    <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
+      {/* Responsive Header */}
+      <motion.header
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm shadow-lg border-b dark:border-gray-700 sticky top-0 z-50 transition-colors duration-300"
+      >
+        <div className="container mx-auto px-4 py-4">
+          <div className="flex items-center justify-between">
+            <Link
+              href="/"
+              className="text-2xl font-bold text-amber-800 dark:text-amber-400 transition-colors"
+            >
+              BLISS SPA
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden lg:flex items-center space-x-6">
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                About Us
+              </Link>
+              <div className="relative group">
+                <button className="flex items-center text-amber-800 font-semibold border-b-2 border-amber-800 dark:text-amber-400 dark:border-amber-400">
+                  Services <ChevronDown className="ml-1 h-4 w-4" />
+                </button>
+                <div className="absolute top-full left-0 mt-2 w-48 bg-white dark:bg-gray-800 shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border dark:border-gray-700">
+                  <div className="py-2">
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-amber-400"
+                    >
+                      Spa & Massage
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-amber-400"
+                    >
+                      Body Treatment
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-amber-400"
+                    >
+                      Facial Treatment
+                    </a>
+                    <a
+                      href="#"
+                      className="block px-4 py-2 text-gray-700 hover:bg-amber-50 hover:text-amber-800 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-amber-400"
+                    >
+                      Aromatherapy
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <Link
+                href="/packages"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                Package
+              </Link>
+              <a
+                href="#"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                Gallery
+              </a>
+              <Link
+                href="/blog"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors"
+              >
+                Contact
+              </Link>
+            </nav>
+
+            <div className="flex items-center space-x-4">
+              <ThemeToggle />
+              <Link href="/book-now">
+                <Button className="hidden sm:block bg-red-500 hover:bg-red-600 text-white px-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                  Book Now
+                </Button>
+              </Link>
+
+              {/* Mobile Menu Button with Hamburger Animation */}
+              <button
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                className="lg:hidden p-2 text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors relative"
+              >
+                <div className="w-6 h-6 flex flex-col justify-center items-center">
+                  <motion.span
+                    animate={
+                      isMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }
+                    }
+                    transition={{ duration: 0.3 }}
+                    className="w-6 h-0.5 bg-current block absolute"
+                  />
+                  <motion.span
+                    animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-6 h-0.5 bg-current block absolute"
+                  />
+                  <motion.span
+                    animate={
+                      isMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
+                    }
+                    transition={{ duration: 0.3 }}
+                    className="w-6 h-0.5 bg-current block absolute"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Navigation with Animation */}
+          <motion.div
+            initial={false}
+            animate={
+              isMenuOpen
+                ? { height: "auto", opacity: 1 }
+                : { height: 0, opacity: 0 }
+            }
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="lg:hidden overflow-hidden"
+          >
+            <motion.nav
+              initial={false}
+              animate={isMenuOpen ? { y: 0 } : { y: -20 }}
+              transition={{ duration: 0.3, delay: isMenuOpen ? 0.1 : 0 }}
+              className="flex flex-col space-y-4 pt-4 pb-4 border-t border-gray-200 dark:border-gray-700"
+            >
+              <Link
+                href="/"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors px-4 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                href="/about"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors px-4 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
+              </Link>
+
+              {/* Mobile Services Dropdown */}
+              <div className="px-4">
+                <button
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className="flex items-center justify-between w-full text-amber-800 font-semibold dark:text-amber-400 py-2"
+                >
+                  <span>Services</span>
+                  <motion.div
+                    animate={isServicesOpen ? { rotate: 180 } : { rotate: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    <ChevronDown className="h-4 w-4" />
+                  </motion.div>
+                </button>
+                <motion.div
+                  initial={false}
+                  animate={
+                    isServicesOpen
+                      ? { height: "auto", opacity: 1 }
+                      : { height: 0, opacity: 0 }
+                  }
+                  transition={{ duration: 0.3 }}
+                  className="overflow-hidden"
+                >
+                  <div className="pl-4 space-y-2 pt-2">
+                    <a
+                      href="#"
+                      className="block text-gray-600 hover:text-amber-800 dark:text-gray-400 dark:hover:text-amber-400 transition-colors py-1"
+                    >
+                      Spa & Massage
+                    </a>
+                    <a
+                      href="#"
+                      className="block text-gray-600 hover:text-amber-800 dark:text-gray-400 dark:hover:text-amber-400 transition-colors py-1"
+                    >
+                      Body Treatment
+                    </a>
+                    <a
+                      href="#"
+                      className="block text-gray-600 hover:text-amber-800 dark:text-gray-400 dark:hover:text-amber-400 transition-colors py-1"
+                    >
+                      Facial Treatment
+                    </a>
+                    <a
+                      href="#"
+                      className="block text-gray-600 hover:text-amber-800 dark:text-gray-400 dark:hover:text-amber-400 transition-colors py-1"
+                    >
+                      Aromatherapy
+                    </a>
+                  </div>
+                </motion.div>
+              </div>
+
+              <Link
+                href="/packages"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors px-4 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Package
+              </Link>
+              <a
+                href="#"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors px-4 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Gallery
+              </a>
+              <Link
+                href="/blog"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors px-4 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Blog
+              </Link>
+              <Link
+                href="/contact"
+                className="text-gray-700 hover:text-amber-800 dark:text-gray-300 dark:hover:text-amber-400 transition-colors px-4 py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contact
+              </Link>
+              <div className="px-4 pt-2">
+                <Link href="/book-now">
+                  <Button
+                    className="bg-red-500 hover:bg-red-600 text-white w-full"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Book Now
+                  </Button>
+                </Link>
+              </div>
+            </motion.nav>
+          </motion.div>
+        </div>
+      </motion.header>
+
+      {/* Hero Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        className="relative py-20 bg-gradient-to-r from-amber-50 via-orange-50 to-red-50 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 transition-colors duration-300"
+      >
+        <div className="container mx-auto px-4 text-center">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
+            <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-6 leading-tight">
+              Where to Find the Best Spa Service in Dhaka
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
+              We offer a wide range of luxurious spa services designed to relax,
+              rejuvenate, and revitalize your body and mind. Nestled in the
+              heart of Dhaka, our serene environment provides the perfect escape
+              from the hustle and bustle of everyday life.
+            </p>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Our Spa Services Section */}
+      <motion.section
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
+      >
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 mb-4">
+              Our Spa Services
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {services.map((service, index) => (
+              <motion.div key={index} variants={fadeInUp}>
+                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white dark:bg-gray-800 shadow-lg overflow-hidden">
+                  <div className="relative overflow-hidden">
+                    <Image
+                      src={`/placeholder.svg?height=250&width=350&query=${service.image}`}
+                      alt={service.title}
+                      width={350}
+                      height={250}
+                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <Badge className="bg-red-500/90 text-white">
+                        {service.category}
+                      </Badge>
+                    </div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  </div>
+
+                  <CardContent className="p-6 text-center">
+                    <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                      {service.description}
+                    </p>
+                    <Button
+                      variant="outline"
+                      className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 bg-transparent dark:border-red-400 dark:text-red-400 dark:hover:bg-red-400 dark:hover:text-white"
+                    >
+                      Discover
+                    </Button>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* About Our Services */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="py-16 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300"
+      >
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
+            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
+              At Bliss Spa BD, we provide an extensive range of spa services
+              designed to pamper, rejuvenate, and invigorate you. Our offerings
+              include soothing massages, revitalizing facials, luxurious body
+              treatments, and meticulous nail care, all delivered by our team of
+              skilled professionals in a tranquil and serene environment.
+              Whether you're seeking relief from daily stress, a beauty boost,
+              or simply a moment to unwind and revitalize, indulge in the
+              ultimate relaxation and wellness journey with our premium spa
+              services.
+            </p>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Escape the Stress Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
+      >
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
+            <div className="border-2 border-gray-800 dark:border-gray-600 p-8 text-center">
+              <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">
+                Escape the Stress: Full Body Massage Services in Dhaka
+              </h3>
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                Discover the ultimate escape from everyday stress with our
+                exceptional full body massage services in Dhaka. Our expert
+                therapists are skilled in a variety of massage techniques,
+                ensuring a personalized and deeply relaxing experience. Whether
+                you're seeking relief from muscle aches, improved circulation,
+                or simply a tranquil experience, our full body massages are
+                tailored to meet your unique needs. Rejuvenate your mind and
+                body as you embark on a journey to total relaxation and
+                well-being with our premium spa services.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Daily Work Hours */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="py-16 bg-gradient-to-r from-teal-600 to-teal-700 text-white"
+      >
+        <div className="container mx-auto px-4">
+          <motion.div {...fadeInUp} className="text-center">
+            <h3 className="text-3xl font-bold mb-8">Daily Work Hours</h3>
+            <div className="flex items-center justify-center space-x-4">
+              <Clock className="h-8 w-8 text-red-400" />
+              <div>
+                <p className="text-xl font-semibold">Saturday</p>
+                <p className="text-2xl font-bold">10:00 AM - 8:00 PM</p>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </motion.section>
+
+      {/* Testimonial Section */}
+      <motion.section
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
+      >
+        <div className="container mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <motion.div {...fadeInUp} className="space-y-6">
+              <div className="grid grid-cols-2 gap-4">
+                <Image
+                  src="/placeholder.svg?height=200&width=200"
+                  alt="Spa Treatment"
+                  width={200}
+                  height={200}
+                  className="rounded-lg shadow-lg"
+                />
+                <div className="bg-gray-800 dark:bg-gray-700 text-white p-6 rounded-lg text-center">
+                  <div className="text-4xl font-bold text-yellow-400 mb-2">
+                    500
+                  </div>
+                  <div className="text-sm">Positive Reviews</div>
+                  <div className="flex justify-center mt-2">
+                    {[...Array(5)].map((_, i) => (
+                      <Star
+                        key={i}
+                        className="h-4 w-4 fill-current text-yellow-400"
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+              <Image
+                src="/placeholder.svg?height=150&width=300"
+                alt="Spa Therapy"
+                width={300}
+                height={150}
+                className="rounded-lg shadow-lg w-full"
+              />
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
+              <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg">
+                <h3 className="text-2xl font-bold mb-4">
+                  The Love & Affection We Received From Our Clients
+                </h3>
+                <blockquote className="text-lg italic mb-4">
+                  "You should try out their pedicure and manicure packages. It
+                  is very soothing and relaxing. Must Recommended!!!!"
+                </blockquote>
+                <div className="text-right">
+                  <p className="font-semibold">- Client A</p>
+                  <p className="text-sm opacity-90">Bliss Spa Experience</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Footer */}
+      <footer className="bg-gradient-to-r from-gray-800 to-gray-900 dark:from-gray-900 dark:to-black text-white py-16 transition-colors duration-300">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8 mb-12">
+            {/* Contact Section */}
+            <div>
+              <div className="flex items-center mb-6">
+                <div className="text-2xl font-bold text-amber-400">
+                  BLISS SPA
+                </div>
+              </div>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                If you want a soothing and relaxing time of your life, book us
+                now!!
+              </p>
+              <div className="flex space-x-4">
+                <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors cursor-pointer">
+                  <Facebook className="h-5 w-5" />
+                </div>
+                <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors cursor-pointer">
+                  <Instagram className="h-5 w-5" />
+                </div>
+                <div className="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors cursor-pointer">
+                  <Linkedin className="h-5 w-5" />
+                </div>
+              </div>
+              <Link href="/book-now">
+                <Button className="bg-red-500 hover:bg-red-600 text-white mt-6 w-full">
+                  Book Now
+                </Button>
+              </Link>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h4 className="font-bold text-xl mb-6 text-amber-400">Contact</h4>
+              <div className="space-y-4 text-gray-300">
+                <div className="flex items-start space-x-3">
+                  <MapPin className="h-5 w-5 text-red-500 mt-1" />
+                  <div>
+                    <p>Address: Road 11,Rabindra Near</p>
+                    <p>Dhaka Bank</p>
+                  </div>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Phone className="h-5 w-5 text-red-500" />
+                  <p>01738001055</p>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <Mail className="h-5 w-5 text-red-500" />
+                  <p>blissspabd@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="mt-6">
+                <h5 className="font-semibold mb-3 text-amber-400">
+                  Opening Hours
+                </h5>
+                <div className="flex items-center space-x-2 text-gray-300">
+                  <Clock className="h-4 w-4 text-red-500" />
+                  <span>Saturday - Friday 10:00 - 22:00</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="font-bold text-xl mb-6 text-amber-400">
+                Quick Link
+              </h4>
+              <ul className="space-y-3 text-gray-300">
+                <li>
+                  <Link
+                    href="/about"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Service
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Gallery
+                  </a>
+                </li>
+                <li>
+                  <Link
+                    href="/packages"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Package
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/contact"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Best Services */}
+            <div>
+              <h4 className="font-bold text-xl mb-6 text-amber-400">
+                Best Service
+              </h4>
+              <ul className="space-y-3 text-gray-300">
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Eye & Shadow
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Swedish Massage
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Facial Therapy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Facial & Therapy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    Lifting Facial
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="border-t border-gray-700 pt-8 text-center">
+            <p className="text-gray-400">Copyright blissspabd.com 2024</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
