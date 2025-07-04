@@ -108,7 +108,7 @@ export default function PackagesSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className=" px-7 xl:px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
               title: "Aromatherapy Massage",
@@ -157,7 +157,7 @@ export default function PackagesSection() {
               },
             },
           ].map((service) => (
-            <div className="overflow-hidden relative">
+            <div className="overflow-hidden rounded relative shadow-[20px_-20px_80px_0px_rgba(0,0,0,0.1)]">
               {service?.popular && service?.popular.postion === "left" && (
                 <span className="bg-[#111827] absolute text-center -left-6 top-4 text-xs text-white font-semibold w-[100px] py-[2px] -rotate-45">
                   Popular

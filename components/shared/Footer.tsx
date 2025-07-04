@@ -13,7 +13,7 @@ import { Button } from "../ui/button";
 const Footer = () => {
   return (
     <footer className="bg-gradient-to-r from-gray-800 to-gray-900 text-white py-16 dark:from-gray-900 dark:to-gray-900">
-      <div className="container mx-auto px-4">
+      <div className="container max-w-5xl mx-auto px-4">
         <div className="grid md:grid-cols-4 gap-8 mb-12">
           {/* Contact Section */}
           <div>

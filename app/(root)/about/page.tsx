@@ -58,7 +58,7 @@ export default function AboutPage() {
         className="relative h-[300px] bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 transition-colors duration-300"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-orange-900/20 dark:from-gray-900/20 dark:to-gray-900/20"></div>
-        <div className="container mx-auto px-4 h-full flex items-center justify-center">
+        <div className="container mx-auto max-w-5xl px-4 h-full flex items-center justify-center">
           <motion.div {...fadeInUp} className="text-center text-white">
             <h1 className="text-5xl font-bold mb-4 text-gray-800 dark:text-gray-200">
               About Us
@@ -86,7 +86,7 @@ export default function AboutPage() {
         viewport={{ once: true }}
         className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-5xl px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -123,7 +123,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
+              <h2 className="text-4xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
                 One of The Leading SPA & Therapy Centre in Bangladesh
               </h2>
 
@@ -167,7 +167,7 @@ export default function AboutPage() {
         viewport={{ once: true }}
         className="py-16 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
+        <div className="container max-w-5xl mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { number: "1000", label: "Happy Client", color: "text-red-500" },
@@ -211,7 +211,7 @@ export default function AboutPage() {
         viewport={{ once: true }}
         className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
+        <div className="container max-w-5xl mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -281,7 +281,7 @@ export default function AboutPage() {
         viewport={{ once: true }}
         className="py-20 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-5xl px-4">
           <div className="grid lg:grid-cols-2 gap-16">
             <motion.div
               {...fadeInUp}

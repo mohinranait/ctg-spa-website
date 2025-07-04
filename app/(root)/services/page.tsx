@@ -87,7 +87,7 @@ export default function ServicesPage() {
         transition={{ duration: 1 }}
         className="relative py-20 bg-gradient-to-r from-amber-50 via-orange-50 to-red-50 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4 text-center">
+        <div className="container mx-auto max-w-5xl px-4 text-center">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-6 leading-tight">
               Where to Find the Best Spa Service in Dhaka
@@ -110,7 +110,7 @@ export default function ServicesPage() {
         viewport={{ once: true }}
         className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-5xl px-4">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 mb-4">
               Our Spa Services
@@ -165,7 +165,7 @@ export default function ServicesPage() {
         viewport={{ once: true }}
         className="py-16 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-5xl px-4">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
               At CTG Spa BD, we provide an extensive range of spa services
@@ -189,7 +189,7 @@ export default function ServicesPage() {
         viewport={{ once: true }}
         className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-5xl px-4">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
             <div className="border-2 border-gray-800 dark:border-gray-600 p-8 text-center">
               <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">
@@ -218,7 +218,7 @@ export default function ServicesPage() {
         viewport={{ once: true }}
         className="py-16 bg-gradient-to-r from-teal-600 to-teal-700 text-white"
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-5xl px-4">
           <motion.div {...fadeInUp} className="text-center">
             <h3 className="text-3xl font-bold mb-8">Daily Work Hours</h3>
             <div className="flex items-center justify-center space-x-4">
@@ -239,7 +239,7 @@ export default function ServicesPage() {
         viewport={{ once: true }}
         className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-5xl px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <motion.div {...fadeInUp} className="space-y-6 relative">
               <Image

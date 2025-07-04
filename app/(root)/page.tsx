@@ -12,6 +12,7 @@ import SimplePackage from "@/components/common/package-card-simple";
 import PackagesSection from "@/components/pages/home/pacakges-section";
 import HomeSlider from "@/components/sliders/home-slider";
 import CountUp from "react-countup";
+import HomeBanner from "@/components/pages/home/home-banner";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 100 },
@@ -140,25 +141,7 @@ export default function CtgSpaWebsite() {
     <>
       {/* <HomeSlider /> */}
 
-      {/* Welcome Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="py-0 bg-white dark:bg-gray-900 transition-colors duration-300"
-      >
-        <div className="2xl:w-[1600px] mx-auto  text-center">
-          <motion.div {...fadeInUp}>
-            <Image
-              src={"/banner.webp"}
-              width={1900}
-              height={800}
-              alt="banner"
-              className="w-full "
-            />
-          </motion.div>
-        </div>
-      </motion.section>
+      <HomeBanner />
 
       {/* Service Images Grid */}
       <motion.section
@@ -166,22 +149,23 @@ export default function CtgSpaWebsite() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="py-8 bg-gray-50 dark:bg-gray-800  xl:h-[300px] transition-colors duration-300"
+        className=" xl:py-8 bg-gray-50 dark:bg-gray-800  xl:h-[300px] transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
-          <div className="grid  md:grid-cols-3 gap-4">
+        <div className="container max-w-5xl mx-auto px-2">
+          <div className="grid  md:grid-cols-3 gap-2">
             {[
               {
-                title: "Spa & Massage",
-                image: "images/home/20230218_145836_0000.png",
+                title: "Facial Care",
+                image: "images/home/20230218_150500_0000.png",
               },
+
               {
                 title: "Body Treatment",
                 image: "images/home/20230218_150309_0000.png",
               },
               {
-                title: "Facial Care",
-                image: "images/home/20230218_150500_0000.png",
+                title: "Spa & Massage",
+                image: "images/home/20230218_145836_0000.png",
               },
               // {
               //   title: "Aromatherapy",
@@ -191,7 +175,7 @@ export default function CtgSpaWebsite() {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                whileHover={{ scale: 1.05 }}
+                // whileHover={{ scale: 1.05 }}
                 className="relative group cursor-pointer"
               >
                 <Image
@@ -199,9 +183,9 @@ export default function CtgSpaWebsite() {
                   alt={service.title}
                   width={200}
                   height={200}
-                  className="w-full h-[250px] object-cover rounded-lg"
+                  className="w-full xl:h-[250px] object-cover "
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <div className="absolute inset-0 bg-black bg-opacity-40  flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="text-white font-semibold">
                     {service.title}
                   </span>
@@ -219,21 +203,18 @@ export default function CtgSpaWebsite() {
         viewport={{ once: true }}
         className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4 text-center">
+        <div className="container max-w-5xl mx-auto px-4 text-center">
           <motion.div {...fadeInUp}>
-            <Badge className="bg-amber-800 dark:bg-amber-600 text-white mb-4 transition-colors">
-              Welcome to CTG Spa BD
-            </Badge>
             <motion.h2
               initial={{ opacity: 0, y: -200 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-4xl font-bold text-amber-900 dark:text-amber-400 mb-6 transition-colors"
+              className="text-xl md:text-2xl xl:text-4xl font-bold text-white py-1 bg-[#3D0808] dark:text-amber-400 mb-4 transition-colors"
             >
-              Best Spa in Dhaka
+              Welcome to CTG Spa BD Best Spa in Dhaka
             </motion.h2>
-            <h3 className="text-2xl text-gray-700 dark:text-gray-300 mb-8 transition-colors">
+            <h3 className="text-2xl xl:text-4xl xl:max-w-xl mx-auto text-gray-700 dark:text-gray-300 mb-5 transition-colors">
               Best Spa & Massage Service in Dhaka
             </h3>
             <motion.div
@@ -241,7 +222,7 @@ export default function CtgSpaWebsite() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="max-w-4xl mx-auto text-gray-600 dark:text-gray-400 leading-relaxed space-y-4 transition-colors"
+              className="max-w-xl mx-auto text-gray-600 dark:text-gray-400 leading-relaxed space-y-3 transition-colors"
             >
               <p>
                 Welcome to CTG Spa, your premier destination for relaxation and
@@ -268,8 +249,8 @@ export default function CtgSpaWebsite() {
         // viewport={{ once: true }}
         className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8">
+        <div className="container max-w-5xl mx-auto px-4">
+          <div className="px-7 xl:px-4 grid md:grid-cols-3 gap-6">
             {[
               {
                 icon: Phone,
@@ -290,9 +271,9 @@ export default function CtgSpaWebsite() {
                 content: "10:00 AM - 10:00 PM",
               },
             ].map((item, index) => (
-              <motion.div key={index} variants={fadeInUp}>
-                <Card className="text-center p-8 hover:shadow-lg transition-shadow bg-white dark:bg-gray-900 border dark:border-gray-700">
-                  <CardContent className="space-y-4">
+              <motion.div key={index} variants={fadeInUp} className="">
+                <Card className="text-center p-8 shadow-[20px_-20px_80px_0px_rgba(0,0,0,0.1)] hover:shadow-lg transition-shadow bg-white dark:bg-gray-900 border dark:border-gray-700">
+                  <CardContent className="space-y-2">
                     <div className="mx-auto w-16 h-16 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center transition-colors">
                       <item.icon className="h-8 w-8 text-amber-800 dark:text-amber-400 transition-colors" />
                     </div>
@@ -320,7 +301,7 @@ export default function CtgSpaWebsite() {
         viewport={{ once: true }}
         className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
+        <div className="container max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="bg-red-500 text-white mb-4">About us</Badge>
             <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-8 transition-colors">
@@ -392,14 +373,14 @@ export default function CtgSpaWebsite() {
         viewport={{ once: true }}
         className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
+        <div className="container max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="bg-amber-800 dark:bg-amber-600 text-white mb-4 transition-colors">
               Best Services from The Best Spa in Dhaka
             </Badge>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid  md:grid-cols-3 lg:grid-cols-4 gap-4">
             {flipCards.map((card, index) => (
               <motion.div
                 key={index}
@@ -424,7 +405,7 @@ export default function CtgSpaWebsite() {
         viewport={{ once: true }}
         className="py-16 bg-gradient-to-r from-amber-800 to-orange-800 dark:from-amber-900 dark:to-orange-900 text-white text-center transition-colors duration-300"
       >
-        <div className="container mx-auto px-4">
+        <div className="container max-w-5xl mx-auto px-4">
           <motion.div {...fadeInUp} className="space-y-6">
             <h2 className="text-4xl font-bold">
               Affordable and Reliable Spa Service.
@@ -456,7 +437,7 @@ export default function CtgSpaWebsite() {
         viewport={{ once: true }}
         className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
       >
-        <div className="container mx-auto px-4 text-center">
+        <div className="container max-w-5xl mx-auto px-4 text-center">
           <motion.div {...fadeInUp}>
             <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-12 transition-colors">
               The Love & Affection We Received From Our Clients

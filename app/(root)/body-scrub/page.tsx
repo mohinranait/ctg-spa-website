@@ -88,7 +88,7 @@ const BodyScrubPage = () => {
     <>
       {/* Main Content */}
       <main className="py-8">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto max-w-5xl px-4">
           {/* Best Body Scrub Picks Section */}
           <motion.section {...fadeInUp} className="mb-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
