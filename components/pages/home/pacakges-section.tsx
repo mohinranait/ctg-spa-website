@@ -108,7 +108,7 @@ export default function PackagesSection() {
           </p>
         </div>
 
-        <div className=" px-7 xl:px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className=" px-5 xl:px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
             {
               title: "Aromatherapy Massage",

@@ -250,7 +250,7 @@ export default function CtgSpaWebsite() {
         className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
       >
         <div className="container max-w-5xl mx-auto px-4">
-          <div className="px-7 xl:px-4 grid md:grid-cols-3 gap-6">
+          <div className="px-5 grid md:grid-cols-3 gap-6">
             {[
               {
                 icon: Phone,
