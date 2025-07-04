@@ -110,7 +110,7 @@ export default function AboutPage() {
                 <div className="absolute -bottom-6 right-0 xl:-right-6 bg-white dark:bg-gray-700 p-10 rounded-xl shadow-xl border dark:border-gray-600">
                   <div className="text-center">
                     <div className="text-4xl font-bold text-amber-800 dark:text-amber-400">
-                      50
+                      <CountUp start={0} end={50} duration={1.75} />
                     </div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">
                       Happy Client

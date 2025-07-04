@@ -96,9 +96,9 @@ export default function PackagesSection() {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-stone-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 px-4"
+      className="min-h-screen bg-gradient-to-br from-[#F6ECE5] via-[#F6ECE5] to-stone-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 px-4"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Our Premium Packages
@@ -106,10 +106,89 @@ export default function PackagesSection() {
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
             Experience luxury and relaxation like never before
           </p>
-          <div className="w-32 h-1 bg-gradient-to-r from-purple-600 to-pink-600 mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[
+            {
+              title: "Aromatherapy Massage",
+              price: "4000",
+              duration: "60 min",
+              popular: {
+                value: true,
+                postion: "left",
+              },
+            },
+            {
+              title: "Thai Traditional Massage",
+              price: "3500",
+              duration: "60 min",
+            },
+            {
+              title: "Swedish Back Massage",
+              price: "3500",
+              duration: "60 min",
+              popular: {
+                value: true,
+                postion: "right",
+              },
+            },
+            {
+              title: "Pedicure & Manicure",
+              price: "2000",
+              duration: "60 min",
+              popular: {
+                value: true,
+                postion: "left",
+              },
+            },
+            {
+              title: "Chocolate Scrub",
+              price: "3500",
+              duration: "60 min",
+            },
+            {
+              title: "Bliss Special Massage",
+              price: "3500",
+              duration: "60 mins",
+              popular: {
+                value: true,
+                postion: "right",
+              },
+            },
+          ].map((service) => (
+            <div className="overflow-hidden relative">
+              {service?.popular && service?.popular.postion === "left" && (
+                <span className="bg-[#111827] absolute text-center -left-6 top-4 text-xs text-white font-semibold w-[100px] py-[2px] -rotate-45">
+                  Popular
+                </span>
+              )}
+              {service?.popular && service?.popular.postion === "right" && (
+                <span className="bg-[#111827] absolute text-center top-4 -right-6 text-xs text-white font-semibold w-[100px] py-[2px] rotate-45">
+                  Popular
+                </span>
+              )}
+
+              <div className="py-10 flex flex-col  space-y-6 bg-[#FAF5FA] items-center dark:bg-[#111827]">
+                <p className="text-xl font-semibold text-center">
+                  {service?.title}
+                </p>
+                <div className="relative">
+                  <span className="text-sm absolute top-0 left-0 ">৳</span>
+                  <span className="text-5xl pl-2">{service?.price}</span>
+                  <span className="text-sm ">{service?.duration}</span>
+                </div>
+              </div>
+              <div className="py-9 flex justify-center bg-white  dark:bg-[#111827]/80">
+                <Button className="rounded-3xl text-xs h-8 bg-[#F6EEE9] hover:bg-[#F6EEE9] text-black  dark:bg-[#111827] dark:text-slate-100">
+                  Call Now
+                </Button>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {packages.map((pkg, index) => {
             const IconComponent = pkg.icon;
             return (
@@ -118,7 +197,6 @@ export default function PackagesSection() {
                 key={pkg.id}
                 className="group relative"
               >
-                {/* Popular Badge */}
                 {pkg.popular && (
                   <div
                     className={`absolute -top-3 -right-3 z-20 bg-gradient-to-r ${pkg.gradient} text-white px-6 py-2 text-sm font-bold shadow-lg`}
@@ -133,11 +211,9 @@ export default function PackagesSection() {
                   </div>
                 )}
 
-                {/* Main Card */}
                 <div
                   className={`relative bg-gradient-to-br ${pkg.bgGradient} backdrop-blur-sm border border-white/20 dark:border-gray-600 shadow-2xl hover:shadow-3xl dark:hover:border-gray-500 transition-all duration-500 group-hover:scale-105 overflow-hidden h-96`}
                 >
-                  {/* Decorative Elements */}
                   <div className="absolute top-0 right-0 w-32 h-32 opacity-10">
                     <div
                       className={`w-full h-full bg-gradient-to-br ${pkg.gradient}`}
@@ -162,7 +238,6 @@ export default function PackagesSection() {
                     ></div>
                   </div>
 
-                  {/* Content */}
                   <div className="relative p-6 h-full flex flex-col justify-between">
                     <div>
                       <div className="flex items-center gap-3 mb-3">
@@ -241,9 +316,8 @@ export default function PackagesSection() {
               </motion.div>
             );
           })}
-        </div>
-
-        {/* Bottom Stats Section */}
+        </div> */}
+        {/* 
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
           <div className="group">
             <div
@@ -280,16 +354,16 @@ export default function PackagesSection() {
               <div className="text-sm opacity-90">Rating</div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="mt-16 text-center">
+        {/* <div className="mt-16 text-center">
           <div
             className="inline-block w-80 h-3 bg-gradient-to-r from-purple-600 via-pink-600 to-rose-500 opacity-30"
             style={{
               clipPath: "polygon(5% 0, 95% 0, 100% 100%, 0 100%)",
             }}
           ></div>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
