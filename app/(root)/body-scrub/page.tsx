@@ -1,6 +1,12 @@
 "use client";
 
 import type React from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -14,24 +20,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import {
-  Phone,
-  MapPin,
-  Clock,
-  ChevronDown,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-} from "lucide-react";
-import { ThemeToggle } from "@/components/theme-toggle";
+
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 
 const fadeInUp = {
@@ -126,11 +116,11 @@ export default function BodyScrubPage() {
               </div>
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
+                  src="/images/sliders/3.jpg?height=400&width=500"
                   alt="Luxury Body Scrub Treatment"
                   width={500}
                   height={400}
-                  className="rounded-2xl shadow-2xl"
+                  className=""
                 />
               </div>
             </div>
@@ -225,42 +215,35 @@ export default function BodyScrubPage() {
               Frequently Asked Question (FAQ)
             </h2>
             <div className="space-y-4 max-w-4xl">
-              {faqData.map((faq, index) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.1 }}
-                >
-                  <Collapsible
-                    open={openFaq === index}
-                    onOpenChange={() =>
-                      setOpenFaq(openFaq === index ? null : index)
-                    }
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqData.map((faq, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
                   >
-                    <CollapsibleTrigger className="w-full">
-                      <div className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700">
+                    <AccordionItem
+                      value={`item-${index}`}
+                      className="border-none"
+                    >
+                      <AccordionTrigger className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors border border-gray-200 dark:border-gray-700 hover:no-underline [&[data-state=open]>svg]:rotate-180">
                         <h3 className="text-left font-medium text-gray-800 dark:text-gray-200">
                           {faq.question}
                         </h3>
-                        <ChevronDown
-                          className={`h-5 w-5 text-gray-500 transition-transform ${
-                            openFaq === index ? "rotate-180" : ""
-                          }`}
-                        />
-                      </div>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent>
-                      <div className="p-4 bg-white dark:bg-gray-900 border-l-4 border-red-500 ml-4">
-                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </motion.div>
-              ))}
+                      </AccordionTrigger>
+                      <AccordionContent className="pt-0 pb-0">
+                        <div className="p-4 bg-white dark:bg-gray-900 border-l-4 border-red-500 ml-4 mt-2">
+                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </motion.div>
+                ))}
+              </Accordion>
             </div>
           </motion.section>
 

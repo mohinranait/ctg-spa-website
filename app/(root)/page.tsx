@@ -184,7 +184,7 @@ export default function CtgSpaWebsite() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="py-8 bg-gray-50 dark:bg-gray-800  h-[250px] transition-colors duration-300"
+        className="py-8 bg-gray-50 dark:bg-gray-800  xl:h-[300px] transition-colors duration-300"
       >
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">

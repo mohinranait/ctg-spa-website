@@ -44,7 +44,7 @@ const blogPosts = [
     overlayTitle: "Full Body Massage Treatment",
     excerpt:
       "Discover the transformative power of full body massage therapy and how it can enhance your overall wellness journey.",
-    image: "spa full body massage therapy relaxation",
+    image: "/images/blogs/image-3-1.jpg",
     category: "Hair Spa | The Pros & Cons",
     date: "March 15, 2024",
     author: "Dr. Sarah Ahmed",
@@ -58,7 +58,7 @@ const blogPosts = [
     overlayTitle: "Use of Sea Salt for Bath",
     excerpt:
       "Explore the healing benefits of sea salt baths and learn the proper techniques for sensitive skin care.",
-    image: "sea salt bath therapy wellness spa",
+    image: "/images/blogs/image-6.jpg",
     category: "Skin Care",
     date: "March 12, 2024",
     author: "Maria Khan",
@@ -71,7 +71,7 @@ const blogPosts = [
     overlayTitle: "Exploring How to Use Epsom Salt Bath",
     excerpt:
       "Uncover the science behind Epsom salt baths and their incredible benefits for muscle recovery and relaxation.",
-    image: "epsom salt bath magnesium therapy",
+    image: "/images/blogs/image-10.jpg",
     category: "Wellness",
     date: "March 10, 2024",
     author: "Dr. Rahman",
@@ -85,7 +85,7 @@ const blogPosts = [
     overlayTitle: "Bath Salts for Muscle Recovery",
     excerpt:
       "Learn how different types of bath salts can provide relief for sore muscles and promote faster recovery.",
-    image: "bath salts muscle recovery therapy",
+    image: "/images/blogs/image-11.jpg",
     category: "Recovery",
     date: "March 8, 2024",
     author: "Fitness Expert",
@@ -98,7 +98,7 @@ const blogPosts = [
     overlayTitle: "Exfoliating Black Skin Guide",
     excerpt:
       "Master the art of proper exfoliation techniques specifically designed for darker skin tones.",
-    image: "black skin exfoliation scrub skincare",
+    image: "/images/blogs/image-17.jpg",
     category: "Skincare",
     date: "March 5, 2024",
     author: "Beauty Specialist",
@@ -111,7 +111,7 @@ const blogPosts = [
     overlayTitle: "Best Body Scrubs for Every Skin Type",
     excerpt:
       "Discover the perfect body scrub for your unique skin type and budget with our comprehensive guide.",
-    image: "body scrubs skincare products spa",
+    image: "/images/blogs/image-3-1.jpg",
     category: "Product Guide",
     date: "March 3, 2024",
     author: "Skincare Expert",
@@ -124,7 +124,7 @@ const blogPosts = [
     overlayTitle: "Choosing Body Massage in Dhaka",
     excerpt:
       "Compare traditional and modern massage techniques to find the perfect treatment for your needs in Dhaka.",
-    image: "traditional modern massage techniques dhaka",
+    image: "/images/blogs/image-6.jpg",
     category: "Massage Guide",
     date: "March 1, 2024",
     author: "Massage Therapist",
@@ -137,7 +137,7 @@ const blogPosts = [
     overlayTitle: "Top 5 Affordable and Luxurious Massage in Dhaka",
     excerpt:
       "Discover the best massage centers in Dhaka that offer both affordability and luxury experiences.",
-    image: "luxury affordable massage dhaka spa",
+    image: "/images/blogs/image-17.jpg",
     category: "Local Guide",
     date: "February 28, 2024",
     author: "Local Expert",
@@ -150,7 +150,7 @@ const blogPosts = [
     overlayTitle: "Face and Body Scrub for Sensitive Skin",
     excerpt:
       "Learn how to select the perfect bath and shower oils that nourish and protect your skin type.",
-    image: "bath shower oil sensitive skin care",
+    image: "/images/blogs/image-3-1.jpg",
     category: "Skincare",
     date: "February 25, 2024",
     author: "Dermatologist",
@@ -163,7 +163,7 @@ const blogPosts = [
     overlayTitle: "Face and Body Scrub for Sensitive Skin",
     excerpt:
       "Find gentle yet effective scrubs specifically formulated for sensitive skin types.",
-    image: "face body scrub sensitive skin gentle",
+    image: "/images/blogs/image-3-1.jpg",
     category: "Sensitive Skin",
     date: "February 22, 2024",
     author: "Skincare Specialist",
@@ -176,7 +176,7 @@ const blogPosts = [
     overlayTitle: "Body Scrub Prices in Bangladesh",
     excerpt:
       "Complete guide to body scrub pricing across Bangladesh, from budget-friendly to luxury options.",
-    image: "body scrub prices bangladesh spa market",
+    image: "/images/blogs/image-17.jpg",
     category: "Pricing Guide",
     date: "February 20, 2024",
     author: "Market Analyst",
@@ -230,7 +230,7 @@ export default function BlogPage() {
         className="py-20"
       >
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-8">
+          <div className="max-w-5xl mx-auto space-y-8">
             {blogPosts.map((post, index) => (
               <motion.article key={post.id} variants={fadeInUp}>
                 <Card className="overflow-hidden group hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm dark:bg-gray-800/80 dark:border dark:border-gray-700">
@@ -238,7 +238,7 @@ export default function BlogPage() {
                     {/* Image Section */}
                     <div className="relative overflow-hidden h-64 md:h-auto">
                       <Image
-                        src={`/placeholder.svg?height=300&width=400&query=${post.image}`}
+                        src={`${post.image}?height=300&width=400&query=${post.image}`}
                         alt={post.title}
                         width={400}
                         height={300}

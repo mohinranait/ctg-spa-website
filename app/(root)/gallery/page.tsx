@@ -46,7 +46,7 @@ const galleryImages = [
     id: 1,
     title: "CTG SPA",
     subtitle: "Premium Spa Experience",
-    image: "luxury spa treatment massage therapy",
+    image: "/images/blogs/image-6.jpg",
     size: "large",
     category: "Spa Treatment",
   },
@@ -54,7 +54,7 @@ const galleryImages = [
     id: 2,
     title: "Spa & Massage",
     subtitle: "Relaxation Therapy",
-    image: "spa massage relaxation wellness",
+    image: "/images/blogs/image-3-1.jpg",
     size: "medium",
     category: "Massage",
   },
@@ -62,7 +62,7 @@ const galleryImages = [
     id: 3,
     title: "Spa and Massage",
     subtitle: "Ultimate Wellness",
-    image: "spa wellness massage aromatherapy",
+    image: "/images/blogs/image-10.jpg",
     size: "medium",
     category: "Wellness",
   },
@@ -70,7 +70,7 @@ const galleryImages = [
     id: 4,
     title: "Welcome To The best Spa in Dhaka City",
     subtitle: "Premium Services",
-    image: "best spa dhaka city premium",
+    image: "/images/blogs/image-11.jpg",
     size: "large",
     category: "Welcome",
     featured: true,
@@ -79,7 +79,7 @@ const galleryImages = [
     id: 5,
     title: "BEAUTY & SPA",
     subtitle: "Facial Treatment",
-    image: "beauty spa facial treatment skincare",
+    image: "/images/blogs/image-17.jpg",
     size: "medium",
     category: "Beauty",
   },
@@ -87,7 +87,7 @@ const galleryImages = [
     id: 6,
     title: "Spa & massage",
     subtitle: "Body Treatment",
-    image: "spa massage body treatment therapy",
+    image: "/images/blogs/image-11.jpg",
     size: "medium",
     category: "Body Care",
   },
@@ -95,7 +95,7 @@ const galleryImages = [
     id: 7,
     title: "Massage Treatment",
     subtitle: "Therapeutic Massage",
-    image: "massage treatment therapeutic wellness",
+    image: "/images/blogs/image-6.jpg",
     size: "small",
     category: "Massage",
   },
@@ -103,7 +103,7 @@ const galleryImages = [
     id: 8,
     title: "Body Massage",
     subtitle: "Relaxing Experience",
-    image: "body massage relaxation therapy",
+    image: "/images/blogs/image-11.jpg",
     size: "small",
     category: "Body Massage",
   },
@@ -111,7 +111,7 @@ const galleryImages = [
     id: 9,
     title: "Massage Therapy",
     subtitle: "Professional Service",
-    image: "massage therapy professional spa",
+    image: "/images/blogs/image-10.jpg",
     size: "small",
     category: "Therapy",
   },
@@ -119,7 +119,7 @@ const galleryImages = [
     id: 10,
     title: "BEAUTY & SPA",
     subtitle: "Complete Wellness",
-    image: "beauty spa complete wellness treatment",
+    image: "/images/blogs/image-6.jpg",
     size: "small",
     category: "Beauty",
   },
@@ -189,7 +189,7 @@ export default function GalleryPage() {
                 <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-gray-800">
                   <div className="relative overflow-hidden">
                     <Image
-                      src={`/placeholder.svg?height=${
+                      src={`${item?.image}?height=${
                         item.size === "large"
                           ? "400"
                           : item.size === "medium"

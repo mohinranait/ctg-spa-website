@@ -107,7 +107,7 @@ export default function AboutPage() {
                   height={500}
                   className="rounded-2xl shadow-2xl"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-700 p-10 rounded-xl shadow-xl border dark:border-gray-600">
+                <div className="absolute -bottom-6 right-0 xl:-right-6 bg-white dark:bg-gray-700 p-10 rounded-xl shadow-xl border dark:border-gray-600">
                   <div className="text-center">
                     <div className="text-4xl font-bold text-amber-800 dark:text-amber-400">
                       50
@@ -153,7 +153,7 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <Link href="/book-now">
+              <Link href="/book-now" className="mt-5 inline-block">
                 <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg shadow-lg">
                   Book Now
                 </Button>
@@ -236,7 +236,7 @@ export default function AboutPage() {
                 alt="New Formula Spa Treatment"
                 width={300}
                 height={300}
-                className="rounded-xl absolute -right-10 -bottom-10 shadow-xl"
+                className="rounded-xl absolute right-0 xl:-right-10 -bottom-10 shadow-xl"
               />
             </motion.div>
 

@@ -86,7 +86,7 @@ const Navbar = () => {
               <div className="w-6 h-6 flex flex-col justify-center items-center">
                 <motion.span
                   animate={
-                    isMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }
+                    isMenuOpen ? { rotate: 45, y: 0 } : { rotate: 0, y: 8 }
                   }
                   transition={{ duration: 0.3 }}
                   className="w-6 h-0.5 bg-current block absolute"
@@ -98,7 +98,7 @@ const Navbar = () => {
                 />
                 <motion.span
                   animate={
-                    isMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
+                    isMenuOpen ? { rotate: -45, y: -0 } : { rotate: 0, y: -8 }
                   }
                   transition={{ duration: 0.3 }}
                   className="w-6 h-0.5 bg-current block absolute"
