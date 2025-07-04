@@ -7,7 +7,10 @@ import { Badge } from "@/components/ui/badge";
 import { Phone, MapPin, Clock, Star, Globe } from "lucide-react";
 
 import Image from "next/image";
-import Link from "next/link";
+import FlipCard, { FlipCardType } from "@/components/common/flip-card";
+import SimplePackage from "@/components/common/package-card-simple";
+import PackagesSection from "@/components/pages/home/pacakges-section";
+import HomeSlider from "@/components/sliders/home-slider";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -23,11 +26,120 @@ const staggerContainer = {
   },
 };
 
-export default function BlissSpaWebsite() {
+const flipCards: FlipCardType[] = [
+  {
+    id: "1",
+    front: {
+      image: "/images/home/20230218_145836_0000.png?height=400&width=350",
+      title: "Aromatherapy",
+      subtitle: "A & MASSAGE",
+    },
+    back: {
+      image: `/images/home/20230218_145505_0000.png?height=400&width=350`,
+      title: "Essential Oils Therapy",
+      description:
+        "Relax your mind and body with our premium aromatherapy treatments using natural essential oils.",
+      call: "80",
+    },
+  },
+  {
+    id: "2",
+    front: {
+      image: "/images/home/20230218_145836_0000.png?height=400&width=350",
+      title: "Thai Traditional",
+      subtitle: "BEAUTY & SPA",
+    },
+    back: {
+      image: `/images/home/20230218_145505_0000.png?height=400&width=350`,
+      title: "Traditional Thai Massage",
+      description:
+        "Experience authentic Thai massage techniques that heal the mind, calm the spirit, and rejuvenate your body.",
+      call: "120",
+    },
+  },
+  {
+    id: "3",
+    front: {
+      image: "/images/home/20230218_145836_0000.png?height=400&width=350",
+      title: "Swedish Back",
+      subtitle: "BODY MASSAGE",
+    },
+    back: {
+      image: `/images/home/20230218_145505_0000.png?height=400&width=350`,
+      title: "Swedish Massage Therapy",
+      description:
+        "Deep tissue Swedish massage to relieve tension and promote complete relaxation of your body.",
+      call: "100",
+    },
+  },
+  {
+    id: "4",
+    front: {
+      image: `/images/home/20230218_145505_0000.png?height=400&width=350`,
+      title: "Swedish Back",
+      subtitle: "BODY MASSAGE",
+    },
+    back: {
+      image: "/images/home/20230218_145836_0000.png?height=400&width=350",
+      title: "Swedish Massage Therapy",
+      description:
+        "Deep tissue Swedish massage to relieve tension and promote complete relaxation of your body.",
+      call: "100",
+    },
+  },
+];
+
+const packages = [
+  {
+    id: "1",
+    title: "Aromatherapy Massage",
+    price: 4000,
+    duration: "60 min",
+    popular: true,
+  },
+  {
+    id: "2",
+    title: "Thai Traditional Massage",
+    price: 3500,
+    duration: "60 min",
+    popular: false,
+  },
+  {
+    id: "3",
+    title: "Swedish Back Massage",
+    price: 3500,
+    duration: "60 min",
+    popular: true,
+  },
+  {
+    id: "4",
+    title: "Hot Stone Therapy",
+    price: 5000,
+    duration: "75 min",
+    popular: false,
+  },
+  {
+    id: "5",
+    title: "Deep Tissue Massage",
+    price: 4500,
+    duration: "90 min",
+    popular: true,
+  },
+  {
+    id: "6",
+    title: "Couples Spa Package",
+    price: 8000,
+    duration: "120 min",
+    popular: false,
+  },
+];
+
+export default function CtgSpaWebsite() {
   return (
     <>
+      <HomeSlider />
       {/* Hero Section */}
-      <motion.section
+      {/* <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -37,7 +149,7 @@ export default function BlissSpaWebsite() {
           <div className="grid md:grid-cols-2 gap-8 items-center w-full">
             <motion.div {...fadeInUp} className="space-y-6">
               <h1 className="text-5xl font-bold text-amber-900 dark:text-amber-400 transition-colors">
-                BLISS SPA
+                CTG SPA
               </h1>
               <div className="flex items-center space-x-4 text-amber-800 dark:text-amber-400 transition-colors">
                 <Phone className="h-5 w-5" />
@@ -64,7 +176,7 @@ export default function BlissSpaWebsite() {
             </motion.div>
           </div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Service Images Grid */}
       <motion.section
@@ -72,15 +184,27 @@ export default function BlissSpaWebsite() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="py-8 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
+        className="py-8 bg-gray-50 dark:bg-gray-800  h-[250px] transition-colors duration-300"
       >
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {[
-              { title: "Spa & Massage", image: "spa massage treatment" },
-              { title: "Body Treatment", image: "body treatment therapy" },
-              { title: "Facial Care", image: "facial treatment skincare" },
-              { title: "Aromatherapy", image: "aromatherapy essential oils" },
+              {
+                title: "Spa & Massage",
+                image: "images/home/20230218_145836_0000.png",
+              },
+              {
+                title: "Body Treatment",
+                image: "images/home/20230218_150309_0000.png",
+              },
+              {
+                title: "Facial Care",
+                image: "images/home/20230218_150500_0000.png",
+              },
+              // {
+              //   title: "Aromatherapy",
+              //   image: "images/home/20230218_145836_0000.png",
+              // },
             ].map((service, index) => (
               <motion.div
                 key={index}
@@ -89,11 +213,11 @@ export default function BlissSpaWebsite() {
                 className="relative group cursor-pointer"
               >
                 <Image
-                  src={`/placeholder.svg?height=200&width=200&query=${service.image}`}
+                  src={`/${service.image}?height=250&width=200&query=${service.image}`}
                   alt={service.title}
                   width={200}
                   height={200}
-                  className="w-full h-48 object-cover rounded-lg"
+                  className="w-full h-[250px] object-cover rounded-lg"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
                   <span className="text-white font-semibold">
@@ -116,7 +240,7 @@ export default function BlissSpaWebsite() {
         <div className="container mx-auto px-4 text-center">
           <motion.div {...fadeInUp}>
             <Badge className="bg-amber-800 dark:bg-amber-600 text-white mb-4 transition-colors">
-              Welcome to Bliss Spa BD
+              Welcome to CTG Spa BD
             </Badge>
             <h2 className="text-4xl font-bold text-amber-900 dark:text-amber-400 mb-6 transition-colors">
               Best Spa in Dhaka
@@ -126,9 +250,9 @@ export default function BlissSpaWebsite() {
             </h3>
             <div className="max-w-4xl mx-auto text-gray-600 dark:text-gray-400 leading-relaxed space-y-4 transition-colors">
               <p>
-                Welcome to Bliss Spa, your premier destination for relaxation
-                and rejuvenation in Dhaka. We offer a comprehensive range of spa
-                and massage services designed to help you unwind, refresh, and
+                Welcome to CTG Spa, your premier destination for relaxation and
+                rejuvenation in Dhaka. We offer a comprehensive range of spa and
+                massage services designed to help you unwind, refresh, and
                 restore your body and mind.
               </p>
               <p>
@@ -243,7 +367,7 @@ export default function BlissSpaWebsite() {
               transition={{ duration: 0.8 }}
             >
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/images/about.webp?height=400&width=500"
                 alt="Spa Interior"
                 width={500}
                 height={400}
@@ -255,6 +379,7 @@ export default function BlissSpaWebsite() {
       </motion.section>
 
       {/* Services Gallery */}
+
       <motion.section
         variants={staggerContainer}
         initial="initial"
@@ -270,30 +395,14 @@ export default function BlissSpaWebsite() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {[
-              "hot stone massage therapy",
-              "beauty spa facial treatment",
-              "thai traditional massage",
-              "aromatherapy essential oils",
-              "couples massage room",
-              "body scrub treatment",
-              "reflexology foot massage",
-              "deep tissue massage",
-            ].map((service, index) => (
+            {flipCards.map((card, index) => (
               <motion.div
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ scale: 1.05 }}
                 className="relative group cursor-pointer"
               >
-                <Image
-                  src={`/placeholder.svg?height=250&width=250&query=${service}`}
-                  alt={`Service ${index + 1}`}
-                  width={250}
-                  height={250}
-                  className="w-full h-48 object-cover rounded-lg"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity" />
+                <FlipCard card={card} />
               </motion.div>
             ))}
           </div>
@@ -301,54 +410,7 @@ export default function BlissSpaWebsite() {
       </motion.section>
 
       {/* Packages Section */}
-      <motion.section
-        variants={staggerContainer}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
-      >
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-4 transition-colors">
-              Our Packages
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { price: "4000", duration: "90 min", title: "Premium Package" },
-              { price: "3500", duration: "75 min", title: "Deluxe Package" },
-              { price: "3500", duration: "60 min", title: "Standard Package" },
-              { price: "2000", duration: "45 min", title: "Basic Package" },
-              { price: "3500", duration: "90 min", title: "Couple Package" },
-              { price: "3500", duration: "120 min", title: "Full Day Package" },
-            ].map((pkg, index) => (
-              <motion.div key={index} variants={fadeInUp}>
-                <Card className="text-center p-6 hover:shadow-lg transition-shadow border-2 hover:border-amber-200 dark:hover:border-amber-600 bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-700">
-                  <CardContent className="space-y-4">
-                    <div className="text-3xl font-bold text-amber-800 dark:text-amber-400 transition-colors">
-                      ৳{pkg.price}
-                    </div>
-                    <div className="text-gray-600 dark:text-gray-400 transition-colors">
-                      {pkg.duration}
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 transition-colors">
-                      {pkg.title}
-                    </h3>
-                    <Button
-                      variant="outline"
-                      className="w-full border-amber-800 dark:border-amber-400 text-amber-800 dark:text-amber-400 hover:bg-amber-800 dark:hover:bg-amber-600 hover:text-white bg-transparent transition-colors"
-                    >
-                      Book Now
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.section>
+      <PackagesSection />
 
       {/* CTA Section */}
       <motion.section
@@ -404,7 +466,7 @@ export default function BlissSpaWebsite() {
                 ))}
               </div>
               <p className="text-lg italic mb-4">
-                "Amazing experience at Bliss Spa! The staff is professional and
+                "Amazing experience at CTG Spa! The staff is professional and
                 the treatments are top-notch. I feel completely relaxed and
                 rejuvenated after every visit."
               </p>

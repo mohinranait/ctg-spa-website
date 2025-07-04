@@ -112,7 +112,7 @@ export default function BookNowPage() {
               Book an Appointment
             </h2>
             <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-              Book your spa appointment in Bliss Spa BD. We serve you best spa
+              Book your spa appointment in CTG Spa BD. We serve you best spa
               service in Bangladesh.
             </p>
           </motion.div>

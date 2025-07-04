@@ -8,6 +8,7 @@ import { ThemeToggle } from "../theme-toggle";
 import { navMenus } from "@/consts/data";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import Logo from "./Logo";
 
 const Navbar = () => {
   const pathName = usePathname();
@@ -22,12 +23,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link
-            href="/"
-            className="text-2xl font-bold text-amber-800 dark:text-amber-500"
-          >
-            BLISS SPA
-          </Link>
+          <Logo />
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6">

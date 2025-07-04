@@ -9,9 +9,9 @@ import Footer from "@/components/shared/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Bliss Spa - Premium Spa & Wellness Center in Dhaka",
+  title: "CTG Spa - Premium Spa & Wellness Center in Dhaka",
   description:
-    "Experience ultimate relaxation at Bliss Spa BD. Premium spa and massage services in Dhaka with expert therapists and modern facilities.",
+    "Experience ultimate relaxation at ctg Spa BD. Premium spa and massage services in Dhaka with expert therapists and modern facilities.",
   generator: "v0.dev",
 };
 

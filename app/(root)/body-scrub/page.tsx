@@ -197,8 +197,7 @@ export default function BodyScrubPage() {
               Why Choose Our Body Scrub Service?
             </h2>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-              At{" "}
-              <span className="text-red-500 font-semibold">Bliss Spa BD</span>,
+              At <span className="text-red-500 font-semibold">CTG Spa BD</span>,
               we pride ourselves on delivering exceptional body scrub treatments
               that go beyond exfoliation to rejuvenate and nourish your skin.
               Our expert aestheticians carefully select the finest natural
@@ -274,7 +273,7 @@ export default function BodyScrubPage() {
           >
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
               Experience{" "}
-              <span className="text-red-500 font-semibold">Bliss Spa BD's</span>{" "}
+              <span className="text-red-500 font-semibold">CTG Spa BD's</span>{" "}
               premium body scrubs, crafted with the finest ingredients for
               radiant, rejuvenated skin in a serene, personalised setting.
               Discover transformative self-care today.

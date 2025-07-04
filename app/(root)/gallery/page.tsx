@@ -44,7 +44,7 @@ const scaleIn = {
 const galleryImages = [
   {
     id: 1,
-    title: "BLISS SPA",
+    title: "CTG SPA",
     subtitle: "Premium Spa Experience",
     image: "luxury spa treatment massage therapy",
     size: "large",
@@ -324,11 +324,11 @@ export default function GalleryPage() {
               className="relative"
             >
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/images/gallary.webp?height=400&width=500"
                 alt="New Spa Place in Dhaka"
                 width={500}
                 height={400}
-                className="rounded-2xl shadow-2xl"
+                className=" "
               />
             </motion.div>
           </div>
@@ -371,7 +371,7 @@ export default function GalleryPage() {
                       About Our Journey From 2015 Until Now
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-                      Bliss Spa Dhaka offers a wide range of luxurious services,
+                      CTG Spa Dhaka offers a wide range of luxurious services,
                       from rejuvenating facials to holistic massages, designed
                       to help you unwind and restore your inner balance. Our
                       skilled therapists are dedicated to providing personalized

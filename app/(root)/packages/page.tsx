@@ -70,7 +70,7 @@ const packageData = [
     price60: "2000",
     price90: "4000",
     description:
-      "We at Bliss Spa BD insist on providing our customers the utmost quality service possible, without any need for harsh chemicals or stainless steel tools. We promise that your pedicure and manicure will be done using gentle techniques using only natural ingredients.",
+      "We at CTG Spa BD insist on providing our customers the utmost quality service possible, without any need for harsh chemicals or stainless steel tools. We promise that your pedicure and manicure will be done using gentle techniques using only natural ingredients.",
     gradient: "from-pink-600 to-rose-600",
     icon: "💅",
     popular: false,

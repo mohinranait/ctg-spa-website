@@ -105,13 +105,13 @@ export default function ContactPage() {
             >
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <Image
-                  src="/placeholder.svg?height=400&width=400"
+                  src="/images/contact.png?height=400&width=400"
                   alt="Spa Relaxation"
                   width={400}
                   height={400}
                   className="w-full h-[400px] object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/70 to-transparent"></div>
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center p-8">
                   <h3 className="text-4xl font-bold mb-4">Relax</h3>
                   <h3 className="text-4xl font-bold mb-4">Renew</h3>

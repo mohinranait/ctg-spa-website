@@ -18,7 +18,7 @@ const Footer = () => {
           {/* Contact Section */}
           <div>
             <div className="flex items-center mb-6">
-              <div className="text-2xl font-bold text-amber-400">BLISS SPA</div>
+              <div className="text-2xl font-bold text-amber-400">CTG SPA</div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
               If you want a soothing and relaxing time of your life, book us

@@ -1,26 +1,19 @@
 "use client";
+import CountUp from "react-countup";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
-import {
-  Phone,
-  MapPin,
-  Clock,
-  ChevronDown,
-  PhoneCall,
-  Facebook,
-  Instagram,
-  Linkedin,
-} from "lucide-react";
+
+import { PhoneCall } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -43,9 +36,9 @@ const faqData = [
       "We have a variety of services available for both men and women. So, you can get all kinds of spa services available here.",
   },
   {
-    question: "What is The Difference Between Bliss Spa BD and Other Spas?",
+    question: "What is The Difference Between CTG Spa BD and Other Spas?",
     answer:
-      "Bliss Spa BD offers premium quality services with experienced therapists, modern facilities, and personalized treatments that set us apart from other spas in Dhaka.",
+      "CTG Spa BD offers premium quality services with experienced therapists, modern facilities, and personalized treatments that set us apart from other spas in Dhaka.",
   },
   {
     question: "What Payment Methods Can be Made Here?",
@@ -106,21 +99,21 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="relative">
+              <div className="relative flex justify-center items-center">
                 <Image
-                  src="/placeholder.svg?height=500&width=400"
+                  src="/images/about/about.webp?height=500&width=400"
                   alt="Spa Treatment"
                   width={400}
                   height={500}
                   className="rounded-2xl shadow-2xl"
                 />
-                <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-700 p-6 rounded-xl shadow-xl border dark:border-gray-600">
+                <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-700 p-10 rounded-xl shadow-xl border dark:border-gray-600">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-amber-800 dark:text-amber-400">
-                      SPA
+                    <div className="text-4xl font-bold text-amber-800 dark:text-amber-400">
+                      50
                     </div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">
-                      WWW.BLISSSPABD.COM
+                      Happy Client
                     </div>
                   </div>
                 </div>
@@ -141,9 +134,7 @@ export default function AboutPage() {
               <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <p>
                   Introducing{" "}
-                  <span className="text-red-500 font-semibold">
-                    Bliss SPA BD
-                  </span>
+                  <span className="text-red-500 font-semibold">CTG SPA BD</span>
                   , the most relaxing and soothing Bangladesh Spa center. Our
                   unique combination of soothing spa services and comfortable
                   surroundings will leave you feeling refreshed and relaxed.
@@ -152,7 +143,7 @@ export default function AboutPage() {
                 <p>
                   We are a group of qualified professionals who are committed to
                   ensuring that you are well trying your things. We understand
-                  Bliss Spa business has essential to deliver a specialized in
+                  CTG Spa business has essential to deliver a specialized in
                   purpose. Our goal is to make you feel comfortable and enjoy
                   the moment. We offer a variety of spa treatments that are
                   tailored to meet the needs of each individual. Our goal is to
@@ -183,7 +174,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { number: "1k", label: "Happy Client", color: "text-red-500" },
+              { number: "1000", label: "Happy Client", color: "text-red-500" },
               {
                 number: "14",
                 label: "Treatment Success",
@@ -202,7 +193,11 @@ export default function AboutPage() {
                 className="text-center"
               >
                 <div className={`text-6xl font-bold ${stat.color} mb-2`}>
-                  {stat.number}
+                  <CountUp
+                    start={0}
+                    end={Number(stat.number)}
+                    duration={1.75}
+                  />
                 </div>
                 <div className="text-gray-700 font-medium text-lg dark:text-gray-300">
                   {stat.label}
@@ -227,13 +222,21 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
+              className="relative"
             >
               <Image
-                src="/placeholder.svg?height=400&width=350"
+                src="/images/about/1.png?height=460&width=460"
                 alt="New Formula Spa Treatment"
-                width={350}
-                height={400}
-                className="rounded-2xl shadow-2xl"
+                width={460}
+                height={460}
+                className="rounded-xl "
+              />
+              <Image
+                src="/images/about/2.webp?height=200&width=200"
+                alt="New Formula Spa Treatment"
+                width={300}
+                height={300}
+                className="rounded-xl absolute -right-10 -bottom-10 shadow-xl"
               />
             </motion.div>
 
@@ -284,8 +287,11 @@ export default function AboutPage() {
       >
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-16">
-            <motion.div {...fadeInUp}>
-              <h2 className="text-4xl font-bold text-gray-800 mb-8 dark:text-gray-200">
+            <motion.div
+              {...fadeInUp}
+              className="w-full h-full flex items-center justify-center flex-col "
+            >
+              <h2 className="text-4xl font-bold  text-gray-800 mb-8 dark:text-gray-200">
                 Frequently Asked Questions
               </h2>
               <Button className="bg-red-500 hover:bg-red-600 text-white px-6 py-2">
@@ -300,36 +306,29 @@ export default function AboutPage() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              {faqData.map((faq, index) => (
-                <motion.div key={index} variants={fadeInUp}>
-                  <Collapsible
-                    open={openFaq === index}
-                    onOpenChange={() =>
-                      setOpenFaq(openFaq === index ? null : index)
-                    }
-                  >
-                    <CollapsibleTrigger className="w-full">
-                      <div className="flex items-center justify-between p-6 bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-600">
+              <Accordion type="single" collapsible className="space-y-4">
+                {faqData.map((faq, index) => (
+                  <motion.div key={index} variants={fadeInUp}>
+                    <AccordionItem
+                      value={`item-${index}`}
+                      className="bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-600 overflow-hidden"
+                    >
+                      <AccordionTrigger className="px-6 py-4 hover:no-underline [&[data-state=open]>svg]:rotate-180">
                         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">
                           {faq.question}
                         </h3>
-                        <ChevronDown
-                          className={`h-5 w-5 text-red-500 transition-transform ${
-                            openFaq === index ? "rotate-180" : ""
-                          }`}
-                        />
-                      </div>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent>
-                      <div className="p-6 bg-gray-50 dark:bg-gray-800 rounded-b-lg border-t border-gray-100 dark:border-gray-600">
-                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                          {faq.answer}
-                        </p>
-                      </div>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </motion.div>
-              ))}
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-4 pt-0">
+                        <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg border-t border-gray-100 dark:border-gray-600">
+                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                            {faq.answer}
+                          </p>
+                        </div>
+                      </AccordionContent>
+                    </AccordionItem>
+                  </motion.div>
+                ))}
+              </Accordion>
             </motion.div>
           </div>
         </div>

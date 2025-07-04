@@ -185,7 +185,7 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-              At Bliss Spa BD, we provide an extensive range of spa services
+              At CTG Spa BD, we provide an extensive range of spa services
               designed to pamper, rejuvenate, and invigorate you. Our offerings
               include soothing massages, revitalizing facials, luxurious body
               treatments, and meticulous nail care, all delivered by our team of
@@ -308,7 +308,7 @@ export default function ServicesPage() {
                 </blockquote>
                 <div className="text-right">
                   <p className="font-semibold">- Client A</p>
-                  <p className="text-sm opacity-90">Bliss Spa Experience</p>
+                  <p className="text-sm opacity-90">CTG Spa Experience</p>
                 </div>
               </div>
             </motion.div>
