@@ -48,10 +48,6 @@ const faqData = [
 ];
 
 export default function AboutPage() {
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
   return (
     <>
       {/* Hero Section */}

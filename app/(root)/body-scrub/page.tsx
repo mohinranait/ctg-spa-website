@@ -1,5 +1,4 @@
 "use client";
-
 import type React from "react";
 import {
   Accordion,
@@ -53,10 +52,7 @@ const faqData = [
   },
 ];
 
-export default function BodyScrubPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
+const BodyScrubPage = () => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -396,4 +392,6 @@ export default function BodyScrubPage() {
       </main>
     </>
   );
-}
+};
+
+export default BodyScrubPage;

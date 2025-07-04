@@ -1,25 +1,11 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Phone,
-  MapPin,
-  Clock,
-  ChevronDown,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  Users,
-  CheckCircle,
-} from "lucide-react";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Users, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },

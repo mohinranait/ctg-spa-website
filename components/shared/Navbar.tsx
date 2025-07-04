@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Mail, Phone } from "lucide-react";
 import { Button } from "../ui/button";
 import { ThemeToggle } from "../theme-toggle";
 import { navMenus } from "@/consts/data";
@@ -21,6 +21,13 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className="bg-white/95 backdrop-blur-sm shadow-lg border-b sticky top-0 z-50 dark:bg-gray-900/95 dark:border-gray-800"
     >
+      <div className="lg:hidden bg-[#ef4444] text-white ">
+        <p className="flex justify-center py-2">
+          <a href="tel:01788453585" className="flex items-center gap-2  ">
+            <Phone size={16} /> 01788453585{" "}
+          </a>
+        </p>
+      </div>
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Logo />

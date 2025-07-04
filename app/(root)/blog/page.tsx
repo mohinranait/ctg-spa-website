@@ -4,23 +4,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Phone,
-  MapPin,
-  Clock,
-  ChevronDown,
-  Calendar,
-  User,
-  Eye,
-  Facebook,
-  Instagram,
-  Linkedin,
-  ArrowRight,
-} from "lucide-react";
+import { Calendar, User, Eye, ArrowRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },

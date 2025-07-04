@@ -4,21 +4,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Phone,
-  MapPin,
-  Clock,
-  ChevronDown,
-  PhoneCall,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Star,
-  Sparkles,
-} from "lucide-react";
+import { PhoneCall, Star, Sparkles } from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
-import { ThemeToggle } from "@/components/theme-toggle";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },

@@ -1,24 +1,10 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import {
-  Phone,
-  MapPin,
-  Clock,
-  ChevronDown,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Star,
-  Mail,
-} from "lucide-react";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Clock, Star } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -38,63 +24,60 @@ const services = [
   {
     title: "Body Scrub",
     description: "Enjoy A Refreshing Body Scrub",
-    image: "body scrub spa treatment exfoliation",
+    image: "/images/about/1.png",
     category: "Body Treatment",
   },
   {
     title: "Facial Spa",
     description: "Nourish Your Face With Our Advanced Facial Spa",
-    image: "facial spa treatment skincare",
+    image: "/images/blogs/image-3-1.jpg",
     category: "Facial Care",
   },
   {
     title: "Oil Bath",
     description: "Calm Your Body With The Most Relaxed Oil Bath",
-    image: "oil bath massage therapy relaxation",
+    image: "/images/blogs/image-6.jpg",
     category: "Bath Treatment",
   },
   {
     title: "Salt Bath",
     description: "Enjoy A Refreshing Salt Bath Therapy",
-    image: "salt bath therapy wellness spa",
+    image: "/images/blogs/image-11.jpg",
     category: "Bath Treatment",
   },
   {
     title: "Waxing & Threading",
     description: "Clean Your Hair With Our Advanced Waxing",
-    image: "waxing threading beauty treatment",
+    image: "/images/blogs/image-6.jpg",
     category: "Beauty Care",
   },
   {
     title: "Body Treatment",
     description: "Enjoy A Refreshing & Luxury Body Massage",
-    image: "body treatment massage therapy",
+    image: "/images/blogs/image-17.jpg",
     category: "Body Care",
   },
   {
     title: "Hot Stone Massage",
     description: "A Rejuvenating Healing Massage",
-    image: "hot stone massage therapy relaxation",
+    image: "/images/blogs/image-10.jpg",
     category: "Massage Therapy",
   },
   {
     title: "Hot Oil Massage",
     description: "Hot Oil Massage Therapy & Rejuvenating Hot Massage",
-    image: "hot oil massage therapy wellness",
+    image: "/images/blogs/image-3-1.jpg",
     category: "Massage Therapy",
   },
   {
     title: "Head Massage",
     description: "Hot Oil Massage Therapy & Rejuvenating Head Massage",
-    image: "head massage therapy relaxation",
+    image: "/images/blogs/image-10.jpg",
     category: "Massage Therapy",
   },
 ];
 
 export default function ServicesPage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-
   return (
     <>
       {/* Hero Section */}
@@ -140,7 +123,7 @@ export default function ServicesPage() {
                 <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white dark:bg-gray-800 shadow-lg overflow-hidden">
                   <div className="relative overflow-hidden">
                     <Image
-                      src={`/placeholder.svg?height=250&width=350&query=${service.image}`}
+                      src={`${service?.image}?height=250&width=350&query=${service.title}`}
                       alt={service.title}
                       width={350}
                       height={250}
@@ -258,60 +241,60 @@ export default function ServicesPage() {
       >
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <motion.div {...fadeInUp} className="space-y-6">
-              <div className="grid grid-cols-2 gap-4">
-                <Image
-                  src="/placeholder.svg?height=200&width=200"
-                  alt="Spa Treatment"
-                  width={200}
-                  height={200}
-                  className="rounded-lg shadow-lg"
-                />
-                <div className="bg-gray-800 dark:bg-gray-700 text-white p-6 rounded-lg text-center">
-                  <div className="text-4xl font-bold text-yellow-400 mb-2">
-                    500
-                  </div>
-                  <div className="text-sm">Positive Reviews</div>
-                  <div className="flex justify-center mt-2">
-                    {[...Array(5)].map((_, i) => (
-                      <Star
-                        key={i}
-                        className="h-4 w-4 fill-current text-yellow-400"
-                      />
-                    ))}
-                  </div>
-                </div>
-              </div>
+            <motion.div {...fadeInUp} className="space-y-6 relative">
               <Image
-                src="/placeholder.svg?height=150&width=300"
+                src="/images/home/20230218_150309_0000.png?height=200&width=200"
+                alt="Spa Treatment"
+                width={200}
+                height={200}
+                className="absolute -top-10 left-0 xl:-left-8 z-10 rounded-lg shadow-lg"
+              />
+              <Image
+                src="/images/blogs/image-6.jpg?height=150&width=300"
                 alt="Spa Therapy"
                 width={300}
                 height={150}
-                className="rounded-lg shadow-lg w-full"
+                className="rounded-lg relative z-20 shadow-lg w-full"
               />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
-              <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg">
-                <h3 className="text-2xl font-bold mb-4">
-                  The Love & Affection We Received From Our Clients
-                </h3>
-                <blockquote className="text-lg italic mb-4">
-                  "You should try out their pedicure and manicure packages. It
-                  is very soothing and relaxing. Must Recommended!!!!"
-                </blockquote>
-                <div className="text-right">
-                  <p className="font-semibold">- Client A</p>
-                  <p className="text-sm opacity-90">CTG Spa Experience</p>
+              <div className="absolute z-20 -bottom-8 right-0 xl:-right-8 bg-gray-800 dark:bg-gray-700 text-white p-6 rounded-lg text-center">
+                <div className="text-4xl font-bold text-yellow-400 mb-2">
+                  500
+                </div>
+                <div className="text-sm">Positive Reviews</div>
+                <div className="flex justify-center mt-2">
+                  {[...Array(5)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="h-4 w-4 fill-current text-yellow-400"
+                    />
+                  ))}
                 </div>
               </div>
             </motion.div>
+
+            <div>
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="space-y-6"
+              >
+                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg">
+                  <h3 className="text-2xl font-bold mb-4">
+                    The Love & Affection We Received From Our Clients
+                  </h3>
+                  <blockquote className="text-lg italic mb-4">
+                    "You should try out their pedicure and manicure packages. It
+                    is very soothing and relaxing. Must Recommended!!!!"
+                  </blockquote>
+                  <div className="text-right">
+                    <p className="font-semibold">- Client A</p>
+                    <p className="text-sm opacity-90">CTG Spa Experience</p>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
       </motion.section>

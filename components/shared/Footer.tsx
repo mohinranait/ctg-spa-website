@@ -49,13 +49,15 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="h-5 w-5 text-red-500 mt-1" />
                 <div>
-                  <p>Address: Road 11,Rabindra Near</p>
-                  <p>Dhaka Bank</p>
+                  <p>Address: 805 Zakir Hossain Rd, Khulshi, Rd 4000</p>
+                  <p>Chattogram</p>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-red-500" />
-                <p>01738001055</p>
+                <p>
+                  <Link href={"tel:01788453585"}>01788453585</Link>
+                </p>
               </div>
               <div className="flex items-center space-x-3">
                 <div className="h-5 w-5 bg-red-500 rounded-full flex items-center justify-center">
@@ -91,12 +93,18 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href="#" className="hover:text-amber-400 transition-colors">
+                <a
+                  href="/services"
+                  className="hover:text-amber-400 transition-colors"
+                >
                   Service
                 </a>
               </li>
               <li>
-                <a href="#" className="hover:text-amber-400 transition-colors">
+                <a
+                  href="/gallery"
+                  className="hover:text-amber-400 transition-colors"
+                >
                   Gallery
                 </a>
               </li>

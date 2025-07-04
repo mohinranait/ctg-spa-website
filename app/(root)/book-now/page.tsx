@@ -14,17 +14,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import {
-  Phone,
-  MapPin,
-  Clock,
-  ChevronDown,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-} from "lucide-react";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { Clock } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
