@@ -13,11 +13,14 @@ import PackagesSection from "@/components/pages/home/pacakges-section";
 import HomeSlider from "@/components/sliders/home-slider";
 import CountUp from "react-countup";
 import HomeBanner from "@/components/pages/home/home-banner";
+import GoogleMap from "@/components/pages/google-map";
+import ReviewSection from "@/components/pages/home/review-section";
+import GallarySection from "@/components/pages/home/gallary-section";
 
 const fadeInUp = {
-  initial: { opacity: 0, y: 100 },
+  initial: { opacity: 0, y: 200 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 },
+  transition: { duration: 0.9 },
 };
 
 const staggerContainer = {
@@ -271,7 +274,13 @@ export default function CtgSpaWebsite() {
                 content: "10:00 AM - 10:00 PM",
               },
             ].map((item, index) => (
-              <motion.div key={index} variants={fadeInUp} className="">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 200 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className=""
+              >
                 <Card className="text-center p-8 shadow-[20px_-20px_80px_0px_rgba(0,0,0,0.1)] hover:shadow-lg transition-shadow bg-white dark:bg-gray-900 border dark:border-gray-700">
                   <CardContent className="space-y-2">
                     <div className="mx-auto w-16 h-16 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center transition-colors">
@@ -296,21 +305,33 @@ export default function CtgSpaWebsite() {
 
       {/* About Section */}
       <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
+        // initial={{ opacity: 0 }}
+        // whileInView={{ opacity: 1 }}
+        // viewport={{ once: true }}
         className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
       >
         <div className="container max-w-5xl mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="bg-red-500 text-white mb-4">About us</Badge>
-            <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-8 transition-colors">
+            <motion.h2
+              initial={{ opacity: 0, y: -150 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-8 transition-colors"
+            >
               Best Spa in Dhaka
-            </h2>
+            </motion.h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div {...fadeInUp} className="space-y-6">
+            <motion.div
+              initial={{ opacity: 0, x: -150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-6"
+            >
               <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 transition-colors">
                 Enjoy The Best Spa & Body Massage
               </h3>
@@ -336,8 +357,8 @@ export default function CtgSpaWebsite() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: -200 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: 150 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
               className="relative"
@@ -367,10 +388,10 @@ export default function CtgSpaWebsite() {
       {/* Services Gallery */}
 
       <motion.section
-        variants={staggerContainer}
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
+        // variants={staggerContainer}
+        // initial="initial"
+        // whileInView="animate"
+        // viewport={{ once: true }}
         className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
       >
         <div className="container max-w-5xl mx-auto px-4">
@@ -398,20 +419,56 @@ export default function CtgSpaWebsite() {
       {/* Packages Section */}
       <PackagesSection />
 
-      {/* CTA Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="py-16 bg-gradient-to-r from-amber-800 to-orange-800 dark:from-amber-900 dark:to-orange-900 text-white text-center transition-colors duration-300"
-      >
-        <div className="container max-w-5xl mx-auto px-4">
-          <motion.div {...fadeInUp} className="space-y-6">
-            <h2 className="text-4xl font-bold">
-              Affordable and Reliable Spa Service.
-            </h2>
-            <h3 className="text-2xl">Book Now</h3>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <section>
+        <div className="container  py-20 max-w-5xl mx-auto px-4 lg:grid grid-cols-2 gap-5">
+          <div className="h-full relative w-full justify-center ">
+            <div>
+              <motion.div
+                initial={{ opacity: 0, y: 100 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Image
+                  src={"/2.png"}
+                  width={200}
+                  height={200}
+                  alt="image"
+                  className="w-[250px] h-[250px]"
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="absolute top-[150px] left-[200px] "
+              >
+                <Image
+                  src={"/1.png"}
+                  width={200}
+                  height={200}
+                  alt="image"
+                  className=""
+                />
+              </motion.div>
+            </div>
+          </div>
+          <div className="space-y-6 pt-24 lg:pt-0">
+            <motion.h4
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-4xl font-semibold lg:pr-28"
+            >
+              Affordable and Reliable Spa Service, Book Now
+            </motion.h4>
+            <p>
+              We always try our best to give the best spa service possible at an
+              affordable price. Only we can assure a great service which is
+              reliable and more affordable than any other center’s out there.
+              So, don’t be late! Book now and enjoy a soothing experience with
+              the best spa in Dhaka!!!
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 ">
               <Button
                 size="lg"
                 className="bg-red-500 hover:bg-red-600 text-white"
@@ -421,46 +478,24 @@ export default function CtgSpaWebsite() {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white text-white hover:bg-white hover:text-amber-800 bg-transparent"
+                className="border-red-500 text-red-500 hover:bg-white hover:text-red-500 bg-transparent"
               >
                 Call Now
               </Button>
             </div>
-          </motion.div>
+          </div>
         </div>
-      </motion.section>
+      </section>
+
+      {/* Gallary section */}
+      <GallarySection />
 
       {/* Testimonials */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
-      >
-        <div className="container max-w-5xl mx-auto px-4 text-center">
-          <motion.div {...fadeInUp}>
-            <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-12 transition-colors">
-              The Love & Affection We Received From Our Clients
-            </h2>
-            <div className="bg-amber-800 dark:bg-amber-900 text-white p-8 rounded-lg max-w-2xl mx-auto transition-colors">
-              <div className="flex justify-center mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="h-5 w-5 fill-current text-yellow-400"
-                  />
-                ))}
-              </div>
-              <p className="text-lg italic mb-4">
-                "Amazing experience at CTG Spa! The staff is professional and
-                the treatments are top-notch. I feel completely relaxed and
-                rejuvenated after every visit."
-              </p>
-              <p className="font-semibold">- Sarah Ahmed</p>
-            </div>
-          </motion.div>
-        </div>
-      </motion.section>
+      <ReviewSection />
+
+      <div className="container py-6 px-4 max-w-5xl mx-auto">
+        <GoogleMap />
+      </div>
     </>
   );
 }

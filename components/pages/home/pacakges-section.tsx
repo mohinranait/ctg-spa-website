@@ -92,17 +92,17 @@ export default function PackagesSection() {
 
   return (
     <motion.div
-      variants={staggerContainer}
-      initial="initial"
-      whileInView="animate"
-      viewport={{ once: true }}
+      // variants={staggerContainer}
+      // initial="initial"
+      // whileInView="animate"
+      // viewport={{ once: true }}
       className="min-h-screen bg-gradient-to-br from-[#F6ECE5] via-[#F6ECE5] to-stone-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 px-4"
     >
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h3 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Our Premium Packages
-          </h1>
+          </h3>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
             Experience luxury and relaxation like never before
           </p>
@@ -157,7 +157,12 @@ export default function PackagesSection() {
               },
             },
           ].map((service) => (
-            <div className="overflow-hidden rounded relative shadow-[20px_-20px_80px_0px_rgba(0,0,0,0.1)]">
+            <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="overflow-hidden rounded relative shadow-[20px_-20px_80px_0px_rgba(0,0,0,0.1)]"
+            >
               {service?.popular && service?.popular.postion === "left" && (
                 <span className="bg-[#111827] absolute text-center -left-6 top-4 text-xs text-white font-semibold w-[100px] py-[2px] -rotate-45">
                   Popular
@@ -184,7 +189,7 @@ export default function PackagesSection() {
                   Call Now
                 </Button>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
