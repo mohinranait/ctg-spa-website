@@ -23,9 +23,10 @@ const staggerContainer = {
 };
 
 const scaleIn = {
-  initial: { opacity: 0, scale: 0.9 },
+  initial: { opacity: 0, scale: 0.5 },
+
   animate: { opacity: 1, scale: 1 },
-  transition: { duration: 0.5 },
+  transition: { duration: 0.8 },
 };
 
 const galleryImages = [
@@ -111,6 +112,86 @@ const galleryImages = [
     category: "Beauty",
   },
 ];
+// Animation variants for different directions
+const animationVariants = {
+  fromTop: {
+    hidden: {
+      opacity: 0,
+      y: -100,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  },
+  fromBottom: {
+    hidden: {
+      opacity: 0,
+      y: 100,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  },
+  fromLeft: {
+    hidden: {
+      opacity: 0,
+      x: -100,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  },
+  fromRight: {
+    hidden: {
+      opacity: 0,
+      x: 100,
+      scale: 0.8,
+    },
+    visible: {
+      opacity: 1,
+      x: 0,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    },
+  },
+} as const;
+
+// Function to get animation direction based on index
+const getAnimationDirection = (
+  index: number
+): keyof typeof animationVariants => {
+  const directions: (keyof typeof animationVariants)[] = [
+    "fromTop",
+    "fromRight",
+    "fromBottom",
+    "fromLeft",
+  ];
+  return directions[index % 4];
+};
 
 export default function GalleryPage() {
   return (
@@ -161,65 +242,74 @@ export default function GalleryPage() {
 
           {/* Masonry Grid Layout */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {galleryImages.map((item, index) => (
-              <motion.div
-                key={item.id}
-                variants={scaleIn}
-                whileHover={{ scale: 1.05 }}
-                className={`
+            {galleryImages.map((item, index) => {
+              const direction = getAnimationDirection(index);
+              return (
+                <motion.div
+                  key={item.id}
+                  variants={animationVariants[direction]}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{
+                    once: true,
+                    margin: "-100px",
+                    amount: 0.3,
+                  }}
+                  className={`
                   ${item.size === "large" ? "md:col-span-2 md:row-span-2" : ""}
                   ${item.size === "medium" ? "md:row-span-1" : ""}
                   ${item.size === "small" ? "md:row-span-1" : ""}
                   ${item.featured ? "lg:col-span-2" : ""}
                 `}
-              >
-                <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-gray-800">
-                  <div className="relative overflow-hidden">
-                    <Image
-                      src={`${item?.image}?height=${
-                        item.size === "large"
-                          ? "400"
-                          : item.size === "medium"
-                          ? "300"
-                          : "250"
-                      }&width=${item.size === "large" ? "600" : "400"}&query=${
-                        item.image
-                      }`}
-                      alt={item.title}
-                      width={item.size === "large" ? 600 : 400}
-                      height={
-                        item.size === "large"
-                          ? 400
-                          : item.size === "medium"
-                          ? 300
-                          : 250
-                      }
-                      className={`w-full object-cover group-hover:scale-110 transition-transform duration-700 ${
-                        item.size === "large" ? "h-80 md:h-96" : "h-64"
-                      }`}
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                >
+                  <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-gray-800">
+                    <div className="relative overflow-hidden">
+                      <Image
+                        src={`${item?.image}?height=${
+                          item.size === "large"
+                            ? "400"
+                            : item.size === "medium"
+                            ? "300"
+                            : "250"
+                        }&width=${
+                          item.size === "large" ? "600" : "400"
+                        }&query=${item.image}`}
+                        alt={item.title}
+                        width={item.size === "large" ? 600 : 400}
+                        height={
+                          item.size === "large"
+                            ? 400
+                            : item.size === "medium"
+                            ? 300
+                            : 250
+                        }
+                        className={`w-full object-cover group-hover:scale-110 transition-transform duration-700 ${
+                          item.size === "large" ? "h-80 md:h-96" : "h-64"
+                        }`}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                    {/* Category Badge */}
-                    <div className="absolute top-4 left-4">
-                      <Badge
-                        className={`${
-                          item.featured ? "bg-purple-500" : "bg-red-500"
-                        }/90 text-white`}
-                      >
-                        {item.category}
-                      </Badge>
-                    </div>
+                      {/* Category Badge */}
+                      <div className="absolute top-4 left-4">
+                        <Badge
+                          className={`${
+                            item.featured ? "bg-purple-500" : "bg-red-500"
+                          }/90 text-white`}
+                        >
+                          {item.category}
+                        </Badge>
+                      </div>
 
-                    {/* Content Overlay */}
-                    <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <h3 className="text-lg font-bold mb-1">{item.title}</h3>
-                      <p className="text-sm opacity-90">{item.subtitle}</p>
+                      {/* Content Overlay */}
+                      <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h3 className="text-lg font-bold mb-1">{item.title}</h3>
+                        <p className="text-sm opacity-90">{item.subtitle}</p>
+                      </div>
                     </div>
-                  </div>
-                </Card>
-              </motion.div>
-            ))}
+                  </Card>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </motion.section>
