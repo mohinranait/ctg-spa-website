@@ -348,9 +348,9 @@ export default function CtgSpaWebsite() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="space-y-3 bg-[#E2E2E2] p-4 rounded"
+                className="space-y-3 bg-[#E2E2E2] dark:bg-[#1F2936] p-4 rounded"
               >
-                <motion.h2 className="text-xl lg:text-4xl font-bold text-gray-800 mb-2 transition-colors">
+                <motion.h2 className="text-xl lg:text-4xl font-bold text-gray-800 dark:text-white mb-2 transition-colors">
                   Best Spa in Dhaka
                 </motion.h2>
                 <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
