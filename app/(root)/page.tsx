@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Phone, MapPin, Clock, Star, Globe } from "lucide-react";
+import { Phone, MapPin, Clock, Star, Globe, Calendar } from "lucide-react";
 
 import Image from "next/image";
 import FlipCard, { FlipCardType } from "@/components/common/flip-card";
@@ -308,10 +308,10 @@ export default function CtgSpaWebsite() {
         // initial={{ opacity: 0 }}
         // whileInView={{ opacity: 1 }}
         // viewport={{ once: true }}
-        className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
+        className="py-16 bg-[#FFFFFF] dark:bg-gray-900 transition-colors duration-300"
       >
         <div className="container max-w-5xl overflow-hidden mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 gap-5">
             <motion.div
               initial={{ opacity: 0, x: 150 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -319,8 +319,8 @@ export default function CtgSpaWebsite() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="flex ">
-                <div className=" -bottom-6 left-0 xl:-left-6 z-40 bg-white dark:bg-gray-700 p-5 min-w-[200px] rounded-xl  border dark:border-gray-600">
+              <div className="flex justify-end  ">
+                <div className=" shadow-2xl mr-10 xl:-left-6 z-40 bg-white  dark:bg-gray-700 p-5 min-w-[200px]  dark:border-gray-600">
                   <div className="text-center">
                     <div className="text-4xl font-bold text-[#ef4444] dark:text-slate-50">
                       <CountUp start={0} end={500} duration={1.75} />
@@ -336,7 +336,7 @@ export default function CtgSpaWebsite() {
                 alt="Spa Interior"
                 width={500}
                 height={400}
-                className="rounded-lg shadow-lg"
+                className=" shadow-lg w-full"
               />
             </motion.div>
             <div className="space-y-3">
@@ -385,7 +385,7 @@ export default function CtgSpaWebsite() {
                 </p>
               </motion.div>
               <Button className="bg-red-500 hover:bg-red-600 text-white">
-                Read More
+                <Calendar /> Read More
               </Button>
             </div>
           </div>
@@ -427,9 +427,9 @@ export default function CtgSpaWebsite() {
       <PackagesSection />
 
       <section>
-        <div className="container  py-10 max-w-5xl mx-auto px-4 lg:grid grid-cols-2 gap-5">
-          <div className="h-full relative w-full justify-center ">
-            <div>
+        <div className="container  py-10 max-w-5xl mx-auto px-4 sm:grid grid-cols-2 gap-5">
+          <div className="h-full  relative w-full  ">
+            <div className="w-full">
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -437,34 +437,34 @@ export default function CtgSpaWebsite() {
               >
                 <Image
                   src={"/2.png"}
-                  width={200}
-                  height={200}
+                  width={335}
+                  height={335}
                   alt="image"
-                  className="w-[250px] h-[250px]"
+                  className="  sm:w-[180px] sm:h-[170px] md:w-[200px] md:h-[180px] lg:w-[270px] lg:h-[250px]"
                 />
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="absolute top-[150px] left-[200px] "
+                className="absolute right-0 top-[100px] sm:left-[100px] md:left-[180px] "
               >
                 <Image
                   src={"/1.png"}
-                  width={200}
-                  height={200}
+                  width={335}
+                  height={335}
                   alt="image"
-                  className=""
+                  className="  sm:w-[180px] sm:h-[170px] md:w-[200px] md:h-[180px] lg:w-[270px] lg:h-[250px]"
                 />
               </motion.div>
             </div>
           </div>
-          <div className="space-y-6 pt-24 lg:pt-0">
+          <div className="space-y-6 pt-32 sm:pt-0">
             <motion.h4
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl font-semibold lg:pr-28"
+              className="sm: text-xl md:text-4xl font-semibold lg:pr-28"
             >
               Affordable and Reliable Spa Service, Book Now
             </motion.h4>

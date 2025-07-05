@@ -14,6 +14,7 @@ export const navMenus:TMenuTypes[] = [
     },
     {
         label: "Service",
+        url: '/services',
         items: [
             {
                 label: 'Body Scrub',

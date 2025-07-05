@@ -6,12 +6,13 @@ import { ChevronDown, Mail, Phone } from "lucide-react";
 import { Button } from "../ui/button";
 import { ThemeToggle } from "../theme-toggle";
 import { navMenus } from "@/consts/data";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { cn } from "@/lib/utils";
 import Logo from "./Logo";
 
 const Navbar = () => {
   const pathName = usePathname();
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   return (
@@ -48,9 +49,12 @@ const Navbar = () => {
                   {menu.items && menu.items?.length > 0 ? (
                     <>
                       <div className="relative group">
-                        <button className="flex items-center text-gray-700 hover:text-amber-800 transition-colors dark:text-gray-300 dark:hover:text-amber-500">
+                        <Link
+                          href={`${menu.url}`}
+                          className="flex items-center text-gray-700 hover:text-amber-800 transition-colors dark:text-gray-300 dark:hover:text-amber-500"
+                        >
                           {menu?.label} <ChevronDown className="ml-1 h-4 w-4" />
-                        </button>
+                        </Link>
                         <div className="absolute top-full left-0 mt-2 w-48 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 dark:bg-gray-800 dark:shadow-none dark:border dark:border-gray-700">
                           <div className="py-2">
                             {menu.items?.map((subMenu) => (
@@ -95,7 +99,9 @@ const Navbar = () => {
 
             {/* Mobile Menu Button with Hamburger Animation */}
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+              }}
               className="lg:hidden p-2 text-gray-700 hover:text-amber-800 transition-colors relative dark:text-gray-300 dark:hover:text-amber-500"
             >
               <div className="w-6 h-6 flex flex-col justify-center items-center">
@@ -146,7 +152,10 @@ const Navbar = () => {
                   {menu.items && menu?.items?.length > 0 ? (
                     <div className="px-4">
                       <button
-                        onClick={() => setIsServicesOpen(!isServicesOpen)}
+                        onClick={() => {
+                          setIsServicesOpen(!isServicesOpen);
+                          router.push(`${menu.url}`);
+                        }}
                         className="flex items-center justify-between w-full text-gray-700 hover:text-amber-800 transition-colors py-2 dark:text-gray-300 dark:hover:text-amber-500"
                       >
                         <span>{menu?.label}</span>

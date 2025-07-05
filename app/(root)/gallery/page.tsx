@@ -370,7 +370,43 @@ export default function GalleryPage() {
         className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
       >
         <div className="container mx-auto max-w-5xl px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12  max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, x: "100%" }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="relative"
+            >
+              <Image
+                src="/images/gallary.webp?height=400&width=500"
+                alt="New Spa Place in Dhaka"
+                width={500}
+                height={400}
+                className="w-full "
+              />
+              <motion.div
+                initial={{ opacity: 0, x: "-100%" }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="space-y-6"
+              >
+                <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
+                  About Our Journey From 2015 Until Now
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
+                  Bliss Spa Dhaka offers a wide range of luxurious services,
+                  from rejuvenating facials to indulgent massages, designed to
+                  help you escape from the stresses of daily life and leave you
+                  feeling relaxed and renewed. Let their expert therapists take
+                  care of you and provide an unforgettable spa experience.
+                </p>
+                <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg shadow-lg">
+                  Read More
+                </Button>
+              </motion.div>
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, x: "-100%" }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -378,7 +414,7 @@ export default function GalleryPage() {
               transition={{ duration: 0.8 }}
               className="space-y-6"
             >
-              <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
+              <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
                 The New Spa Place we Built in Dhaka
               </h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
@@ -392,86 +428,6 @@ export default function GalleryPage() {
                 Read More
               </Button>
             </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: "100%" }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="relative"
-            >
-              <Image
-                src="/images/gallary.webp?height=400&width=500"
-                alt="New Spa Place in Dhaka"
-                width={500}
-                height={400}
-                className=" "
-              />
-            </motion.div>
-          </div>
-        </div>
-      </motion.section>
-
-      {/* About Our Journey Section */}
-      <motion.section className="py-20 bg-gradient-to-r from-green-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300">
-        <div className="container mx-auto max-w-5xl px-4">
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-white dark:bg-gray-800 shadow-xl border-0 dark:border dark:border-gray-700 overflow-hidden">
-              <CardContent className="p-0">
-                <div className="grid lg:grid-cols-2 gap-0">
-                  <motion.div
-                    className="relative"
-                    initial={{ opacity: 0, y: -200 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                  >
-                    <Image
-                      src="/placeholder.svg?height=400&width=400"
-                      alt="Beauty Spa Special Offer"
-                      width={400}
-                      height={400}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-green-600/80 to-teal-600/80 flex items-center justify-center">
-                      <div className="text-center text-white p-8">
-                        <h3 className="text-3xl font-bold mb-4">BEAUTY SPA</h3>
-                        <p className="text-xl mb-4">Special Offer</p>
-                        <div className="text-sm opacity-90">
-                          Premium Treatment Experience
-                        </div>
-                      </div>
-                    </div>
-                  </motion.div>
-
-                  <motion.div
-                    className="p-8 lg:p-12"
-                    initial={{ opacity: 0, y: 200 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                  >
-                    <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-6">
-                      About Our Journey From 2015 Until Now
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-                      CTG Spa Dhaka offers a wide range of luxurious services,
-                      from rejuvenating facials to holistic massages, designed
-                      to help you unwind and restore your inner balance. Our
-                      skilled therapists are dedicated to providing personalized
-                      treatments that cater to your unique needs.
-                    </p>
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
-                      Let their expert therapists take care of you and provide
-                      an unforgettable spa experience.
-                    </p>
-                    <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg shadow-lg">
-                      Read More
-                    </Button>
-                  </motion.div>
-                </div>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </motion.section>

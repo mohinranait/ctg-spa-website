@@ -92,7 +92,7 @@ export default function PackagesPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative h-[300px] bg-gradient-to-r from-amber-100 via-orange-100 to-red-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 overflow-hidden transition-colors duration-300"
+        className="relative py-4  bg-gradient-to-r from-amber-100 via-orange-100 to-red-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 overflow-hidden transition-colors duration-300"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-amber-900/10 to-red-900/10 dark:from-gray-900/30 dark:to-gray-900/30"></div>
         <div className="absolute inset-0">
@@ -102,7 +102,7 @@ export default function PackagesPage() {
         </div>
         <div className="container mx-auto max-w-5xl px-4 h-full flex items-center justify-center relative z-10">
           <motion.div {...fadeInUp} className="text-center">
-            <h1 className="text-6xl font-bold mb-4 text-gray-800 bg-gradient-to-r from-amber-800 to-red-600 bg-clip-text text-transparent dark:text-gray-200">
+            <h1 className="text-2xl font-bold  text-gray-800 bg-gradient-to-r from-amber-800 to-red-600 bg-clip-text text-transparent dark:text-gray-200">
               Package's
             </h1>
             <div className="flex items-center justify-center space-x-2 text-gray-700 dark:text-gray-300">
@@ -133,7 +133,7 @@ export default function PackagesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
             {packageData.map((pkg, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="relative p-0 gap-0 overflow-hidden group hover:shadow-2xl transition-all duration-500 bg-[#FAF4F1] backdrop-blur-sm dark:bg-gray-800/80 dark:border dark:border-gray-700 rounded-3xl shadow-xl border border-gray-300 hover:dark:shadow-xl">
+                <Card className="relative shadow-[0_0_10px_0_rgba(0,0,0,0.5)] p-0 gap-0 overflow-hidden group hover:shadow-2xl transition-all duration-500 bg-[#FAF4F1] backdrop-blur-sm dark:bg-gray-800/80 dark:border dark:border-gray-700 rounded-3xl  border border-gray-300 hover:dark:shadow-xl">
                   {/* Header */}
                   <div
                     className={` bg-black  py-3 text-white relative overflow-hidden`}

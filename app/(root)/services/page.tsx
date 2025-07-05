@@ -89,7 +89,7 @@ export default function ServicesPage() {
       >
         <div className="container mx-auto max-w-5xl px-4 text-center">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-800 dark:text-gray-200 mb-6 leading-tight">
+            <h1 className="text-6xl lg:text-7xl font-bold text-gray-800 dark:text-gray-200 mb-6 leading-tight">
               Where to Find the Best Spa Service in Dhaka
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
@@ -108,7 +108,7 @@ export default function ServicesPage() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
+        className="py-10 bg-white dark:bg-gray-900 transition-colors duration-300"
       >
         <div className="container mx-auto max-w-5xl px-4">
           <motion.div {...fadeInUp} className="text-center mb-16">
@@ -120,7 +120,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {services.map((service, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 bg-white dark:bg-gray-800 shadow-lg overflow-hidden">
+                <Card className="group rounded-none p-0 gap-0 transition-all duration-500 border-0 bg-white dark:bg-gray-900 shadow-none overflow-hidden">
                   <div className="relative overflow-hidden">
                     <Image
                       src={`${service?.image}?height=250&width=350&query=${service.title}`}
@@ -129,19 +129,15 @@ export default function ServicesPage() {
                       height={250}
                       className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className="absolute top-4 left-4">
-                      <Badge className="bg-red-500/90 text-white">
-                        {service.category}
-                      </Badge>
-                    </div>
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   </div>
 
-                  <CardContent className="p-6 text-center">
+                  <CardContent className="p-0 pt-3 text-center">
                     <h3 className="text-xl font-bold text-gray-800 dark:text-gray-200 mb-3 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-400 mb-3 leading-relaxed">
                       {service.description}
                     </p>
                     <Button
@@ -163,10 +159,10 @@ export default function ServicesPage() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="py-16 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300"
+        className="py-10 bg-white dark:bg-gray-900 transition-colors duration-300"
       >
         <div className="container mx-auto max-w-5xl px-4">
-          <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto ">
             <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
               At CTG Spa BD, we provide an extensive range of spa services
               designed to pamper, rejuvenate, and invigorate you. Our offerings
@@ -179,35 +175,23 @@ export default function ServicesPage() {
               services.
             </p>
           </motion.div>
-        </div>
-      </motion.section>
 
-      {/* Escape the Stress Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
-      >
-        <div className="container mx-auto max-w-5xl px-4">
-          <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
-            <div className="border-2 border-gray-800 dark:border-gray-600 p-8 text-center">
-              <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200 mb-6">
-                Escape the Stress: Full Body Massage Services in Dhaka
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                Discover the ultimate escape from everyday stress with our
-                exceptional full body massage services in Dhaka. Our expert
-                therapists are skilled in a variety of massage techniques,
-                ensuring a personalized and deeply relaxing experience. Whether
-                you're seeking relief from muscle aches, improved circulation,
-                or simply a tranquil experience, our full body massages are
-                tailored to meet your unique needs. Rejuvenate your mind and
-                body as you embark on a journey to total relaxation and
-                well-being with our premium spa services.
-              </p>
-            </div>
-          </motion.div>
+          <div className="  max-w-4xl mx-auto  pt-4">
+            <h3 className="text-2xl border border-[#230303] py-2 px-2   text-center font-bold text-gray-800 dark:text-gray-200 mb-6">
+              Escape the Stress: Full Body Massage Services in Dhaka
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+              Discover the ultimate escape from everyday stress with our
+              exceptional full body massage services in Dhaka. Our expert
+              therapists are skilled in a variety of massage techniques,
+              ensuring a personalized and deeply relaxing experience. Whether
+              you're seeking relief from muscle aches, improved circulation, or
+              simply a tranquil experience, our full body massages are tailored
+              to meet your unique needs. Rejuvenate your mind and body as you
+              embark on a journey to total relaxation and well-being with our
+              premium spa services.
+            </p>
+          </div>
         </div>
       </motion.section>
 
@@ -216,15 +200,24 @@ export default function ServicesPage() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="py-16 bg-gradient-to-r from-teal-600 to-teal-700 text-white"
+        className="py-16 "
       >
         <div className="container mx-auto max-w-5xl px-4">
-          <motion.div {...fadeInUp} className="text-center">
-            <h3 className="text-3xl font-bold mb-8">Daily Work Hours</h3>
+          <motion.div {...fadeInUp} className="text-center bg-[#1D7D6B]">
+            <h3 className="text-3xl lg:text-5xl py-2 text-white font-bold mb-8">
+              Daily Work Hours
+            </h3>
+          </motion.div>
+          <motion.div
+            {...fadeInUp}
+            className="text-center bg-[#FAF5F7] dark:bg-[#111827] py-16"
+          >
             <div className="flex items-center justify-center space-x-4">
               <Clock className="h-8 w-8 text-red-400" />
               <div>
-                <p className="text-xl font-semibold">Saturday</p>
+                <p className="text-xl text-left text-gray-600 ">
+                  Saturday - Friday
+                </p>
                 <p className="text-2xl font-bold">10:00 AM - 8:00 PM</p>
               </div>
             </div>
@@ -232,72 +225,90 @@ export default function ServicesPage() {
         </div>
       </motion.section>
 
-      {/* Testimonial Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
-      >
-        <div className="container mx-auto max-w-5xl px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-            <motion.div {...fadeInUp} className="space-y-6 relative">
-              <Image
-                src="/images/home/20230218_150309_0000.png?height=200&width=200"
-                alt="Spa Treatment"
-                width={200}
-                height={200}
-                className="absolute -top-10 left-0 xl:-left-8 z-10 rounded-lg shadow-lg"
-              />
-              <Image
-                src="/images/blogs/image-6.jpg?height=150&width=300"
-                alt="Spa Therapy"
-                width={300}
-                height={150}
-                className="rounded-lg relative z-20 shadow-lg w-full"
-              />
-              <div className="absolute z-20 -bottom-8 right-0 xl:-right-8 bg-gray-800 dark:bg-gray-700 text-white p-6 rounded-lg text-center">
-                <div className="text-4xl font-bold text-yellow-400 mb-2">
-                  500
-                </div>
-                <div className="text-sm">Positive Reviews</div>
-                <div className="flex justify-center mt-2">
-                  {[...Array(5)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="h-4 w-4 fill-current text-yellow-400"
-                    />
-                  ))}
-                </div>
-              </div>
-            </motion.div>
+      <section className="pb-32">
+        <div>
+          <div className="max-w-5xl px-4 mx-auto grid md:grid-cols-2 gap-4 bg-gradient-to-r to-[#FAF5F7] py-16 pr-4 from-transparent dark:bg-transparent dark:bg-gradient-to-r dark:to-transparent dark:from-transparent">
+            <div className="">
+              <div className="space-y-4">
+                <div className="">
+                  <div className="flex gap-4 items-end  ">
+                    <div className="lg:size-[40%] md:-ml-[20%]">
+                      <Image
+                        src={`/images/contact.png`}
+                        width={200}
+                        height={200}
+                        alt="avater"
+                        className="  "
+                      />
+                    </div>
 
-            <div>
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="space-y-6"
-              >
-                <div className="bg-gradient-to-r from-green-600 to-green-700 text-white p-8 rounded-lg">
-                  <h3 className="text-2xl font-bold mb-4">
-                    The Love & Affection We Received From Our Clients
-                  </h3>
-                  <blockquote className="text-lg italic mb-4">
-                    "You should try out their pedicure and manicure packages. It
-                    is very soothing and relaxing. Must Recommended!!!!"
-                  </blockquote>
-                  <div className="text-right">
-                    <p className="font-semibold">- Client A</p>
-                    <p className="text-sm opacity-90">CTG Spa Experience</p>
+                    <div className="lg:size-[50%] relative">
+                      <span className="w-full bg-bl h-full bg-black/50 text-white absolute top-0 left-0 flex flex-col justify-center pl-10 ">
+                        <p className="text-3xl">500</p>
+                        <p className="text-lg">Positive Review</p>
+                        <div className="flex items-center gap-1">
+                          <Star />
+                          <Star />
+                          <Star />
+                          <Star />
+                          <Star />
+                        </div>
+                      </span>
+                      <Image
+                        src={`/images/png_20230218_145600_0000.png`}
+                        width={300}
+                        height={300}
+                        alt="avater"
+                        className=""
+                      />
+                    </div>
                   </div>
                 </div>
-              </motion.div>
+                <div className="flex  gap-4 ">
+                  <div className="sm:size-[40%] relative">
+                    <span className="absolute h-full text-white pl-10  left-0 top-0 flex items-center justify-center bg-black/50">
+                      Phasellus eu turpis tincidunt
+                    </span>
+                    <Image
+                      src={`/images/download.webp`}
+                      width={200}
+                      height={200}
+                      alt="avater"
+                      className=""
+                    />
+                  </div>
+                  <Image
+                    src={`/images/20230107_155409_0000-jpg.webp`}
+                    width={300}
+                    height={300}
+                    alt="avater"
+                    className="size-[50%]"
+                  />
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="bg-[#526612] py-4 px-3 ">
+                <p className="text-4xl text-center text-white">
+                  The Love & Affection We Received From Our Clients
+                </p>
+              </div>
+              <div className=" py-4 px-3 ">
+                <p className="text-2xl text-black dark:text-white ">
+                  "You should try out their pedicure and manicure package. It is
+                  very soothing and relaxing. Must Recommended!!!!"
+                </p>
+              </div>
+              <div className="pl-20 mt-10">
+                <p className="text-red-600 text-lg">Client A</p>
+                <p className="text-gray-700 text-lg dark:text-white">
+                  Client from Bangladesh
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </motion.section>
+      </section>
     </>
   );
 }

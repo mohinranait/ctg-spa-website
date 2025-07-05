@@ -16,18 +16,18 @@ const MainLayout = ({ children }: PropType) => {
       <Footer />
       <Link
         href={"tel:01788453585"}
-        className="inline-flex sm:hidden bg-green-600 text-white items-center justify-center w-11 h-11 rounded-full fixed bottom-5 left-5"
+        className="inline-flex sm:hidden bg-green-600 text-white items-center justify-center w-12 h-12 rounded-full fixed bottom-5 left-5"
       >
         <Phone size={18} />
       </Link>
       <Link
         href={"https://wa.me/+8801788453585"}
-        className="inline-flex sm:hidden items-center justify-center w-12 h-12 rounded-full fixed bottom-5 right-5"
+        className="inline-flex sm:hidden items-center justify-center w-14 h-14 rounded-full fixed bottom-5 right-5"
       >
         <Image
           src={"/whatsapp.png"}
-          width={50}
-          height={50}
+          width={70}
+          height={70}
           alt="whatsapp logo"
         />
       </Link>

@@ -168,7 +168,7 @@ export default function AboutPage() {
         className="py-16 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300"
       >
         <div className="container max-w-5xl mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid  lg:grid-cols-4 gap-8">
             {[
               { number: "1000", label: "Happy Client", color: "text-red-500" },
               {
@@ -212,7 +212,7 @@ export default function AboutPage() {
         className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300"
       >
         <div className="container max-w-5xl mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -225,14 +225,14 @@ export default function AboutPage() {
                 alt="New Formula Spa Treatment"
                 width={460}
                 height={460}
-                className="rounded-xl "
+                className="w-[60%] rounded-xl "
               />
               <Image
                 src="/images/about/2.webp?height=200&width=200"
                 alt="New Formula Spa Treatment"
                 width={300}
                 height={300}
-                className="rounded-xl absolute right-0 xl:-right-10 -bottom-10 shadow-xl"
+                className="w-[60%] rounded-xl absolute right-0 xl:-right-10 -bottom-20 shadow-xl"
               />
             </motion.div>
 
@@ -241,7 +241,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
+              className="space-y-6 mt-16 md:mt-0"
             >
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
                 Affordable And Reliable, Book Now
@@ -255,7 +255,7 @@ export default function AboutPage() {
                 us.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex  sm:flex-row gap-4">
                 <Link href="/book-now">
                   <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg shadow-lg">
                     Book Now
@@ -287,7 +287,7 @@ export default function AboutPage() {
               {...fadeInUp}
               className="w-full h-full flex items-center justify-center flex-col "
             >
-              <h2 className="text-4xl font-bold  text-gray-800 mb-8 dark:text-gray-200">
+              <h2 className="text-4xl text-center md:text-left font-bold  text-gray-800 mb-8 dark:text-gray-200">
                 Frequently Asked Questions
               </h2>
               <Button className="bg-red-500 hover:bg-red-600 text-white px-6 py-2">
