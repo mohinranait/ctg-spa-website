@@ -201,7 +201,7 @@ export default function BlogPage() {
         className="pb-20 pt-4"
       >
         <div className="container mx-auto max-w-5xl px-4">
-          <div className="max-w-3xl mx-auto space-y-8">
+          <div className="max-w-5xl mx-auto space-y-8">
             {blogPosts.map((post, index) => (
               <motion.article key={post.id} variants={fadeInUp}>
                 <Card className="overflow-hidden shadow-none group  transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm dark:bg-gray-800/80 dark:border dark:border-gray-700">
