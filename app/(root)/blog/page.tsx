@@ -180,110 +180,48 @@ const additionalTopics = [
 export default function BlogPage() {
   return (
     <>
-      {/* Hero Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        className="relative h-[300px] bg-gradient-to-r from-red-100 via-pink-100 to-amber-100 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 overflow-hidden transition-colors duration-300"
-      >
-        <div className="absolute inset-0 bg-gradient-to-r from-red-900/10 to-amber-900/10 dark:from-gray-900/30 dark:to-gray-900/30"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-10 left-10 w-20 h-20 bg-red-200/30 rounded-full blur-xl"></div>
-          <div className="absolute bottom-10 right-10 w-32 h-32 bg-amber-200/30 rounded-full blur-xl"></div>
-          <div className="absolute top-1/2 left-1/3 w-16 h-16 bg-pink-200/30 rounded-full blur-xl"></div>
-        </div>
-        <div className="container mx-auto max-w-5xl px-4 h-full flex items-center justify-center relative z-10">
-          <motion.div {...fadeInUp} className="text-center">
-            <h1 className="text-6xl font-bold mb-4 text-gray-800 bg-gradient-to-r from-red-600 to-amber-600 bg-clip-text text-transparent dark:text-white">
-              Blog
-            </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto dark:text-gray-400">
-              Discover wellness tips, spa insights, and expert advice for your
-              journey to relaxation and rejuvenation.
-            </p>
-          </motion.div>
-        </div>
-      </motion.section>
-
       {/* Blog Posts Grid */}
       <motion.section
         variants={staggerContainer}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="py-20"
+        className="pb-20 pt-4"
       >
         <div className="container mx-auto max-w-5xl px-4">
-          <div className="max-w-5xl mx-auto space-y-8">
+          <div className="max-w-3xl mx-auto space-y-8">
             {blogPosts.map((post, index) => (
               <motion.article key={post.id} variants={fadeInUp}>
-                <Card className="overflow-hidden group hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm dark:bg-gray-800/80 dark:border dark:border-gray-700">
-                  <div className="grid md:grid-cols-2 gap-0">
+                <Card className="overflow-hidden shadow-none group  transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm dark:bg-gray-800/80 dark:border dark:border-gray-700">
+                  <div className=" gap-0">
                     {/* Image Section */}
-                    <div className="relative overflow-hidden h-64 md:h-auto">
-                      <Image
-                        src={`${post.image}?height=300&width=400&query=${post.image}`}
-                        alt={post.title}
-                        width={400}
-                        height={300}
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent dark:from-gray-900/70 dark:via-gray-900/20"></div>
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <h3 className="text-white font-bold text-lg leading-tight">
-                          {post.overlayTitle}
-                        </h3>
+                    {post.image && (
+                      <div className="relative overflow-hidden h-64 md:h-auto">
+                        <Image
+                          src={`${post.image}?height=300&width=400&query=${post.image}`}
+                          alt={post.title}
+                          width={400}
+                          height={300}
+                          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                        />
+
+                        <div className="absolute top-4 left-4">
+                          <Badge className="bg-red-500/90 text-white">
+                            {post.category}
+                          </Badge>
+                        </div>
                       </div>
-                      <div className="absolute top-4 left-4">
-                        <Badge className="bg-red-500/90 text-white">
-                          {post.category}
-                        </Badge>
-                      </div>
-                    </div>
+                    )}
 
                     {/* Content Section */}
-                    <CardContent className="p-8 flex flex-col justify-between">
+                    <CardContent className="p-0 flex flex-col justify-between">
                       <div>
-                        <h2 className="text-xl font-bold text-gray-800 mb-4 line-clamp-2 group-hover:text-red-600 transition-colors dark:text-gray-100 dark:group-hover:text-red-500">
+                        <h2 className="text-2xl font-bold text-gray-800 mb-1 line-clamp-2 group-hover:text-red-600 transition-colors dark:text-gray-100 dark:group-hover:text-red-500">
                           {post.title}
                         </h2>
                         <p className="text-gray-600 mb-6 line-clamp-3 dark:text-gray-400">
                           {post.excerpt}
                         </p>
-                      </div>
-
-                      <div className="space-y-4">
-                        {/* Meta Information */}
-                        <div className="flex flex-wrap items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
-                          <div className="flex items-center gap-1">
-                            <Calendar className="w-4 h-4" />
-                            <span>{post.date}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <User className="w-4 h-4" />
-                            <span>{post.author}</span>
-                          </div>
-                          <div className="flex items-center gap-1">
-                            <Eye className="w-4 h-4" />
-                            <span>{post.views}</span>
-                          </div>
-                          <Badge
-                            variant="outline"
-                            className="text-xs dark:border-gray-500 dark:text-gray-400"
-                          >
-                            {post.readTime}
-                          </Badge>
-                        </div>
-
-                        {/* Read More Button */}
-                        <Button
-                          variant="outline"
-                          className="w-full group-hover:bg-red-500 group-hover:text-white group-hover:border-red-500 transition-all duration-300 bg-transparent dark:group-hover:bg-red-500 dark:group-hover:text-white dark:group-hover:border-red-500 dark:border-gray-500 dark:text-gray-300"
-                        >
-                          Read More
-                          <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                        </Button>
                       </div>
                     </CardContent>
                   </div>
