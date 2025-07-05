@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Users, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import CountUp from "react-countup";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -244,7 +245,7 @@ export default function GalleryPage() {
                 className="text-center"
               >
                 <div className="text-6xl font-bold text-red-500 dark:text-red-400 mb-2">
-                  200
+                  <CountUp start={0} end={200} duration={1.99} />
                 </div>
                 <div className="text-gray-700 dark:text-gray-300 font-medium flex items-center justify-center">
                   <Users className="w-5 h-5 mr-2" />
@@ -259,7 +260,7 @@ export default function GalleryPage() {
                 className="text-center"
               >
                 <div className="text-6xl font-bold text-red-500 dark:text-red-400 mb-2">
-                  600
+                  <CountUp start={0} end={600} duration={2.5} />
                 </div>
                 <div className="text-gray-700 dark:text-gray-300 font-medium flex items-center justify-center">
                   <CheckCircle className="w-5 h-5 mr-2" />
@@ -281,7 +282,7 @@ export default function GalleryPage() {
         <div className="container mx-auto max-w-5xl px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: "-100%" }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -303,7 +304,7 @@ export default function GalleryPage() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: "100%" }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
@@ -322,18 +323,19 @@ export default function GalleryPage() {
       </motion.section>
 
       {/* About Our Journey Section */}
-      <motion.section
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="py-20 bg-gradient-to-r from-green-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300"
-      >
+      <motion.section className="py-20 bg-gradient-to-r from-green-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="max-w-4xl mx-auto">
             <Card className="bg-white dark:bg-gray-800 shadow-xl border-0 dark:border dark:border-gray-700 overflow-hidden">
               <CardContent className="p-0">
                 <div className="grid lg:grid-cols-2 gap-0">
-                  <div className="relative">
+                  <motion.div
+                    className="relative"
+                    initial={{ opacity: 0, y: -200 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                  >
                     <Image
                       src="/placeholder.svg?height=400&width=400"
                       alt="Beauty Spa Special Offer"
@@ -350,9 +352,15 @@ export default function GalleryPage() {
                         </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
 
-                  <div className="p-8 lg:p-12">
+                  <motion.div
+                    className="p-8 lg:p-12"
+                    initial={{ opacity: 0, y: 200 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                  >
                     <h3 className="text-3xl font-bold text-gray-800 dark:text-gray-200 mb-6">
                       About Our Journey From 2015 Until Now
                     </h3>
@@ -370,7 +378,7 @@ export default function GalleryPage() {
                     <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg shadow-lg">
                       Read More
                     </Button>
-                  </div>
+                  </motion.div>
                 </div>
               </CardContent>
             </Card>

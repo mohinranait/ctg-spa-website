@@ -130,77 +130,64 @@ export default function PackagesPage() {
         className="py-20"
       >
         <div className="container mx-auto max-w-5xl px-4">
-          <div className="grid lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-7xl mx-auto">
             {packageData.map((pkg, index) => (
               <motion.div key={index} variants={fadeInUp}>
-                <Card className="relative overflow-hidden group hover:shadow-2xl transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm dark:bg-gray-800/80 dark:border dark:border-gray-700 hover:dark:shadow-xl">
-                  {pkg.popular && (
-                    <div className="absolute top-4 right-4 z-10">
-                      <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white px-3 py-1 shadow-lg">
-                        <Star className="w-3 h-3 mr-1" />
-                        Popular
-                      </Badge>
-                    </div>
-                  )}
-
+                <Card className="relative p-0 gap-0 overflow-hidden group hover:shadow-2xl transition-all duration-500 bg-[#FAF4F1] backdrop-blur-sm dark:bg-gray-800/80 dark:border dark:border-gray-700 rounded-3xl shadow-xl border border-gray-300 hover:dark:shadow-xl">
                   {/* Header */}
                   <div
-                    className={`bg-gradient-to-r ${pkg.gradient} p-6 text-white relative overflow-hidden`}
+                    className={` bg-black  py-3 text-white relative overflow-hidden`}
                   >
-                    <div className="absolute inset-0 bg-black/20 dark:bg-black/40"></div>
-                    <div className="relative z-10 flex items-center justify-between">
-                      <div className="flex items-center space-x-3">
-                        <span className="text-3xl">{pkg.icon}</span>
-                        <h3 className="text-xl font-bold">{pkg.title}</h3>
-                      </div>
-                      <Sparkles className="w-6 h-6 opacity-70" />
-                    </div>
+                    <h3 className="text-xl font-semibold text-center">
+                      {pkg.title}
+                    </h3>
                   </div>
 
-                  <CardContent className="p-8">
+                  <CardContent className="px-2">
                     {/* Pricing */}
-                    <div className="grid grid-cols-2 gap-6 mb-6">
-                      <div className="text-center p-4 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl border dark:from-gray-900 dark:to-gray-800 dark:border-gray-700">
-                        <div className="text-sm text-gray-600 mb-1 dark:text-gray-400">
-                          ৳
-                        </div>
-                        <div className="text-3xl font-bold text-red-500 dark:text-red-400">
+                    <div className=" gap-3 mb-4">
+                      <div className="text-center p-4 const sliders flex justify-center flex-col items-center dark:from-gray-900 dark:to-gray-800 dark:border-gray-700">
+                        <div className="text-5xl  relative font-bold text-red-400 dark:text-red-400">
+                          <span className="absolute text-gray-600 -left-3 text-base top-0">
+                            ৳
+                          </span>
+
                           {pkg.price60}
                         </div>
                         <div className="text-sm text-gray-600 dark:text-gray-400">
-                          60 Min
+                          /60 Min
                         </div>
                       </div>
-                      <div className="text-center p-4 bg-gradient-to-br from-amber-50 to-orange-100 rounded-xl border border-amber-200 dark:from-gray-900 dark:to-gray-800 dark:border-gray-700">
-                        <div className="text-sm text-gray-600 mb-1 dark:text-gray-400">
-                          ৳
-                        </div>
-                        <div className="text-3xl font-bold text-amber-600 dark:text-amber-500">
+                      <div className="text-center px-4 py-2 const sliders flex justify-center flex-col items-center dark:from-gray-900 dark:to-gray-800 dark:border-gray-700">
+                        <div className="text-5xl  relative font-bold text-red-400 dark:text-red-400">
+                          <span className="absolute text-gray-600 -left-3 text-base top-0">
+                            ৳
+                          </span>
+
                           {pkg.price90}
                         </div>
                         <div className="text-sm text-gray-600 dark:text-gray-400">
-                          90 Min
+                          /90 Min
                         </div>
                       </div>
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-600 leading-relaxed mb-8 text-sm dark:text-gray-400">
+                    <p className="text-gray-600 text-center leading-relaxed mb-8 text-sm dark:text-gray-400">
                       {pkg.description}
                     </p>
 
                     {/* Action Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-3 mb-4">
-                      <Link href="/book-now" className="flex-1">
+                    <div className="flex justify-center  gap-3 mb-4">
+                      <Link href="/book-now" className="">
                         <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white shadow-lg hover:shadow-xl transition-all duration-300">
                           Book Appointment
                         </Button>
                       </Link>
                       <Button
                         variant="outline"
-                        className="flex-1 border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 bg-transparent dark:border-red-400 dark:text-red-400 dark:hover:bg-red-400"
+                        className=" border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 bg-transparent dark:border-red-400 dark:text-red-400 dark:hover:bg-red-400"
                       >
-                        <PhoneCall className="w-4 h-4 mr-2" />
                         Call Now
                       </Button>
                     </div>
@@ -210,9 +197,6 @@ export default function PackagesPage() {
                       Book Your Appointment Right Now
                     </p>
                   </CardContent>
-
-                  {/* Hover Effect Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none dark:via-gray-900/80"></div>
                 </Card>
               </motion.div>
             ))}
