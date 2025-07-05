@@ -310,7 +310,7 @@ export default function CtgSpaWebsite() {
         // viewport={{ once: true }}
         className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
       >
-        <div className="container max-w-5xl mx-auto px-4">
+        <div className="container max-w-5xl overflow-hidden mx-auto px-4">
           <div className="text-center mb-12">
             <Badge className="bg-red-500 text-white mb-4">About us</Badge>
             <motion.h2
