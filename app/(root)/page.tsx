@@ -311,51 +311,7 @@ export default function CtgSpaWebsite() {
         className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
       >
         <div className="container max-w-5xl overflow-hidden mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="bg-red-500 text-white mb-4">About us</Badge>
-            <motion.h2
-              initial={{ opacity: 0, y: -150 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-8 transition-colors"
-            >
-              Best Spa in Dhaka
-            </motion.h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -150 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
-              <h3 className="text-2xl font-semibold text-gray-800 dark:text-gray-200 transition-colors">
-                Enjoy The Best Spa & Body Massage
-              </h3>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors">
-                Experience ultimate relaxation with our premium spa and massage
-                services. Our skilled therapists provide personalized treatments
-                in a serene environment designed to rejuvenate your body and
-                soul.
-              </p>
-
-              <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 transition-colors">
-                Book The Perfect Spa Collection Therapy Along 1
-              </h4>
-              <p className="text-gray-600 dark:text-gray-400 leading-relaxed transition-colors">
-                Discover our signature collection of therapeutic treatments that
-                combine traditional techniques with modern wellness practices.
-                Each session is tailored to your specific needs and preferences.
-              </p>
-
-              <Button className="bg-red-500 hover:bg-red-600 text-white">
-                Read More
-              </Button>
-            </motion.div>
-
+          <div className="grid md:grid-cols-2 gap-8">
             <motion.div
               initial={{ opacity: 0, x: 150 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -363,6 +319,18 @@ export default function CtgSpaWebsite() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
+              <div className="flex ">
+                <div className=" -bottom-6 left-0 xl:-left-6 z-40 bg-white dark:bg-gray-700 p-5 min-w-[200px] rounded-xl  border dark:border-gray-600">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-[#ef4444] dark:text-slate-50">
+                      <CountUp start={0} end={500} duration={1.75} />
+                    </div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">
+                      Happy Client
+                    </div>
+                  </div>
+                </div>
+              </div>
               <Image
                 src="/images/about.webp?height=400&width=500"
                 alt="Spa Interior"
@@ -370,17 +338,56 @@ export default function CtgSpaWebsite() {
                 height={400}
                 className="rounded-lg shadow-lg"
               />
-              <div className="absolute -bottom-6 left-0 xl:-left-6 z-40 bg-white dark:bg-gray-700 p-10 rounded-xl shadow-xl border dark:border-gray-600">
-                <div className="text-center">
-                  <div className="text-4xl font-bold text-[#ef4444] dark:text-slate-50">
-                    <CountUp start={0} end={100} duration={1.75} />
-                  </div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
-                    Happy Client
-                  </div>
-                </div>
-              </div>
             </motion.div>
+            <div className="space-y-3">
+              <h4 className="w-full text-white  text-xl lg:text-4xl bg-[#952525] py-1 px-2 text-center">
+                About us
+              </h4>
+              <motion.div
+                initial={{ opacity: 0, x: -150 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="space-y-3 bg-[#E2E2E2] p-4 rounded"
+              >
+                <motion.h2 className="text-xl lg:text-4xl font-bold text-gray-800 mb-2 transition-colors">
+                  Best Spa in Dhaka
+                </motion.h2>
+                <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
+                  Introducing Bliss SPA BD, the most relaxing and soothing Spa
+                  center in Bangladesh. Our unique combination of soothing spa
+                  services and comfortable surroundings will leave you feeling
+                  refreshed and relaxed.
+                </p>
+                <h3 className=" text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-200 transition-colors">
+                  Enjoy The Best Spa & Body Massage
+                </h3>
+
+                <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
+                  We are a group of people who love spending time in nature,
+                  enjoying the arts and trying new things. We founded Bliss Spa
+                  because we wanted to create a place where people could come
+                  and relax, feel comfortable and enjoy themselves.
+                </p>
+
+                <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 transition-colors">
+                  Best Spa Center In Gulshan Banani Area || 100% Satisfaction
+                  Guaranteed
+                </h4>
+                <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
+                  We specialize in offering a variety of spa treatments that are
+                  tailored to meet the needs of each individual.
+                </p>
+                <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
+                  Our goal is to provide our clients with an experience that is
+                  truly relaxing and satisfying and make a name in Bangladeshi
+                  Spa community. Come and experience the difference today!
+                </p>
+              </motion.div>
+              <Button className="bg-red-500 hover:bg-red-600 text-white">
+                Read More
+              </Button>
+            </div>
           </div>
         </div>
       </motion.section>
@@ -395,10 +402,10 @@ export default function CtgSpaWebsite() {
         className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
       >
         <div className="container max-w-5xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <Badge className="bg-amber-800 dark:bg-amber-600 text-white mb-4 transition-colors">
+          <div className="text-center mb-7">
+            <h4 className="w-full text-white text-xl lg:text-2xl bg-[#952525] py-1 px-2 text-center">
               Best Services from The Best Spa in Dhaka
-            </Badge>
+            </h4>
           </div>
 
           <div className="grid  md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -420,7 +427,7 @@ export default function CtgSpaWebsite() {
       <PackagesSection />
 
       <section>
-        <div className="container  py-20 max-w-5xl mx-auto px-4 lg:grid grid-cols-2 gap-5">
+        <div className="container  py-10 max-w-5xl mx-auto px-4 lg:grid grid-cols-2 gap-5">
           <div className="h-full relative w-full justify-center ">
             <div>
               <motion.div

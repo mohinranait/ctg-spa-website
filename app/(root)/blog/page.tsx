@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, User, Eye, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -35,6 +36,7 @@ const blogPosts = [
     author: "Dr. Sarah Ahmed",
     readTime: "5 min read",
     views: "2.1k",
+    link: "body-scrub",
   },
   {
     id: 2,
@@ -49,6 +51,7 @@ const blogPosts = [
     author: "Maria Khan",
     readTime: "4 min read",
     views: "1.8k",
+    link: "body-scrub",
   },
   {
     id: 3,
@@ -62,6 +65,7 @@ const blogPosts = [
     author: "Dr. Rahman",
     readTime: "6 min read",
     views: "2.5k",
+    link: "body-scrub",
   },
   {
     id: 4,
@@ -76,6 +80,7 @@ const blogPosts = [
     author: "Fitness Expert",
     readTime: "5 min read",
     views: "1.9k",
+    link: "body-scrub",
   },
   {
     id: 5,
@@ -89,6 +94,7 @@ const blogPosts = [
     author: "Beauty Specialist",
     readTime: "7 min read",
     views: "3.2k",
+    link: "body-scrub",
   },
   {
     id: 6,
@@ -102,6 +108,7 @@ const blogPosts = [
     author: "Skincare Expert",
     readTime: "8 min read",
     views: "2.7k",
+    link: "body-scrub",
   },
   {
     id: 7,
@@ -115,6 +122,7 @@ const blogPosts = [
     author: "Massage Therapist",
     readTime: "6 min read",
     views: "2.3k",
+    link: "body-scrub",
   },
   {
     id: 8,
@@ -128,6 +136,7 @@ const blogPosts = [
     author: "Local Expert",
     readTime: "9 min read",
     views: "4.1k",
+    link: "body-scrub",
   },
   {
     id: 9,
@@ -141,6 +150,7 @@ const blogPosts = [
     author: "Dermatologist",
     readTime: "5 min read",
     views: "1.6k",
+    link: "body-scrub",
   },
   {
     id: 10,
@@ -154,6 +164,7 @@ const blogPosts = [
     author: "Skincare Specialist",
     readTime: "6 min read",
     views: "2.0k",
+    link: "body-scrub",
   },
   {
     id: 11,
@@ -167,6 +178,7 @@ const blogPosts = [
     author: "Market Analyst",
     readTime: "7 min read",
     views: "3.5k",
+    link: "body-scrub",
   },
 ];
 
@@ -193,8 +205,8 @@ export default function BlogPage() {
             {blogPosts.map((post, index) => (
               <motion.article key={post.id} variants={fadeInUp}>
                 <Card className="overflow-hidden shadow-none group  transition-all duration-500 border-0 bg-white/80 backdrop-blur-sm dark:bg-gray-800/80 dark:border dark:border-gray-700">
-                  <div className=" gap-0">
-                    {/* Image Section */}
+                  {/* Content Section */}
+                  <CardContent className="p-0 flex flex-col justify-between">
                     {post.image && (
                       <div className="relative overflow-hidden h-64 md:h-auto">
                         <Image
@@ -204,27 +216,19 @@ export default function BlogPage() {
                           height={300}
                           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                         />
-
-                        <div className="absolute top-4 left-4">
-                          <Badge className="bg-red-500/90 text-white">
-                            {post.category}
-                          </Badge>
-                        </div>
                       </div>
                     )}
-
-                    {/* Content Section */}
-                    <CardContent className="p-0 flex flex-col justify-between">
-                      <div>
+                    <div>
+                      <Link href={`${post?.link}`}>
                         <h2 className="text-2xl font-bold text-gray-800 mb-1 line-clamp-2 group-hover:text-red-600 transition-colors dark:text-gray-100 dark:group-hover:text-red-500">
                           {post.title}
                         </h2>
-                        <p className="text-gray-600 mb-6 line-clamp-3 dark:text-gray-400">
-                          {post.excerpt}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </div>
+                      </Link>
+                      <p className="text-gray-600 mb-6 line-clamp-3 dark:text-gray-400">
+                        {post.excerpt}
+                      </p>
+                    </div>
+                  </CardContent>
                 </Card>
               </motion.article>
             ))}
