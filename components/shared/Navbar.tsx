@@ -21,10 +21,18 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
       className="bg-white/95 backdrop-blur-sm shadow-lg border-b sticky top-0 z-50 dark:bg-gray-900/95 dark:border-gray-800"
     >
-      <div className="lg:hidden bg-[#ef4444] text-white ">
-        <p className="flex justify-center py-2">
+      <div className="lg:hidden bg-[#ef4444] text-white py-2 ">
+        <p className="flex justify-center text-sm ">
           <a href="tel:01788453585" className="flex items-center gap-2  ">
-            <Phone size={16} /> 01788453585{" "}
+            <Phone size={14} /> 01788453585{" "}
+          </a>
+        </p>
+        <p className="flex justify-center ">
+          <a
+            href="mailto:blissspabd@gmail.com"
+            className="flex items-center text-sm gap-2  "
+          >
+            <Mail size={14} /> blissspabd@gmail.com{" "}
           </a>
         </p>
       </div>
