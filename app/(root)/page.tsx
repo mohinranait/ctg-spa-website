@@ -434,6 +434,7 @@ export default function CtgSpaWebsite() {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
+                className="w-[70%]"
               >
                 <Image
                   src={"/2.png"}
@@ -447,7 +448,7 @@ export default function CtgSpaWebsite() {
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="absolute right-0 top-[100px] sm:left-[100px] md:left-[180px] "
+                className="w-[60%] absolute right-0 top-[100px] sm:left-[100px] md:left-[180px] "
               >
                 <Image
                   src={"/1.png"}
