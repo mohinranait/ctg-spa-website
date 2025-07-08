@@ -96,7 +96,7 @@ export default function PackagesSection() {
       // initial="initial"
       // whileInView="animate"
       // viewport={{ once: true }}
-      className="min-h-screen bg-gradient-to-br from-[#F6ECE5] via-[#F6ECE5] to-stone-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 px-4"
+      className=" bg-gradient-to-br from-[#F6ECE5] via-[#F6ECE5] to-stone-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 px-4"
     >
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">

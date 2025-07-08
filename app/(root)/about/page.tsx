@@ -55,12 +55,12 @@ export default function AboutPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative h-[300px] bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 transition-colors duration-300"
+        className="relative h-[150px] bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 transition-colors duration-300"
       >
         <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-orange-900/20 dark:from-gray-900/20 dark:to-gray-900/20"></div>
         <div className="container mx-auto max-w-5xl px-4 h-full flex items-center justify-center">
           <motion.div {...fadeInUp} className="text-center text-white">
-            <h1 className="text-5xl font-bold mb-4 text-gray-800 dark:text-gray-200">
+            <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-800 dark:text-gray-200">
               About Us
             </h1>
             <div className="flex items-center justify-center space-x-2 text-gray-700 dark:text-gray-300">

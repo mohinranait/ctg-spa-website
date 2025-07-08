@@ -16,7 +16,7 @@ const HomeBanner = () => {
       viewport={{ once: true }}
       className="py-0 bg-white dark:bg-gray-900 transition-colors duration-300"
     >
-      <div className="2xl:w-[1600px] p-2 bg-white mx-auto  text-center">
+      <div className="2xl:w-[1900px] p-2 bg-white mx-auto  text-center">
         <motion.div {...fadeInUp}>
           <Image
             src={"/banner.webp"}
