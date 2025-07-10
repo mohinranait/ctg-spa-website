@@ -63,7 +63,7 @@ const Footer = () => {
                 <div className="h-5 w-5 bg-red-500 rounded-full flex items-center justify-center">
                   <span className="text-xs">@</span>
                 </div>
-                <p>blissspabd@gmail.com</p>
+                <p>Info@ctgspa.com</p>
               </div>
             </div>
 
@@ -163,7 +163,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-gray-700 pt-8 text-center">
-          <p className="text-gray-400">Copyright blissspabd.com 2024</p>
+          <p className="text-gray-400">Copyright ctgspa.com 2025</p>
         </div>
       </div>
     </footer>

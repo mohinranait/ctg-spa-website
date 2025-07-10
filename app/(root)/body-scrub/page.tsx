@@ -22,6 +22,7 @@ import {
 
 import Image from "next/image";
 import { useState } from "react";
+import BookingForm from "@/components/common/booking-form";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -266,127 +267,9 @@ const BodyScrubPage = () => {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <Card className="max-w-2xl mx-auto bg-white dark:bg-gray-800 shadow-xl border-0 dark:border dark:border-gray-700">
-              <CardContent className="p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Name *
-                    </label>
-                    <div className="grid grid-cols-2 gap-4">
-                      <Input
-                        type="text"
-                        name="firstName"
-                        placeholder="First"
-                        value={formData.firstName}
-                        onChange={handleInputChange}
-                        className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
-                        required
-                      />
-                      <Input
-                        type="text"
-                        name="lastName"
-                        placeholder="Last"
-                        value={formData.lastName}
-                        onChange={handleInputChange}
-                        className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
-                        required
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Email *
-                    </label>
-                    <Input
-                      type="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Phone Number *
-                    </label>
-                    <Input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100"
-                      required
-                    />
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Which Service Do You Want
-                    </label>
-                    <Select
-                      onValueChange={(value) =>
-                        handleSelectChange("service", value)
-                      }
-                    >
-                      <SelectTrigger className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100">
-                        <SelectValue placeholder="Select a service" />
-                      </SelectTrigger>
-                      <SelectContent className="bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-600">
-                        <SelectItem
-                          value="milk-body-scrub"
-                          className="text-gray-900 dark:text-gray-100"
-                        >
-                          Milk Body Scrub
-                        </SelectItem>
-                        <SelectItem
-                          value="whole-body-scrub"
-                          className="text-gray-900 dark:text-gray-100"
-                        >
-                          Whole Body Scrub
-                        </SelectItem>
-                        <SelectItem
-                          value="coffee-scrub"
-                          className="text-gray-900 dark:text-gray-100"
-                        >
-                          Coffee Scrub
-                        </SelectItem>
-                        <SelectItem
-                          value="lavender-scrub"
-                          className="text-gray-900 dark:text-gray-100"
-                        >
-                          Lavender Scrub
-                        </SelectItem>
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                      Write Your Time and Date
-                    </label>
-                    <Textarea
-                      name="timeDate"
-                      value={formData.timeDate}
-                      onChange={handleInputChange}
-                      rows={4}
-                      className="bg-white dark:bg-gray-700 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-gray-100 resize-none"
-                      placeholder="Please specify your preferred date and time..."
-                    />
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold"
-                  >
-                    Submit
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
+            <div className="max-w-3xl">
+              <BookingForm />
+            </div>
           </motion.section>
         </div>
       </main>

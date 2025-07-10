@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import GoogleMap from "@/components/pages/google-map";
+import BookingForm from "@/components/common/booking-form";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -20,30 +21,6 @@ const fadeInUp = {
 };
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: "",
-  });
-
-  const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // Handle form submission here
-  };
-
   return (
     <>
       {/* Hero Section */}
@@ -130,76 +107,7 @@ export default function ContactPage() {
                 </h2>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <Input
-                      type="text"
-                      name="firstName"
-                      placeholder="First name ..."
-                      value={formData.firstName}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="text"
-                      name="lastName"
-                      placeholder="Last name ..."
-                      value={formData.lastName}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div className="grid md:grid-cols-2 gap-4">
-                  <div>
-                    <Input
-                      type="email"
-                      name="email"
-                      placeholder="Email address ..."
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="tel"
-                      name="phone"
-                      placeholder="Phone number ..."
-                      value={formData.phone}
-                      onChange={handleInputChange}
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
-                      required
-                    />
-                  </div>
-                </div>
-
-                <div>
-                  <Textarea
-                    name="message"
-                    placeholder="Your message ..."
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent resize-none bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-500 dark:placeholder-gray-400 transition-colors"
-                    required
-                  />
-                </div>
-
-                <Button
-                  type="submit"
-                  className="w-full bg-red-500 hover:bg-red-600 text-white py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-                >
-                  Send message
-                </Button>
-              </form>
+              <BookingForm />
             </motion.div>
           </div>
         </div>
@@ -223,7 +131,7 @@ export default function ContactPage() {
               </div>
             </div>
             <h3 className="text-2xl font-semibold text-gray-700 dark:text-gray-300 mb-8 transition-colors">
-              Dhaka
+              Chattogram
             </h3>
           </motion.div>
 
@@ -237,13 +145,11 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-gray-600 dark:text-gray-400 mb-1 transition-colors">
-                        Address: Road
+                        805 Zakir Hossain Rd, Khulshi,
                       </p>
-                      <p className="text-gray-600 dark:text-gray-400 mb-1 transition-colors">
-                        Address: Road
-                      </p>
+
                       <p className="text-gray-600 dark:text-gray-400 transition-colors">
-                        11,Rabindra Near Dhaka Bank
+                        Rd 4000, Chattogram
                       </p>
                     </div>
                   </div>
@@ -254,7 +160,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-gray-800 dark:text-gray-200 font-semibold text-lg transition-colors">
-                        01738001055
+                        01788453585
                       </p>
                     </div>
                   </div>
@@ -265,7 +171,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <p className="text-gray-800 dark:text-gray-200 font-semibold transition-colors">
-                        blissspabd@gmail.com
+                        info@ctgspa.com
                       </p>
                     </div>
                   </div>
