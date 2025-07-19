@@ -90,13 +90,13 @@ export default function ServicesPage() {
         <div className="container mx-auto max-w-5xl px-4 text-center">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto">
             <h1 className="text-6xl lg:text-7xl font-bold text-gray-800 dark:text-gray-200 mb-6 leading-tight">
-              Where to Find the Best Spa Service in Dhaka
+              Where to Find the Best Spa Service in Chattogram
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-3xl mx-auto">
               We offer a wide range of luxurious spa services designed to relax,
               rejuvenate, and revitalize your body and mind. Nestled in the
-              heart of Dhaka, our serene environment provides the perfect escape
-              from the hustle and bustle of everyday life.
+              heart of Chattogram , our serene environment provides the perfect
+              escape from the hustle and bustle of everyday life.
             </p>
           </motion.div>
         </div>
@@ -178,11 +178,11 @@ export default function ServicesPage() {
 
           <div className="  max-w-4xl mx-auto  pt-4">
             <h3 className="text-2xl border border-[#230303] py-2 px-2   text-center font-bold text-gray-800 dark:text-gray-200 mb-6">
-              Escape the Stress: Full Body Massage Services in Dhaka
+              Escape the Stress: Full Body Massage Services in Chattogram
             </h3>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
               Discover the ultimate escape from everyday stress with our
-              exceptional full body massage services in Dhaka. Our expert
+              exceptional full body massage services in Chattogram. Our expert
               therapists are skilled in a variety of massage techniques,
               ensuring a personalized and deeply relaxing experience. Whether
               you're seeking relief from muscle aches, improved circulation, or

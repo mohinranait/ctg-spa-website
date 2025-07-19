@@ -182,6 +182,7 @@ const Navbar = () => {
                           {menu?.items?.map((subMenu) => (
                             <Link
                               key={subMenu?.label}
+                              onClick={() => setIsMenuOpen(false)}
                               href={`${subMenu?.url}`}
                               className="block text-gray-600 hover:text-amber-800 transition-colors py-1 dark:text-gray-400 dark:hover:text-amber-500"
                             >

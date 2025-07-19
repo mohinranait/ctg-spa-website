@@ -184,7 +184,7 @@ export default function PackagesPage() {
                           Book Appointment
                         </Button>
                       </Link>
-                      <Link href={"tel:s01788453585"}>
+                      <Link href={"tel:01788453585"}>
                         <Button
                           variant="outline"
                           className=" border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 bg-transparent dark:border-red-400 dark:text-red-400 dark:hover:bg-red-400"
