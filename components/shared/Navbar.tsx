@@ -30,10 +30,10 @@ const Navbar = () => {
         </p>
         <p className="flex justify-center ">
           <a
-            href="mailto:blissspabd@gmail.com"
+            href="mailto:info@ctgspa.com"
             className="flex items-center text-sm gap-2  "
           >
-            <Mail size={14} /> blissspabd@gmail.com{" "}
+            <Mail size={14} /> info@ctgspa.com{" "}
           </a>
         </p>
       </div>
@@ -89,9 +89,9 @@ const Navbar = () => {
           </nav>
 
           <div className="flex items-center space-x-4">
-            <Link href="/book-now">
+            <Link href="tel:01788453585">
               <Button className="hidden sm:block bg-red-500 hover:bg-red-600 text-white px-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                Book Now
+                Call now
               </Button>
             </Link>
 
@@ -210,12 +210,12 @@ const Navbar = () => {
             })}
 
             <div className="px-4 pt-2">
-              <Link href="/book-now">
+              <Link href="tel:01788453585">
                 <Button
                   className="bg-red-500 hover:bg-red-600 text-white w-full"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Book Now
+                  Call now
                 </Button>
               </Link>
             </div>

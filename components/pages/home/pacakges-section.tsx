@@ -96,8 +96,7 @@ export default function PackagesSection() {
       // initial="initial"
       // whileInView="animate"
       // viewport={{ once: true }}
-      className=" bg-gradient-to-br from-[#F6ECE5] via-[#F6ECE5] to-stone-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 px-4"
-    >
+      className=" bg-gradient-to-br from-[#F6ECE5] via-[#F6ECE5] to-stone-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16 px-4">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
           <h3 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -148,7 +147,7 @@ export default function PackagesSection() {
               duration: "60 min",
             },
             {
-              title: "Bliss Special Massage",
+              title: "Ctg Special Massage",
               price: "3500",
               duration: "60 mins",
               popular: {
@@ -161,8 +160,7 @@ export default function PackagesSection() {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="overflow-hidden rounded relative shadow-[20px_-20px_80px_0px_rgba(0,0,0,0.1)]"
-            >
+              className="overflow-hidden rounded relative shadow-[20px_-20px_80px_0px_rgba(0,0,0,0.1)]">
               {service?.popular && service?.popular.postion === "left" && (
                 <span className="bg-[#111827] absolute text-center -left-6 top-4 text-xs text-white font-semibold w-[100px] py-[2px] -rotate-45">
                   Popular

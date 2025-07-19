@@ -261,13 +261,15 @@ export default function AboutPage() {
                     Book Now
                   </Button>
                 </Link>
-                <Button
-                  variant="outline"
-                  className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-8 py-3 text-lg bg-transparent"
-                >
-                  <PhoneCall className="mr-2 h-5 w-5" />
-                  Phone Call
-                </Button>
+                <Link href={"tel:01788453585"}>
+                  <Button
+                    variant="outline"
+                    className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-8 py-3 text-lg bg-transparent"
+                  >
+                    <PhoneCall className="mr-2 h-5 w-5" />
+                    Phone Call
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -290,9 +292,6 @@ export default function AboutPage() {
               <h2 className="text-4xl text-center md:text-left font-bold  text-gray-800 mb-8 dark:text-gray-200">
                 Frequently Asked Questions
               </h2>
-              <Button className="bg-red-500 hover:bg-red-600 text-white px-6 py-2">
-                Download Catalog
-              </Button>
             </motion.div>
 
             <motion.div

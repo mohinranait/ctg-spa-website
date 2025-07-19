@@ -95,7 +95,7 @@ const BodyScrubPage = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
-                  Best Body Scrub Picks for Luxurious Skin Care
+                  Facial Spa Best Body Scrub Picks for Luxurious Skin Care
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
                   Indulge in luxurious skincare with our curated selection of

@@ -21,7 +21,7 @@ const Footer = () => {
               <div className="text-2xl font-bold text-amber-400">CTG SPA</div>
             </div>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              If you want a soothing and relaxing time of your life, book us
+              If you want a soothing and relaxing time of your life, call us
               now!!
             </p>
             <div className="flex space-x-4">
@@ -35,9 +35,9 @@ const Footer = () => {
                 <Linkedin className="h-5 w-5" />
               </div>
             </div>
-            <Link href="/book-now">
+            <Link href="tel:01788453585">
               <Button className="bg-red-500 hover:bg-red-600 text-white mt-6 w-full">
-                Book Now
+                Call now
               </Button>
             </Link>
           </div>
@@ -63,7 +63,7 @@ const Footer = () => {
                 <div className="h-5 w-5 bg-red-500 rounded-full flex items-center justify-center">
                   <span className="text-xs">@</span>
                 </div>
-                <p>Info@ctgspa.com</p>
+                <Link href={"mailto:info@ctgspa.com"}>info@ctgspa.com</Link>
               </div>
             </div>
 
@@ -133,31 +133,37 @@ const Footer = () => {
               Best Service
             </h4>
             <ul className="space-y-3 text-gray-300">
-              <li>
-                <a href="#" className="hover:text-amber-400 transition-colors">
-                  Eye & Shadow
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-amber-400 transition-colors">
-                  Swedish Massage
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-amber-400 transition-colors">
-                  Facial Therapy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-amber-400 transition-colors">
-                  Facial & Therapy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-amber-400 transition-colors">
-                  Lifting Facial
-                </a>
-              </li>
+              {[
+                {
+                  label: "Body Scrub",
+                  url: "/body-scrub",
+                },
+                {
+                  label: "Facial Spa",
+                  url: "/facial-spa",
+                },
+                {
+                  label: "Oil Bath",
+                  url: "/oil-bath",
+                },
+                {
+                  label: "Salt Bath",
+                  url: "/salt-bath",
+                },
+                {
+                  label: "Waxing & Threading",
+                  url: "/waxing-&-threading",
+                },
+              ].map((blog, i) => (
+                <li key={i}>
+                  <Link
+                    href={blog?.url}
+                    className="hover:text-amber-400 transition-colors"
+                  >
+                    {blog?.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>

@@ -16,6 +16,7 @@ import HomeBanner from "@/components/pages/home/home-banner";
 import GoogleMap from "@/components/pages/google-map";
 import ReviewSection from "@/components/pages/home/review-section";
 import GallarySection from "@/components/pages/home/gallary-section";
+import Link from "next/link";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 200 },
@@ -215,10 +216,10 @@ export default function CtgSpaWebsite() {
               transition={{ duration: 0.8 }}
               className="text-xl md:text-2xl xl:text-4xl font-bold text-white py-1 bg-[#3D0808] dark:text-amber-400 mb-4 transition-colors"
             >
-              Welcome to CTG Spa BD Best Spa in Dhaka
+              Welcome to CTG spa in Khulshi, Chittagong, Bangladesh
             </motion.h2>
             <h3 className="text-2xl xl:text-4xl xl:max-w-xl mx-auto text-gray-700 dark:text-gray-300 mb-5 transition-colors">
-              Best Spa & Massage Service in Dhaka
+              Best Spa & Massage Service in Chittagong
             </h3>
             <motion.div
               initial={{ opacity: 0, y: 200 }}
@@ -228,16 +229,24 @@ export default function CtgSpaWebsite() {
               className="max-w-xl mx-auto text-gray-600 dark:text-gray-400 leading-relaxed space-y-3 transition-colors"
             >
               <p>
-                Welcome to CTG Spa, your premier destination for relaxation and
-                rejuvenation in Dhaka. We offer a comprehensive range of spa and
-                massage services designed to help you unwind, refresh, and
-                restore your body and mind.
+                Welcome to ctgspa.com….. Located in vibrant Khushi in the Heart
+                of Chittagong and Dhaka ctgspa focuses on innovation therapies
+                approach to Skin services and products, treating Both mind and
+                body in a unique way dishari, also Hobe to guide you to provide
+                healthy Services….. ctgspa.com is designed in Such a way that
+                you can Feel calm and confident that you are in good and caring
+                hands. Cleanliness is OUR first priority, We want you to Feel
+                like a guest in our home to create an inviting warm environment.
               </p>
               <p>
-                Our experienced therapists use only the finest natural products
-                and time-tested techniques to ensure you receive the highest
-                quality treatment. From traditional massages to modern spa
-                therapies, we have something for everyone.
+                Far some time you don’t know ctgspa perhaps you will not find
+                surprise with new decoration equipments and other design to
+                enhance your experience. If you want to get it you must come
+                Once. We are here to provide you healthy and beautiful
+                comfortable services. Services is always updating. And using the
+                best modern techniques to add feature, just to show you Our
+                sanctuary, so can we wait for your arrival..?Come take a virtual
+                tour
               </p>
             </motion.div>
           </motion.div>
@@ -259,18 +268,18 @@ export default function CtgSpaWebsite() {
                 icon: Phone,
                 title: "Phone",
                 subtitle: "Call us anytime",
-                content: "+8801738 001065",
+                content: "+8801788453585",
               },
               {
                 icon: MapPin,
                 title: "Location",
                 subtitle: "Visit our spa",
-                content: "Dhaka, Bangladesh",
+                content: "Khulshi, Chittagong",
               },
               {
                 icon: Clock,
                 title: "Office Hours",
-                subtitle: "We're open daily",
+                subtitle: "We're open Everyday",
                 content: "10:00 AM - 10:00 PM",
               },
             ].map((item, index) => (
@@ -323,7 +332,7 @@ export default function CtgSpaWebsite() {
                 <div className=" shadow-2xl mr-10 xl:-left-6 z-40 bg-white  dark:bg-gray-700 p-5 min-w-[200px]  dark:border-gray-600">
                   <div className="text-center">
                     <div className="text-4xl font-bold text-[#ef4444] dark:text-slate-50">
-                      <CountUp start={0} end={500} duration={1.75} />
+                      <CountUp start={0} end={400} duration={4.75} />
                     </div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">
                       Happy Client
@@ -351,37 +360,38 @@ export default function CtgSpaWebsite() {
                 className="space-y-3 bg-[#E2E2E2] dark:bg-[#1F2936] p-4 rounded"
               >
                 <motion.h2 className="text-xl lg:text-4xl font-bold text-gray-800 dark:text-white mb-2 transition-colors">
-                  Best Spa in Dhaka
+                  Best Spa in Khulshi
                 </motion.h2>
                 <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
-                  Introducing Bliss SPA BD, the most relaxing and soothing Spa
-                  center in Bangladesh. Our unique combination of soothing spa
-                  services and comfortable surroundings will leave you feeling
-                  refreshed and relaxed.
+                  CTG SPA is a Professional Spa service Platform. Here we will
+                  provide you only interesting content, which you will like very
+                  much. We’re dedicated to providing you the best of Spa
+                  service, with a focus on dependability and Spa service in
+                  khulshi,
                 </p>
                 <h3 className=" text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-200 transition-colors">
-                  Enjoy The Best Spa & Body Massage
+                  Enjoy Best Spa & Body Massage
                 </h3>
 
                 <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
-                  We are a group of people who love spending time in nature,
-                  enjoying the arts and trying new things. We founded Bliss Spa
-                  because we wanted to create a place where people could come
-                  and relax, feel comfortable and enjoy themselves.
+                  Spa service in Chittagng. We’re working to turn our passion
+                  for Spa service into a booming online website. We hope you
+                  enjoy our Spa service as much as we enjoy offering them to
+                  you.
                 </p>
 
                 <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 transition-colors">
-                  Best Spa Center In Gulshan Banani Area || 100% Satisfaction
-                  Guaranteed
+                  Best Spa Center In Khulshi Chittagong Area || Get 100%
+                  Satisfaction Guaranteed
                 </h4>
                 <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
-                  We specialize in offering a variety of spa treatments that are
-                  tailored to meet the needs of each individual.
+                  I will keep posting more important posts on my Website for all
+                  of you. Please give your support and love.
                 </p>
                 <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
-                  Our goal is to provide our clients with an experience that is
-                  truly relaxing and satisfying and make a name in Bangladeshi
-                  Spa community. Come and experience the difference today!
+                  Our goal is to provide best service that is truly relaxing and
+                  satisfying and make a name in Bangladeshi Spa Center. Come and
+                  enjoy the difference today!
                 </p>
               </motion.div>
               <Button className="bg-red-500 hover:bg-red-600 text-white">
@@ -404,7 +414,7 @@ export default function CtgSpaWebsite() {
         <div className="container max-w-5xl mx-auto px-4">
           <div className="text-center mb-7">
             <h4 className="w-full text-white text-xl lg:text-2xl bg-[#952525] py-1 px-2 text-center">
-              Best Services from The Best Spa in Dhaka
+              Best Services from The Best Spa in Chittagong
             </h4>
           </div>
 
@@ -467,29 +477,32 @@ export default function CtgSpaWebsite() {
               transition={{ duration: 0.8 }}
               className="sm: text-xl md:text-4xl font-semibold lg:pr-28"
             >
-              Affordable and Reliable Spa Service, Book Now
+              Reliable and Affordable Spa Service, Call Now
             </motion.h4>
             <p>
-              We always try our best to give the best spa service possible at an
-              affordable price. Only we can assure a great service which is
-              reliable and more affordable than any other center’s out there.
-              So, don’t be late! Book now and enjoy a soothing experience with
-              the best spa in Dhaka!!!
+              We always try our best spa service possible at an reasonable
+              price. Only we can ensure a great service which is more affordable
+              than any other center’s out there. So, don’t be late! call now and
+              enjoy a soothing experience with the best spa in Khulshi!!!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 ">
-              <Button
-                size="lg"
-                className="bg-red-500 hover:bg-red-600 text-white"
-              >
-                Book Now
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-red-500 text-red-500 hover:bg-white hover:text-red-500 bg-transparent"
-              >
-                Call Now
-              </Button>
+              <Link href={"/book-now"}>
+                <Button
+                  size="lg"
+                  className="bg-red-500 hover:bg-red-600 text-white"
+                >
+                  Book Now
+                </Button>
+              </Link>
+              <Link href={"tel:01788453585"}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-red-500 text-red-500 hover:bg-white hover:text-red-500 bg-transparent"
+                >
+                  Call Now
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -73,11 +73,11 @@ const packageData = [
     popular: false,
   },
   {
-    title: "Bliss Special Massage",
+    title: "Ctg Special Massage",
     price60: "8000",
     price90: "10000",
     description:
-      "Bliss presents special massage service to our special guests. With the confidence, love & suggestions from many of our valuable clients, we can undoubtly prefer you to try this one. Why so special? Well, let it be a surprise!",
+      "Ctg presents special massage service to our special guests. With the confidence, love & suggestions from many of our valuable clients, we can undoubtly prefer you to try this one. Why so special? Well, let it be a surprise!",
     gradient: "from-indigo-600 to-purple-600",
     icon: "✨",
     popular: true,
@@ -184,12 +184,14 @@ export default function PackagesPage() {
                           Book Appointment
                         </Button>
                       </Link>
-                      <Button
-                        variant="outline"
-                        className=" border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 bg-transparent dark:border-red-400 dark:text-red-400 dark:hover:bg-red-400"
-                      >
-                        Call Now
-                      </Button>
+                      <Link href={"tel:s01788453585"}>
+                        <Button
+                          variant="outline"
+                          className=" border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 bg-transparent dark:border-red-400 dark:text-red-400 dark:hover:bg-red-400"
+                        >
+                          Call Now
+                        </Button>
+                      </Link>
                     </div>
 
                     {/* Bottom Text */}
@@ -218,7 +220,7 @@ export default function PackagesPage() {
         <div className="container mx-auto max-w-5xl px-4 text-center relative z-10">
           <motion.div {...fadeInUp} className="space-y-6">
             <h2 className="text-4xl font-bold dark:text-gray-100">
-              Ready to Experience Bliss?
+              Ready to Experience?
             </h2>
             <p className="text-xl opacity-90 max-w-2xl mx-auto dark:text-gray-300">
               Choose your perfect package and let us take care of your wellness
@@ -233,14 +235,16 @@ export default function PackagesPage() {
                   Book Your Package Now
                 </Button>
               </Link>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-red-600 bg-transparent shadow-xl transition-all duration-300 dark:border-gray-300 dark:hover:bg-gray-900 dark:hover:text-amber-500"
-              >
-                <PhoneCall className="mr-2 h-5 w-5" />
-                Call for Consultation
-              </Button>
+              <Link href={"tel:01788453585"}>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-white text-white hover:bg-white hover:text-red-600 bg-transparent shadow-xl transition-all duration-300 dark:border-gray-300 dark:hover:bg-gray-900 dark:hover:text-amber-500"
+                >
+                  <PhoneCall className="mr-2 h-5 w-5" />
+                  Call for Consultation
+                </Button>
+              </Link>
             </div>
           </motion.div>
         </div>
