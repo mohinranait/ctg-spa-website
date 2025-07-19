@@ -112,10 +112,11 @@ const blogPosts = [
   },
   {
     id: 7,
-    title: "Traditional vs Modern Techniques: Choosing Body Massage in Dhaka",
-    overlayTitle: "Choosing Body Massage in Dhaka",
+    title:
+      "Traditional vs Modern Techniques: Choosing Body Massage in chattogram ",
+    overlayTitle: "Choosing Body Massage in chattogram",
     excerpt:
-      "Compare traditional and modern massage techniques to find the perfect treatment for your needs in Dhaka.",
+      "Compare traditional and modern massage techniques to find the perfect treatment for your needs in chattogram .",
     image: "/images/blogs/image-6.jpg",
     category: "Massage Guide",
     date: "March 1, 2024",
@@ -126,10 +127,10 @@ const blogPosts = [
   },
   {
     id: 8,
-    title: "Top 5 Affordable and Luxurious Massage in Dhaka",
-    overlayTitle: "Top 5 Affordable and Luxurious Massage in Dhaka",
+    title: "Top 5 Affordable and Luxurious Massage in chattogram ",
+    overlayTitle: "Top 5 Affordable and Luxurious Massage in chattogram ",
     excerpt:
-      "Discover the best massage centers in Dhaka that offer both affordability and luxury experiences.",
+      "Discover the best massage centers in chattogram  that offer both affordability and luxury experiences.",
     image: "/images/blogs/image-17.jpg",
     category: "Local Guide",
     date: "February 28, 2024",

@@ -38,7 +38,7 @@ const faqData = [
   {
     question: "What is The Difference Between CTG Spa BD and Other Spas?",
     answer:
-      "CTG Spa BD offers premium quality services with experienced therapists, modern facilities, and personalized treatments that set us apart from other spas in Dhaka.",
+      "CTG Spa BD offers premium quality services with experienced therapists, modern facilities, and personalized treatments that set us apart from other spas in chattogram.",
   },
   {
     question: "What Payment Methods Can be Made Here?",

@@ -10,9 +10,9 @@ import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CTG Spa - Premium Spa & Wellness Center in Dhaka",
+  title: "CTG Spa - Premium Spa & Wellness Center in Chattogram ",
   description:
-    "Experience ultimate relaxation at ctg Spa BD. Premium spa and massage services in Dhaka with expert therapists and modern facilities.",
+    "Experience ultimate relaxation at ctg Spa BD. Premium spa and massage services in chattogram with expert therapists and modern facilities.",
   generator: "v0.dev",
 };
 

@@ -230,13 +230,14 @@ export default function CtgSpaWebsite() {
             >
               <p>
                 Welcome to ctgspa.com….. Located in vibrant Khushi in the Heart
-                of Chittagong and Dhaka ctgspa focuses on innovation therapies
-                approach to Skin services and products, treating Both mind and
-                body in a unique way dishari, also Hobe to guide you to provide
-                healthy Services….. ctgspa.com is designed in Such a way that
-                you can Feel calm and confident that you are in good and caring
-                hands. Cleanliness is OUR first priority, We want you to Feel
-                like a guest in our home to create an inviting warm environment.
+                of Chittagong and chattogram ctgspa focuses on innovation
+                therapies approach to Skin services and products, treating Both
+                mind and body in a unique way dishari, also Hobe to guide you to
+                provide healthy Services….. ctgspa.com is designed in Such a way
+                that you can Feel calm and confident that you are in good and
+                caring hands. Cleanliness is OUR first priority, We want you to
+                Feel like a guest in our home to create an inviting warm
+                environment.
               </p>
               <p>
                 Far some time you don’t know ctgspa perhaps you will not find
