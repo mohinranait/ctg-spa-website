@@ -28,7 +28,7 @@ const FlipCard = ({ card }: PropType) => {
         <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden] shadow-xl overflow-hidden">
           <div className="relative w-full h-full">
             <img
-              src={card.front.image || "/placeholder.svg"}
+              src={card.front.image || "/placeholder.png"}
               alt={card.front.title}
               className="w-full h-full object-cover"
             />
@@ -46,7 +46,7 @@ const FlipCard = ({ card }: PropType) => {
         <div className="absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden] [transform:rotateY(180deg)] shadow-xl overflow-hidden bg-white">
           <div className="relative w-full h-full flex flex-col">
             <img
-              src={card.back.image || "/placeholder.svg"}
+              src={card.back.image || "/placeholder.png"}
               alt={card.back.title}
               className="w-full h-full object-cover"
             />

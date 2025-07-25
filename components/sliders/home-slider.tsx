@@ -92,7 +92,7 @@ export default function HomeSlider() {
           {/* Background Image */}
           <div className="absolute inset-0">
             <Image
-              src={slide.backgroundImage || "/placeholder.svg"}
+              src={slide.backgroundImage || "/placeholder.png"}
               alt={slide.title}
               fill
               className="object-cover"
