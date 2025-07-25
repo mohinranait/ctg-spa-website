@@ -10,10 +10,10 @@ import { Toaster } from "sonner";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CTG Spa - Premium Spa & Wellness Center in Chattogram ",
+  title: "Ctgspa - Best spa service in Chittagong",
   description:
-    "Experience ultimate relaxation at ctg Spa BD. Premium spa and massage services in chattogram with expert therapists and modern facilities.",
-  generator: "v0.dev",
+    "Ctg spa provides you with the best spa service in Khulshi, Chittagong, Bangladesh. (call: 01788453585) We offer various type spa service. visit now...",
+  keywords: ["ctg spa service", "Chittagong spa service", "massage service"],
 };
 
 export default function RootLayout({
