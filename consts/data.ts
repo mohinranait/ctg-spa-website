@@ -3,6 +3,7 @@ export type TMenuTypes = {
   url?: string;
   items?: TMenuTypes[];
 };
+
 export const navMenus: TMenuTypes[] = [
   {
     label: "Home",
