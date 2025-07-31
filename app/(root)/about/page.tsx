@@ -33,17 +33,17 @@ const faqData = [
   {
     question: "What Are Your Services?",
     answer:
-      "We have a variety of services available for both men and women. So, you can get all kinds of spa services available here.",
+      "We have a variety of services available for  men. So, you can get all kinds spa services available here.",
   },
   {
     question: "What is The Difference Between CTG Spa BD and Other Spas?",
     answer:
-      "CTG Spa BD offers premium quality services with experienced therapists, modern facilities, and personalized treatments that set us apart from other spas in chattogram.",
+      "CTG Spa BD offers good quality services with experienced modern facilities that set us apart from other spas in chattogram.",
   },
   {
     question: "What Payment Methods Can be Made Here?",
     answer:
-      "We accept cash payments, mobile banking (bKash, Nagad, Rocket), and major credit/debit cards for your convenience.",
+      "We accept cash payments, mobile banking (bKash, Nagad, Rocket), and specific bank.",
   },
 ];
 
@@ -124,20 +124,19 @@ export default function AboutPage() {
 
               <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <p>
-                  Introducing{" "}
                   <span className="text-red-500 font-semibold">CTG SPA BD</span>
-                  CTG SPA is a Professional Spa service Platform. Here we will
-                  provide you only interesting content, which you will like very
-                  much. We’re dedicated to providing you the best of Spa
-                  service, with a focus on dependability and Spa service in
-                  khulshi, Spa service in Chittagng. We’re working to turn our
-                  passion for Spa service into a booming online website. We hope
-                  you enjoy our Spa service as much as we enjoy offering them to
-                  you. In the meantime, we want to maintain our good reputation
-                  and take another step forward in the future, if you use the
-                  services regularly. Ctgspa center was established in the
-                  traditional Chittagong Khulshi, from then on, we have started
-                  this service with skilled and trained staff.
+                  is a Professional Spa service Platform. Here we will provide
+                  you only interesting content, which you will like very much.
+                  We’re dedicated to providing you the best of Spa service, with
+                  a focus on dependability and Spa service in khulshi, Spa
+                  service in Chittagng. We’re working to turn our passion for
+                  Spa service into a booming online website. We hope you enjoy
+                  our Spa service as much as we enjoy offering them to you. In
+                  the meantime, we want to maintain our good reputation and take
+                  another step forward in the future, if you use the services
+                  regularly. Ctgspa center was established in the traditional
+                  Chittagong Khulshi, from then on, we have started this service
+                  with skilled and trained staff.
                 </p>
               </div>
 
