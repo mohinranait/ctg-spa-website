@@ -153,8 +153,7 @@ export default function CtgSpaWebsite() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className=" xl:py-8 bg-gray-50 dark:bg-gray-800  xl:h-[300px] transition-colors duration-300"
-      >
+        className=" xl:py-8 bg-gray-50 dark:bg-gray-800  xl:h-[300px] transition-colors duration-300">
         <div className="container max-w-5xl mx-auto px-2">
           <div className="grid  md:grid-cols-3 gap-2">
             {[
@@ -180,8 +179,7 @@ export default function CtgSpaWebsite() {
                 key={index}
                 variants={fadeInUp}
                 // whileHover={{ scale: 1.05 }}
-                className="relative group cursor-pointer"
-              >
+                className="relative group cursor-pointer">
                 <Image
                   src={`/${service.image}?height=250&width=200&query=${service.image}`}
                   alt={service.title}
@@ -205,8 +203,7 @@ export default function CtgSpaWebsite() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300"
-      >
+        className="py-16 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container max-w-5xl mx-auto px-4 text-center">
           <motion.div {...fadeInUp}>
             <motion.h2
@@ -214,8 +211,7 @@ export default function CtgSpaWebsite() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-xl md:text-2xl xl:text-4xl font-bold text-white py-1 bg-[#3D0808] dark:text-amber-400 mb-4 transition-colors"
-            >
+              className="text-xl md:text-2xl xl:text-4xl font-bold text-white py-1 bg-[#3D0808] dark:text-amber-400 mb-4 transition-colors">
               Welcome to CTG spa in Khulshi, Chittagong, Bangladesh
             </motion.h2>
             <h3 className="text-2xl xl:text-4xl xl:max-w-xl mx-auto text-gray-700 dark:text-gray-300 mb-5 transition-colors">
@@ -226,28 +222,30 @@ export default function CtgSpaWebsite() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="max-w-xl mx-auto text-gray-600 dark:text-gray-400 leading-relaxed space-y-3 transition-colors"
-            >
+              className="max-w-xl mx-auto text-gray-600 dark:text-gray-400 leading-relaxed space-y-3 transition-colors">
               <p>
-                Welcome to ctgspa.com….. Located in vibrant Khushi in the Heart
-                of Chittagong and chattogram ctgspa focuses on innovation
-                therapies approach to Skin services and products, treating Both
-                mind and body in a unique way dishari, also Hobe to guide you to
-                provide healthy Services….. ctgspa.com is designed in Such a way
-                that you can Feel calm and confident that you are in good and
-                caring hands. Cleanliness is OUR first priority, We want you to
-                Feel like a guest in our home to create an inviting warm
-                environment.
-              </p>
-              <p>
-                Far some time you don’t know ctgspa perhaps you will not find
-                surprise with new decoration equipments and other design to
-                enhance your experience. If you want to get it you must come
-                Once. We are here to provide you healthy and beautiful
-                comfortable services. Services is always updating. And using the
-                best modern techniques to add feature, just to show you Our
-                sanctuary, so can we wait for your arrival..?Come take a virtual
-                tour
+                *The Best body Spa place in Ctg** They always have the ability
+                to provide all kinds of services, their activities are conducted
+                in the most modern way in the body spa world, many types of body
+                massage services are provided here. Some of the notable ones are
+                as follows:-Manicure & Pedicure, Fooy-Head-Shuoulder.Traditional
+                thai. Atoms oil Massacres. Thai Aroma Massages. Swedish Massage.
+                Body Scrub. Nurumosculor Massages. Hot Oil Massages. Deep tissue
+                Massages. Sports Massages. Jacuzzi & SteamBoth.G- spa universal
+                package. 4 Hand Massages. Couple Massages. Aromatherapy Massages
+                & Body Scrub. Swedish Massage & Body Scrub.. We enter many more
+                types of such services. They have taken the responsibility of
+                bringing back the weak body to independence, a group of women
+                trained from abroad are coming forward 24 hours a day to provide
+                services without hesitation and fear. This class of Bangladesh
+                is always waiting considering the health of the human body.
+                There is a longing request to come here even just once and take
+                the service. Therefore, if you want to get this recognition of
+                your skills, you will deny them immediately. If there is an
+                exception to what has been said, I like to serve. Their
+                profession is service, their addiction is service. I wish you
+                that we can move forward by maintaining our reputation through
+                the service and care of the clients.
               </p>
             </motion.div>
           </motion.div>
@@ -260,8 +258,7 @@ export default function CtgSpaWebsite() {
         // initial="initial"
         // whileInView="animate"
         // viewport={{ once: true }}
-        className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
-      >
+        className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
         <div className="container max-w-5xl mx-auto px-4">
           <div className="px-5 grid md:grid-cols-3 gap-6">
             {[
@@ -289,8 +286,7 @@ export default function CtgSpaWebsite() {
                 initial={{ opacity: 0, y: 200 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className=""
-              >
+                className="">
                 <Card className="text-center p-8 shadow-[20px_-20px_80px_0px_rgba(0,0,0,0.1)] hover:shadow-lg transition-shadow bg-white dark:bg-gray-900 border dark:border-gray-700">
                   <CardContent className="space-y-2">
                     <div className="mx-auto w-16 h-16 bg-amber-100 dark:bg-amber-900 rounded-full flex items-center justify-center transition-colors">
@@ -318,8 +314,7 @@ export default function CtgSpaWebsite() {
         // initial={{ opacity: 0 }}
         // whileInView={{ opacity: 1 }}
         // viewport={{ once: true }}
-        className="py-16 bg-[#FFFFFF] dark:bg-gray-900 transition-colors duration-300"
-      >
+        className="py-16 bg-[#FFFFFF] dark:bg-gray-900 transition-colors duration-300">
         <div className="container max-w-5xl overflow-hidden mx-auto px-4">
           <div className="grid sm:grid-cols-2 gap-5">
             <motion.div
@@ -327,8 +322,7 @@ export default function CtgSpaWebsite() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
-            >
+              className="relative">
               <div className="flex justify-end  ">
                 <div className=" shadow-2xl mr-10 xl:-left-6 z-40 bg-white  dark:bg-gray-700 p-5 min-w-[200px]  dark:border-gray-600">
                   <div className="text-center">
@@ -358,27 +352,26 @@ export default function CtgSpaWebsite() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="space-y-3 bg-[#E2E2E2] dark:bg-[#1F2936] p-4 rounded"
-              >
+                className="space-y-3 bg-[#E2E2E2] dark:bg-[#1F2936] p-4 rounded">
                 <motion.h2 className="text-xl lg:text-4xl font-bold text-gray-800 dark:text-white mb-2 transition-colors">
                   Best Spa in Khulshi
                 </motion.h2>
                 <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
-                  CTG SPA is a Professional Spa service Platform. Here we will
-                  provide you only interesting content, which you will like very
-                  much. We’re dedicated to providing you the best of Spa
-                  service, with a focus on dependability and Spa service in
-                  khulshi,
+                  To tell you more about us, first of all, I would like to tell
+                  you, The best service in Ctgspa of Bangladesh.. I can proudly
+                  say that spa services were not available in Bangladesh at one
+                  time, how did it appear in Bangladesh in stages??
                 </p>
                 <h3 className=" text-xl md:text-2xl font-semibold text-gray-800 dark:text-gray-200 transition-colors">
                   Enjoy Best Spa & Body Massage
                 </h3>
 
                 <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
-                  Spa service in Chittagng. We’re working to turn our passion
-                  for Spa service into a booming online website. We hope you
-                  enjoy our Spa service as much as we enjoy offering them to
-                  you.
+                  Although we have gradually become accustomed to taking this
+                  spa service, if we want, it is suddenly not possible to take
+                  this service abroad, considering these issues, Ctgspa has
+                  taken an initiative to establish an institution in Bangladesh
+                  in the style of a foreign country.
                 </p>
 
                 <h4 className="text-xl font-semibold text-gray-800 dark:text-gray-200 transition-colors">
@@ -386,13 +379,10 @@ export default function CtgSpaWebsite() {
                   Satisfaction Guaranteed
                 </h4>
                 <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
-                  I will keep posting more important posts on my Website for all
-                  of you. Please give your support and love.
-                </p>
-                <p className="text-gray-700 dark:text-gray-400 text-sm leading-relaxed transition-colors">
-                  Our goal is to provide best service that is truly relaxing and
-                  satisfying and make a name in Bangladeshi Spa Center. Come and
-                  enjoy the difference today!
+                  Due to the weather in Bangladesh, which usually makes us sick
+                  here, we have organized this service to feel physically
+                  strong. Since we are the first, we want to challenge the whole
+                  of Bangladesh and prove that we are the best of Bangladesh.
                 </p>
               </motion.div>
               <Button className="bg-red-500 hover:bg-red-600 text-white">
@@ -410,8 +400,7 @@ export default function CtgSpaWebsite() {
         // initial="initial"
         // whileInView="animate"
         // viewport={{ once: true }}
-        className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300"
-      >
+        className="py-16 bg-gray-50 dark:bg-gray-800 transition-colors duration-300">
         <div className="container max-w-5xl mx-auto px-4">
           <div className="text-center mb-7">
             <h4 className="w-full text-white text-xl lg:text-2xl bg-[#952525] py-1 px-2 text-center">
@@ -425,8 +414,7 @@ export default function CtgSpaWebsite() {
                 key={index}
                 variants={fadeInUp}
                 whileHover={{ scale: 1.05 }}
-                className="relative group cursor-pointer"
-              >
+                className="relative group cursor-pointer">
                 <FlipCard card={card} />
               </motion.div>
             ))}
@@ -445,8 +433,7 @@ export default function CtgSpaWebsite() {
                 initial={{ opacity: 0, y: 100 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="w-[70%]"
-              >
+                className="w-[70%]">
                 <Image
                   src={"/2.png"}
                   width={335}
@@ -459,8 +446,7 @@ export default function CtgSpaWebsite() {
                 initial={{ opacity: 0, x: -100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                className="w-[60%] absolute right-0 top-[100px] sm:left-[100px] md:left-[180px] "
-              >
+                className="w-[60%] absolute right-0 top-[100px] sm:left-[100px] md:left-[180px] ">
                 <Image
                   src={"/1.png"}
                   width={335}
@@ -476,8 +462,7 @@ export default function CtgSpaWebsite() {
               initial={{ opacity: 0, y: 100 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="sm: text-xl md:text-4xl font-semibold lg:pr-28"
-            >
+              className="sm: text-xl md:text-4xl font-semibold lg:pr-28">
               Reliable and Affordable Spa Service, Call Now
             </motion.h4>
             <p>
@@ -490,8 +475,7 @@ export default function CtgSpaWebsite() {
               <Link href={"/book-now"}>
                 <Button
                   size="lg"
-                  className="bg-red-500 hover:bg-red-600 text-white"
-                >
+                  className="bg-red-500 hover:bg-red-600 text-white">
                   Book Now
                 </Button>
               </Link>
@@ -499,8 +483,7 @@ export default function CtgSpaWebsite() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-red-500 text-red-500 hover:bg-white hover:text-red-500 bg-transparent"
-                >
+                  className="border-red-500 text-red-500 hover:bg-white hover:text-red-500 bg-transparent">
                   Call Now
                 </Button>
               </Link>
