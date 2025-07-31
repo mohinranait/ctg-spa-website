@@ -55,8 +55,7 @@ export default function AboutPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative h-[150px] bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 transition-colors duration-300"
-      >
+        className="relative h-[150px] bg-gradient-to-r from-blue-100 via-blue-200 to-blue-300 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 transition-colors duration-300">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-900/20 to-orange-900/20 dark:from-gray-900/20 dark:to-gray-900/20"></div>
         <div className="container mx-auto max-w-5xl px-4 h-full flex items-center justify-center">
           <motion.div {...fadeInUp} className="text-center text-white">
@@ -66,8 +65,7 @@ export default function AboutPage() {
             <div className="flex items-center justify-center space-x-2 text-gray-700 dark:text-gray-300">
               <Link
                 href="/"
-                className="hover:text-amber-800 transition-colors dark:hover:text-amber-400"
-              >
+                className="hover:text-amber-800 transition-colors dark:hover:text-amber-400">
                 Home
               </Link>
               <span>•</span>
@@ -84,8 +82,7 @@ export default function AboutPage() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300"
-      >
+        className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -93,8 +90,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
-            >
+              className="relative">
               <div className="relative flex justify-center items-center">
                 <Image
                   src="/images/about/about.webp?height=500&width=400"
@@ -121,31 +117,27 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
+              className="space-y-6">
               <h2 className="text-4xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
-                One of The Leading SPA & Therapy Centre in Bangladesh
+                One of The Best SPA & Therapy Centre in Chittagong
               </h2>
 
               <div className="space-y-4 text-gray-600 dark:text-gray-400 leading-relaxed">
                 <p>
                   Introducing{" "}
                   <span className="text-red-500 font-semibold">CTG SPA BD</span>
-                  , the most relaxing and soothing Bangladesh Spa center. Our
-                  unique combination of soothing spa services and comfortable
-                  surroundings will leave you feeling refreshed and relaxed.
-                </p>
-
-                <p>
-                  We are a group of qualified professionals who are committed to
-                  ensuring that you are well trying your things. We understand
-                  CTG Spa business has essential to deliver a specialized in
-                  purpose. Our goal is to make you feel comfortable and enjoy
-                  the moment. We offer a variety of spa treatments that are
-                  tailored to meet the needs of each individual. Our goal is to
-                  provide our clients with an experience that is truly relaxing
-                  and satisfying and to help them feel rejuvenated and
-                  refreshed. Come and experience the difference today.
+                  CTG SPA is a Professional Spa service Platform. Here we will
+                  provide you only interesting content, which you will like very
+                  much. We’re dedicated to providing you the best of Spa
+                  service, with a focus on dependability and Spa service in
+                  khulshi, Spa service in Chittagng. We’re working to turn our
+                  passion for Spa service into a booming online website. We hope
+                  you enjoy our Spa service as much as we enjoy offering them to
+                  you. In the meantime, we want to maintain our good reputation
+                  and take another step forward in the future, if you use the
+                  services regularly. Ctgspa center was established in the
+                  traditional Chittagong Khulshi, from then on, we have started
+                  this service with skilled and trained staff.
                 </p>
               </div>
 
@@ -165,8 +157,7 @@ export default function AboutPage() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="py-16 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300"
-      >
+        className="py-16 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300">
         <div className="container max-w-5xl mx-auto px-4">
           <div className="grid  lg:grid-cols-4 gap-8">
             {[
@@ -186,8 +177,7 @@ export default function AboutPage() {
               <motion.div
                 key={index}
                 variants={fadeInUp}
-                className="text-center"
-              >
+                className="text-center">
                 <div className={`text-6xl font-bold ${stat.color} mb-2`}>
                   <CountUp
                     start={0}
@@ -209,8 +199,7 @@ export default function AboutPage() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300"
-      >
+        className="py-20 bg-white dark:bg-gray-800 transition-colors duration-300">
         <div className="container max-w-5xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <motion.div
@@ -218,8 +207,7 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
-            >
+              className="relative">
               <Image
                 src="/images/about/1.png?height=460&width=460"
                 alt="New Formula Spa Treatment"
@@ -241,18 +229,19 @@ export default function AboutPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-6 mt-16 md:mt-0"
-            >
+              className="space-y-6 mt-16 md:mt-0">
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
                 Affordable And Reliable, Book Now
               </h2>
 
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-                We always try our best to give the best service possible at an
-                affordable price. Only we can assure a good service which is
-                reliable and more affordable than any other center's out there.
-                So, don't be late! Book now and enjoy a soothing experience with
-                us.
+                A class of wealthy and established first-class citizens had to
+                go abroad for various business reasons, after traveling so far,
+                they would definitely become physically ill, It was only
+                possible when they went abroad for some work. I will keep
+                posting more important posts on my Website for all of you.
+                Please give your support and love. Thanks For Visiting Our Site
+                Have a nice day!
               </p>
 
               <div className="flex  sm:flex-row gap-4">
@@ -264,8 +253,7 @@ export default function AboutPage() {
                 <Link href={"tel:01788453585"}>
                   <Button
                     variant="outline"
-                    className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-8 py-3 text-lg bg-transparent"
-                  >
+                    className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-8 py-3 text-lg bg-transparent">
                     <PhoneCall className="mr-2 h-5 w-5" />
                     Phone Call
                   </Button>
@@ -281,14 +269,12 @@ export default function AboutPage() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="py-20 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300"
-      >
+        className="py-20 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="grid lg:grid-cols-2 gap-16">
             <motion.div
               {...fadeInUp}
-              className="w-full h-full flex items-center justify-center flex-col "
-            >
+              className="w-full h-full flex items-center justify-center flex-col ">
               <h2 className="text-4xl text-center md:text-left font-bold  text-gray-800 mb-8 dark:text-gray-200">
                 Frequently Asked Questions
               </h2>
@@ -299,15 +285,13 @@ export default function AboutPage() {
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              className="space-y-4"
-            >
+              className="space-y-4">
               <Accordion type="single" collapsible className="space-y-4">
                 {faqData.map((faq, index) => (
                   <motion.div key={index} variants={fadeInUp}>
                     <AccordionItem
                       value={`item-${index}`}
-                      className="bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-600 overflow-hidden"
-                    >
+                      className="bg-white dark:bg-gray-700 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100 dark:border-gray-600 overflow-hidden">
                       <AccordionTrigger className="px-6 py-4 hover:no-underline [&[data-state=open]>svg]:rotate-180">
                         <h3 className="text-lg font-semibold text-gray-800 dark:text-gray-200 text-left">
                           {faq.question}
