@@ -201,8 +201,7 @@ export default function GalleryPage() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative h-[300px] bg-gradient-to-r from-amber-50 via-orange-50 to-red-50 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 overflow-hidden transition-colors duration-300"
-      >
+        className="relative h-[300px] bg-gradient-to-r from-amber-50 via-orange-50 to-red-50 dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 overflow-hidden transition-colors duration-300">
         <div className="absolute inset-0 bg-gradient-to-r from-amber-900/10 to-red-900/10 dark:from-amber-900/20 dark:to-red-900/20"></div>
         <div className="container mx-auto max-w-5xl px-4 h-full flex items-center justify-center relative z-10">
           <motion.div {...fadeInUp} className="text-center">
@@ -212,8 +211,7 @@ export default function GalleryPage() {
             <div className="flex items-center justify-center space-x-2 text-gray-700 dark:text-gray-300">
               <Link
                 href="/"
-                className="hover:text-amber-800 dark:hover:text-amber-400 transition-colors"
-              >
+                className="hover:text-amber-800 dark:hover:text-amber-400 transition-colors">
                 Home
               </Link>
               <span>•</span>
@@ -231,8 +229,7 @@ export default function GalleryPage() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
-      >
+        className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto max-w-5xl px-4">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 mb-4">
@@ -260,8 +257,7 @@ export default function GalleryPage() {
                   ${item.size === "medium" ? "md:row-span-1" : ""}
                   ${item.size === "small" ? "md:row-span-1" : ""}
                   ${item.featured ? "lg:col-span-2" : ""}
-                `}
-                >
+                `}>
                   <Card className="group overflow-hidden border-0 shadow-lg hover:shadow-2xl transition-all duration-500 bg-white dark:bg-gray-800">
                     <div className="relative overflow-hidden">
                       <Image
@@ -294,8 +290,7 @@ export default function GalleryPage() {
                         <Badge
                           className={`${
                             item.featured ? "bg-purple-500" : "bg-red-500"
-                          }/90 text-white`}
-                        >
+                          }/90 text-white`}>
                           {item.category}
                         </Badge>
                       </div>
@@ -319,8 +314,7 @@ export default function GalleryPage() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="py-16 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300"
-      >
+        className="py-16 bg-gradient-to-r from-gray-50 to-amber-50 dark:from-gray-800 dark:to-gray-700 transition-colors duration-300">
         <div className="container mx-auto max-w-5xl px-4">
           <motion.div {...fadeInUp} className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-800 dark:text-gray-200 mb-8">
@@ -332,10 +326,9 @@ export default function GalleryPage() {
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="text-6xl font-bold text-red-500 dark:text-red-400 mb-2">
-                  <CountUp start={0} end={200} duration={1.99} />
+                  <CountUp start={0} end={400} duration={1.99} />
                 </div>
                 <div className="text-gray-700 dark:text-gray-300 font-medium flex items-center justify-center">
                   <Users className="w-5 h-5 mr-2" />
@@ -347,10 +340,9 @@ export default function GalleryPage() {
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
-                className="text-center"
-              >
+                className="text-center">
                 <div className="text-6xl font-bold text-red-500 dark:text-red-400 mb-2">
-                  <CountUp start={0} end={600} duration={2.5} />
+                  <CountUp start={0} end={40} duration={2.5} />
                 </div>
                 <div className="text-gray-700 dark:text-gray-300 font-medium flex items-center justify-center">
                   <CheckCircle className="w-5 h-5 mr-2" />
@@ -367,8 +359,7 @@ export default function GalleryPage() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300"
-      >
+        className="py-20 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto max-w-5xl px-4">
           <div className="grid lg:grid-cols-2 gap-12  max-w-6xl mx-auto">
             <motion.div
@@ -376,8 +367,7 @@ export default function GalleryPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="relative"
-            >
+              className="relative">
               <Image
                 src="/images/gallary.webp?height=400&width=500"
                 alt="New Spa Place in chattogram "
@@ -390,20 +380,18 @@ export default function GalleryPage() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8 }}
-                className="space-y-6"
-              >
+                className="space-y-6">
                 <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
-                  About Our Journey From 2015 Until Now
+                  Our Journey From 2015 Until Now
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-                  Ctg Spa chattogram offers a wide range of luxurious services,
-                  from rejuvenating facials to indulgent massages, designed to
-                  help you escape from the stresses of daily life and leave you
-                  feeling relaxed and renewed. Let their expert therapists take
-                  care of you and provide an unforgettable spa experience.
+                  Opportunity The New Spa Place is not just a spa center, it is
+                  a place where you can be refreshed and rejuvenated on a
+                  regular basis—with the best balance between the highest
+                  quality and reasonable prices.
                 </p>
                 <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg shadow-lg">
-                  Read More
+                  <a href="/contact">Contact now</a>
                 </Button>
               </motion.div>
             </motion.div>
@@ -412,20 +400,18 @@ export default function GalleryPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="space-y-6"
-            >
+              className="space-y-6">
               <h2 className="text-3xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
-                The New Spa Place we Built in chattogram
+                New Spa Place we Built in Khulshi
               </h2>
               <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-                Opportunity refers to a favorable set of circumstances that
-                allows for progress, advancement, or success in a particular
-                endeavor. It can arise from various sources such as career,
-                education, business, or personal development and requires a
-                readiness to take action and make the most of the situation.
+                We maintain a peaceful and clean environment, so that you can
+                enjoy the benefits of our services with complete peace of mind.
+                We do not compromise on the quality of our services, but our
+                main commitment is to keep our prices affordable for everyone.
               </p>
               <Button className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg shadow-lg">
-                Read More
+                <a href="/contact">Contact Now</a>
               </Button>
             </motion.div>
           </div>

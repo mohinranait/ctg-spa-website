@@ -463,13 +463,16 @@ export default function CtgSpaWebsite() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               className="sm: text-xl md:text-4xl font-semibold lg:pr-28">
-              Reliable and Affordable Spa Service, Call Now
+              Affordable Spa Service Chittagong, Call Now
             </motion.h4>
             <p>
-              We always try our best spa service possible at an reasonable
-              price. Only we can ensure a great service which is more affordable
-              than any other center’s out there. So, don’t be late! call now and
-              enjoy a soothing experience with the best spa in Khulshi!!!
+              We maintain a peaceful and clean environment, so that you can
+              enjoy the benefits of our services with complete peace of mind. We
+              do not compromise on the quality of our services, but our main
+              commitment is to keep our prices affordable for everyone. Ctg spa
+              is not just a spa center, it is a place where you can regularly
+              refresh and rejuvenate—with the best balance between the highest
+              quality and reasonable prices.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 ">
               <Link href={"/book-now"}>

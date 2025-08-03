@@ -25,11 +25,10 @@ const staggerContainer = {
 const blogPosts = [
   {
     id: 1,
-    title:
-      "Full Body Massage Treatment: A Holistic Approach to Wellness and Relaxation",
+    title: " Difference between Spa and message",
     overlayTitle: "Full Body Massage Treatment",
     excerpt:
-      "Discover the transformative power of full body massage therapy and how it can enhance your overall wellness journey.",
+      "Because the difference between these two has to be determined in a slightly different way. First, let's talk about the message, a very important thing for the human body, after hard work, a little rest is needed. In addition, there are some sensitive places on the human body, where if you massage with soft hands with oily hands with soft touch, you feel pleasure and satisfaction. There are some special features of spa, such as a match maze feeling all over the body, dry skin feels unnecessarily itchy. There, the flower petals are collected from many types of pure ingredients obtained from natural plants to make the oily screen beautiful, and the whole body feels comfortable and relaxed. This is called spa",
     image: "/images/blogs/image-3-1.jpg",
     category: "Hair Spa | The Pros & Cons",
     date: "March 15, 2024",
@@ -40,11 +39,10 @@ const blogPosts = [
   },
   {
     id: 2,
-    title:
-      "Soothing Soaks for Sensitive Skin: Learn How to Use Sea Salt for Bath",
+    title: "Therapy & Spa Center in Bangladesh",
     overlayTitle: "Use of Sea Salt for Bath",
     excerpt:
-      "Explore the healing benefits of sea salt baths and learn the proper techniques for sensitive skin care.",
+      "Therapy & Spa Center in Bangladesh........... The best and most important Ctgspa.com is a firm believer in the hard pleasure of the service. It is notable in the continuation of the message in the traditional natural way, Thailand, Hong Kong, Singapore, Korea, etc. This message center has been established in more developed countries like Bangladesh. In no way is the skill of Bangladesh less, more modern, more advanced, more trained staff have been established in the service and message center, since all these activities are going on in developed countries, of course it has been established in an updated form. So it has to be said that Ctgspa.com has already taken the responsibility of making the body that is feeling tired and sick from the body back to normal and healthy, as a result of which the weak cells of the whole body from the feet to the head will be raped by the touch of hot oily and soft hands, the blood circulation will be normal, it will feel fresh and healthy. By massaging every part of the body in the form of vibration through hard friction, it will be agitated like the waves of the sea and bring back the body to a comfortable and healthy state.  Generally, Ctgspa.com has taken on a great responsibility to ensure the physical well-being of people. I hope that this massage center can occupy the first place in Bangladesh. Of course, if the customers get international quality service, then they will recognize that this is the first and the best",
     image: "/images/blogs/image-6.jpg",
     category: "Skin Care",
     date: "March 12, 2024",
@@ -55,10 +53,10 @@ const blogPosts = [
   },
   {
     id: 3,
-    title: "More Than Magnesium: Exploring How to Use Epsom Salt Bath",
+    title: "How many types of Spa services are there ?",
     overlayTitle: "Exploring How to Use Epsom Salt Bath",
     excerpt:
-      "Uncover the science behind Epsom salt baths and their incredible benefits for muscle recovery and relaxation.",
+      "In fact, its scope is very wide, but it goes without saying that for the information of the customer, Ctgspa.com is a service center that maintains international standards throughout Bangladesh. Since our manpower is more than others, the types of services are of many types, every part of the human body is affected by the decline of a person, in order to live a healthy, normal and beautiful life, it is desirable for every part of the body to be healthy and normal. These are interconnected with each other, if any one of them is damaged, all of them become useless. That is why each part of the body is provided separately like a servicing center. In other words, the types and scope of services are very wide, we only know about two to three services, in fact, its types are of many types, there is no such important part of the body for which there is no service arrangement, a separate Spa is made for each one. If a client thinks that he wants to stay for a long time and do all kinds, they only get the best multi-dimensional service. Because each part of the body is massaged separately with a mixture of many types of oils and time.  It is only possible to truly believe these words if someone has accepted the entire package.",
     image: "/images/blogs/image-10.jpg",
     category: "Wellness",
     date: "March 10, 2024",
@@ -69,11 +67,10 @@ const blogPosts = [
   },
   {
     id: 4,
-    title:
-      "Aching Muscles? Discover How Bath Salts Can Help You Relax and Recover",
+    title: "Where is the best spa center in Chittagong ?",
     overlayTitle: "Bath Salts for Muscle Recovery",
     excerpt:
-      "Learn how different types of bath salts can provide relief for sore muscles and promote faster recovery.",
+      "***Where is the best spa center in Chittagong...??*** Everyone knows which is the best spa center in Chittagong, only this service center is offering gifts in special places in Chittagong. Ctgspa.com What's app -01788453585 It has been established in places like Khulshi, Agrabad, Nasirabad, AK Khan, Faiz Lake etc. Especially keeping in mind the upper class of Chittagong, Ctgspa.com has been established in a safe and easy location with great care. Massage activities are being conducted by skilled girls from developed countries who are engaged here. With a special consideration, I always try to be the first and always be present. A class collection, the improved environment of the center, foreign fittings, everything has been developed in a combination of improved environment and best service providers. Activities are going on, if every client wants to prove it physically, then proof of trustworthiness will be found through taking the service physically and through body messages. Along with the age of every person, physical fitness and restlessness are increasing, there is a great need for a little relaxation.  Since message centers have been established in Chittagong in line with the developed world, there is an opportunity to get addicted to service here, so you can be worry-free, it is possible to get all kinds of body messages for a relatively small amount of money, because Ctgspa.com has all kinds of facilities at your fingertips. The saying goes that we are trying to provide services by standing by to heal a sick human body. A group of skilled craftsmen are busy working with the hope of strengthening a weak body, and they are determined to answer everything by thinking about the customers.",
     image: "/images/blogs/image-11.jpg",
     category: "Recovery",
     date: "March 8, 2024",
@@ -84,10 +81,10 @@ const blogPosts = [
   },
   {
     id: 5,
-    title: "Scrub School: Learn How to Exfoliate Black Skin the Right Way",
+    title: "The best Body massages Centre in CHittagong",
     overlayTitle: "Exfoliating Black Skin Guide",
     excerpt:
-      "Master the art of proper exfoliation techniques specifically designed for darker skin tones.",
+      "No one wants to be left behind, everyone has a goal, how can they be the first? These people are always trying, just like clients are also roaming around in search of the best service, where they feel comfortable and good environment and 100% safe, the customer's place of residence will be unreliable, there the customer will press. If someone's words are tempted by someone or if there is no place on the road, they don't go anywhere. This is normal. So I have to say with pride that I have started with Ctgspa.com and What's app -01788-453585, this body message centre, which provides the best in Bangladesh, with experienced girls who have maintained international standards and have gained experience through further training. Its environment and the whole of Chittagong have improved by leaving everyone behind. Educated, elegant and conscious citizens of Bangladesh never believe in false assurances, they have seen and understood their whole life based on reality and if they get nourishment from the service, then they will only say The Best Body Massage Centre in Chittagong.  The most important thing in this message center is that every skilled craftsman follows the rules and regulations of the developed world. Due to which clients who have taken body messages abroad do not feel the need to go abroad again to get services. Because now all types of services are available in Chittagong, Bangladesh, not abroad. Don't even think about going abroad, you will find a body massage center in Chittagong, Bangladesh. Every organ of the body of all those smart people is waiting for the friction of the palms of the hands with a mixture of hot oil, when the body cells will become bright. That is why Ctgspa.com is committed. Body Message Center in Chittagong, a place trusted by everyone, is always striving to build a beautiful, healthy and beautiful body.",
     image: "/images/blogs/image-17.jpg",
     category: "Skincare",
     date: "March 5, 2024",
@@ -98,10 +95,10 @@ const blogPosts = [
   },
   {
     id: 6,
-    title: "Find Your Perfect Body Scrubs for Every Skin Type and Budget",
+    title: "Where is the spa center Chittagong",
     overlayTitle: "Best Body Scrubs for Every Skin Type",
     excerpt:
-      "Discover the perfect body scrub for your unique skin type and budget with our comprehensive guide.",
+      "*Where is the spa center Chittagong**No one wants to be left behind in the competitive market. Ctgspa.com is also at the forefront, the service center has been established by identifying popular areas in the entire city, keeping one thing in mind, this company is moving forward, considering the first-class citizens, it has been built in such a location that this class of people can travel freely. Ctgspa.com has the South Khulshi residential area on its preferred list, the area is very nice, safe, environmentally friendly, very convenient for travel. It is possible to travel easily to any place in the city from this Khulshi because it is the middle point of the city. Not only did we sit with a beautiful and good location, we have arranged for efficient service services, everyone is trained and has obtained a certificate of proficiency in this service work from developed countries. Not only do you have to be skilled in work, you also have to look beautiful, smart, highly educated.  The main objective of this company is to create a good position by leaving everyone behind in customer satisfaction, and it has done so and is continuing its activities to occupy the first place in Bangladesh, surpassing Chittagong. These skilled girls know that the human body experiences tiring pain in various parts of the body. The weather in Kerala and Bangladesh is severely polluted. Here, to keep the human body healthy, beautiful and neat, it is very important to take care of the body. Hot therapy is very effective for humans. The pain is relieved by applying a mixture of garlic, olive oil and boiling water to the painful area and applying very strong pressure on the body. This is just a little bit, I want to ensure the best service by introducing all the rest.",
     image: "/images/blogs/image-3-1.jpg",
     category: "Product Guide",
     date: "March 3, 2024",
@@ -112,8 +109,7 @@ const blogPosts = [
   },
   {
     id: 7,
-    title:
-      "Traditional vs Modern Techniques: Choosing Body Massage in chattogram ",
+    title: "The Best body Spa place in Ctg",
     overlayTitle: "Choosing Body Massage in chattogram",
     excerpt:
       "Compare traditional and modern massage techniques to find the perfect treatment for your needs in chattogram .",

@@ -102,7 +102,7 @@ export default function AboutPage() {
                 <div className="absolute -bottom-6 right-0 xl:-right-6 bg-white dark:bg-gray-700 p-10 rounded-xl shadow-xl border dark:border-gray-600">
                   <div className="text-center">
                     <div className="text-4xl font-bold text-amber-800 dark:text-amber-400">
-                      <CountUp start={0} end={50} duration={1.75} />
+                      <CountUp start={0} end={400} duration={1.75} />
                     </div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">
                       Happy Client
@@ -160,9 +160,9 @@ export default function AboutPage() {
         <div className="container max-w-5xl mx-auto px-4">
           <div className="grid  lg:grid-cols-4 gap-8">
             {[
-              { number: "1000", label: "Happy Client", color: "text-red-500" },
+              { number: "400", label: "Happy Client", color: "text-red-500" },
               {
-                number: "14",
+                number: "40",
                 label: "Treatment Success",
                 color: "text-orange-500",
               },
