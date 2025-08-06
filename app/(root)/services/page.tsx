@@ -81,7 +81,7 @@ export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <motion.section
+      {/* <motion.section
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -100,7 +100,7 @@ export default function ServicesPage() {
             </p>
           </motion.div>
         </div>
-      </motion.section>
+      </motion.section> */}
 
       {/* Our Spa Services Section */}
       <motion.section
@@ -108,8 +108,7 @@ export default function ServicesPage() {
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
-        className="py-10 bg-white dark:bg-gray-900 transition-colors duration-300"
-      >
+        className="py-10 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto max-w-5xl px-4">
           <motion.div {...fadeInUp} className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 mb-4">
@@ -142,8 +141,7 @@ export default function ServicesPage() {
                     </p>
                     <Button
                       variant="outline"
-                      className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 bg-transparent dark:border-red-400 dark:text-red-400 dark:hover:bg-red-400 dark:hover:text-white"
-                    >
+                      className="border-2 border-red-500 text-red-500 hover:bg-red-500 hover:text-white transition-all duration-300 bg-transparent dark:border-red-400 dark:text-red-400 dark:hover:bg-red-400 dark:hover:text-white">
                       Discover
                     </Button>
                   </CardContent>
@@ -159,24 +157,11 @@ export default function ServicesPage() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="py-10 bg-white dark:bg-gray-900 transition-colors duration-300"
-      >
+        className="py-10 bg-white dark:bg-gray-900 transition-colors duration-300">
         <div className="container mx-auto max-w-5xl px-4">
-          <motion.div {...fadeInUp} className="max-w-4xl mx-auto ">
-            <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-              At CTG Spa BD, we provide an extensive range of spa services
-              designed to pamper, rejuvenate, and invigorate you. Our offerings
-              include soothing massages, revitalizing facials, luxurious body
-              treatments, and meticulous nail care, all delivered by our team of
-              skilled professionals in a tranquil and serene environment.
-              Whether you're seeking relief from daily stress, a beauty boost,
-              or simply a moment to unwind and revitalize, indulge in the
-              ultimate relaxation and wellness journey with our premium spa
-              services.
-            </p>
-          </motion.div>
+          <motion.div {...fadeInUp} className="max-w-4xl mx-auto "></motion.div>
 
-          <div className="  max-w-4xl mx-auto  pt-4">
+          {/* <div className="  max-w-4xl mx-auto  pt-4">
             <h3 className="text-2xl border border-[#230303] py-2 px-2   text-center font-bold text-gray-800 dark:text-gray-200 mb-6">
               Escape the Stress: Full Body Massage Services in Chattogram
             </h3>
@@ -191,7 +176,7 @@ export default function ServicesPage() {
               embark on a journey to total relaxation and well-being with our
               premium spa services.
             </p>
-          </div>
+          </div> */}
         </div>
       </motion.section>
 
@@ -200,8 +185,7 @@ export default function ServicesPage() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
-        className="py-16 "
-      >
+        className="py-16 ">
         <div className="container mx-auto max-w-5xl px-4">
           <motion.div {...fadeInUp} className="text-center bg-[#1D7D6B]">
             <h3 className="text-3xl lg:text-5xl py-2 text-white font-bold mb-8">
@@ -210,8 +194,7 @@ export default function ServicesPage() {
           </motion.div>
           <motion.div
             {...fadeInUp}
-            className="text-center bg-[#FAF5F7] dark:bg-[#111827] py-16"
-          >
+            className="text-center bg-[#FAF5F7] dark:bg-[#111827] py-16">
             <div className="flex items-center justify-center space-x-4">
               <Clock className="h-8 w-8 text-red-400" />
               <div>
@@ -290,17 +273,16 @@ export default function ServicesPage() {
             <div>
               <div className="bg-[#526612] py-4 px-3 ">
                 <p className="text-4xl text-center text-white">
-                  The Love & Affection We Received From Our Clients
+                  The Affection We Received From Our Clients
                 </p>
               </div>
               <div className=" py-4 px-3 ">
                 <p className="text-2xl text-black dark:text-white ">
-                  "You should try out their pedicure and manicure package. It is
-                  very soothing and relaxing. Must Recommended!!!!"
+                  "It is very soothing and relaxing. Must Recommended!!!!"
                 </p>
               </div>
               <div className="pl-20 mt-10">
-                <p className="text-red-600 text-lg">Client A</p>
+                <p className="text-red-600 text-lg">Hasem</p>
                 <p className="text-gray-700 text-lg dark:text-white">
                   Client from Bangladesh
                 </p>
