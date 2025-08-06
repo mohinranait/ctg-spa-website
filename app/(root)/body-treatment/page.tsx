@@ -129,16 +129,13 @@ const BodyScrubPage = () => {
               What is a Body Scrub and What are its Benefits?
             </h2>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-              A body scrub is a popular skincare product, typically a paste made
-              with small granular particles (such as salt, sugar, or coffee
-              grounds) mixed with oils or moisturizing agents. When gently
-              rubbed onto the skin, it effectively removes dead skin cells and
-              impurities from the skin's surface. Prevention of Ingrown Hairs:
-              By clearing dead skin cells and unclogging pores, body scrubs can
-              help prevent ingrown hairs. Enhanced Moisturizer Absorption: After
-              exfoliation, the skin is clean and soft, allowing lotions and
-              moisturizers to penetrate more effectively and provide deeper
-              hydration.
+              Body treatments are essentially like a facial for your entire
+              body. They involve various techniques and products applied to the
+              skin to cleanse, exfoliate, hydrate, and nourish it. Beyond just
+              skin benefits, these treatments often contribute to relaxation,
+              stress reduction, and overall well-being. Body treatments are an
+              excellent way to care for your skin from head to toe, providing a
+              holistic experience that rejuvenates both body and mind.
             </p>
           </motion.section>
         </div>

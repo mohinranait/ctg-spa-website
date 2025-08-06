@@ -95,13 +95,14 @@ const BodyScrubPage = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div className="space-y-6">
                 <h1 className="text-4xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 leading-tight">
-                  Best Body Scrub Picks for Luxurious Skin Care
+                  Best Waxing and threading Picks for Luxurious Skin Care
                 </h1>
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-                  Body scrubs are a popular skincare product that help remove
-                  dead skin cells, leaving the skin smooth, refreshed, and
-                  radiant. Body scrubs are considered an important service at
-                  spas because they deeply nourish the skin and soothe the mind.
+                  Waxing and threading are two popular methods of hair removal
+                  offered in spas, each with distinct techniques, benefits, and
+                  considerations. Both aim to remove hair from the follicle,
+                  providing smoother skin for a longer period compared to
+                  shaving.
                 </p>
               </div>
               <div className="relative">
@@ -123,26 +124,15 @@ const BodyScrubPage = () => {
             viewport={{ once: true }}
             className="mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 dark:text-gray-200 mb-6">
-              Transform Your Skin with Milk Body Scrubs
+              Transform Your Skin with Waxing and threading
             </h2>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-lg">
-              A body scrub is a special paste made of small particles (such as
-              salt, sugar, coffee) and oil or moisturizer. When it is gently
-              rubbed on the skin, it removes dead skin cells and dirt
-              accumulated on the upper layer of the skin. Its main benefits are:
-              Exfoliates the skin: It helps remove dead skin cells and produce
-              new cells, which makes the skin look vibrant. Smoothes and softens
-              the skin: Regular use of a body scrub smoothes and softens rough
-              areas like elbows, knees, and ankles. Increases blood circulation:
-              Gentle massage while scrubbing helps increase blood circulation to
-              the skin. Prevents ingrown hairs: It is effective in reducing the
-              problem of in-grown hairs. Increases the effectiveness of
-              moisturizers: After scrubbing, the skin remains clean and soft, so
-              that lotions or moisturizers are absorbed well. Correct method of
-              using body scrub Some steps should be followed to use a body scrub
-              at home or at a spa: 1. Prepare the skin: First, take a bath with
-              warm water. This opens the pores of the skin and makes scrubbing
-              easier.
+              Considerations: Can be more time-consuming for larger areas of the
+              body. Effectiveness heavily depends on the skill of the
+              technician. Some individuals find the sensation of multiple hairs
+              being pulled simultaneously more uncomfortable than waxing.
+              Primarily used for facial hair (eyebrows, upper lip, chin) and not
+              typically recommended for large body areas with coarse hair.
             </p>
           </motion.section>
         </div>
